@@ -1,23 +1,69 @@
 <html>
     <head>
-        <link rel="icon" type="img/jpg" href="">
+        <link rel="icon" type="image/x-icon" href="..\..\recursos\imagen\logo.png">
         <link id="css" rel="stylesheet" href="Catalogo.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>
-        <div class="gridCatalogo">
-            <div id="foto1" class="estiloFotos">
-                <!--aqui ira cada foto con id insertada--> 
-                <img src="/recursos/imagen/imagenPlaceHolder.jpg" alt="400px" width="400px">
+    <body class="principal">
+        <header>
+            <div>
+                <button id="botonLogo" onclick=""><img id="logo" src="..\..\Recursos\Imagen\logo.png"></button>
+                <ul class="ulHeader">
+                    <li>
+                        <button id="botonPrincipal" onclick=""><img id="casita" src="..\..\Recursos\Imagen\casaBlanca.png"></button>
+                    </li>
+                    <li>
+                        <button id="botonCatalogo" onclick="">CATÁLOGO</button>
+                    </li>
+                    <li>
+                        <button id="botonEquipo" onclick="">SOBRE NOSOTROS</button>
+                    </li>
+                    <li>
+                        <button id="botonContacto" onclick="">CONTACTO</button>
+                    </li>
+                    <li>
+                        <button id="botonAdmin" onclick="">ADMINISTRADOR</button>
+                    </li>
+                
+                </ul>
+                <button id="botonCarrito" onclick=""><img id="carrito" src="..\..\Recursos\Imagen\CarroBlanco.png"></button>
             </div>
-            <div id="foto2" class="estiloFotos">
-                 <!--aqui ira cada foto con id insertada--> 
-                <img src="/recursos/imagen/imagenPlaceHolder.jpg" alt="400px" width="400px">
+        </header>
+        <main>
+            <div class="gridCatalogo">
+                <button class="boton">
+                    <div id="foto1" class="contenedorFotosYTexto"><!--aqui ira cada foto con id insertada--> 
+                        <img src="..\..\recursos\imagen\Casas\CasaIsla1\1.jpg" alt="fotoCasa" class="estiloFotos">
+                        <div class="texto">
+                            <p>Ubicación</p>
+                            <p>Precio</p>
+                        </div>
+                    </div>
+                </button>
+                <button class="boton">
+                    <div id="foto2" class="contenedorFotosYTexto"><!--aqui ira cada foto con id insertada--> 
+                        <img src="..\..\recursos\imagen\imagenPlaceHolder.jpg" alt="fotoCasa" class="estiloFotos">
+                        <div class="texto">
+                            <p>Ubicación</p>
+                            <p>Precio</p>
+                        </div>
+                    </div>
+                </button>
+                <button class="boton">
+                    <div id="foto2" class="contenedorFotosYTexto"><!--aqui ira cada foto con id insertada--> 
+                        <img src="..\..\recursos\imagen\imagenPlaceHolder.jpg" alt="fotoCasa" class="estiloFotos">
+                        <div class="texto">
+                            <p>Ubicación</p>
+                            <p>Precio</p>
+                        </div>
+                    </div>
+                </button>
             </div>
-            <div id="foto3" class="estiloFotos">
-                <!--aqui ira cada foto con id insertada--> 
-                <img src="/recursos/imagen/imagenPlaceHolder.jpg" alt="400px" width="400px">
-            </div>
-        </div>
+        </main>
+        <footer>
+            <div>
 
+            </div>
+        </footer>
     </body>
 </html>

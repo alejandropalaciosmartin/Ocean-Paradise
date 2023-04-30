@@ -1,17 +1,124 @@
-.gridCatalogo{
-    display: grid;
-    grid-template-columns: auto auto auto;
+/*CSS DEL HEADER :*/
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-image:linear-gradient(to right ,#e1e8ec,#0079a9,#015b7f, #003d55);
+    border-bottom: solid 1px rgb(31, 171, 171);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+button{
+    all:unset;
+}
+.ulHeader{
+    display: inline-block;
+    margin: 17px 60px 25px 60px;
+	padding: 0;
+	list-style: none;
+    
+}
+.ulHeader li {
+    display: inline-block;
+    margin-right: 15px;
+    align-content: center;
     padding: 10px;
-    width: 85%;
-    margin:auto;
-    margin-top: 300px;
+    font-size: large;
+    color: white;
+}
+.ulHeader li:hover{
+    text-decoration: underline;
+}
+.ulHeader li:first-child{
+    position: relative;
+    top:10px;
+    padding: 0;
+}
+#logo{
+    position: absolute;
+	top: 0;
+	left: 20px;
+	height: 100px;
+}
+#botonCarrito{
+    position: absolute;
+	top: 15px;
+	right: 20px; 
+	height: 30px;
+}
+#carrito{
+    width: 52px;
+}
+#casita{
+    width: 35px;
+}
+header div{
+    text-align: center;
 }
 
-.estiloFotos{
-    height: auto;
-    width: auto;
+/*CSS DEL MAIN :*/
+.principal{
+    background-image:linear-gradient(to right ,#e1e8ec,#0079a9,#015b7f, #003d55);
+}
+
+.barraPrincipal{ /*Esto es el main del body*/
+    background-color: #e1e8ec;
+    margin: 10%;
+    padding: 20px 10px 10px 20px;
+    
+}
+
+.gridCatalogo{ /*Esto es el grid de todas las imagenes del catalogo*/
+    display: grid;
+    grid-template-columns: repeat(1fr, minmax(250px, 1fr));
+    padding: 20px;
+    background-color: #e1e8ec;
+    max-width: 80%;
+    min-width: 220px;
+    margin: 20% 10% 20% 10%;
+    padding: auto;
+    margin-top: 100px;
+}
+
+.boton { /*Esto es el boton que hay detras de cada foto del catalogo*/
+    height: 300px;
+    max-width: 100%;
+    padding: auto;
+    margin: 10% 10% 10% 10%;
     border: solid 0;
-    margin: 10px 10px 10px 10px;
-    border-radius: 5px;
-    box-shadow: teal;
+    border-radius: 3%; 
+    box-shadow: 0 4px 8px 0 #01587a, 0 6px 20px 0 #01587a;
+    transition: transform 0.2s ease-in-out;
+}
+
+.contenedorFotosYTexto{ /*Esto es para la imagen el bonton y el texto*/
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    height: 300px;
+    max-width: 100%;
+    border: solid 0;
+    border-radius: 3%;
+
+}
+
+.estiloFotos{ /*Esto es cada div que engloba cada foto del catalogo*/
+    height: 200px;
+    max-width: 100%;
+    background-color: #e1e8ec;
+    margin: 5% 5% 5% 5%;
+}
+
+.boton:hover{
+    box-shadow: 0 4px 8px 0 #f3ba00, 0 6px 20px 0 #f3ba00;
+    transform: scale(1.1);
+}
+
+.texto{ /* Esto es para el texto de cada casa en el catologo*/
+    text-align: left;
+    height: 100px;
+    max-width: 100%;
+    margin: 20% 5% 5% 10%;    
 }
