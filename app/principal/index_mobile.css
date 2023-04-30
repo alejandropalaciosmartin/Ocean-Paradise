@@ -3,6 +3,7 @@
     --gris: #e1e8ec;
     --ocean: #5cb3c1;
     --paradise: #99d8dd;
+    --letras: #01587a;
 }
 
 /*TODA LA PÁGINA*/
@@ -204,7 +205,7 @@ imagen no quede espacio vacío*/
 .textito{
     font-size: 3vh;
     margin-top: 1vh;
-    color: var(--gris);
+    color: var(--letras);
 }
 
 /*PIE DE PÁGINA*/
