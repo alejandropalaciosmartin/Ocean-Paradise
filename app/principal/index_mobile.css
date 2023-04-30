@@ -56,6 +56,59 @@ body{
     background-color: var(--gris);
 }
 
+.barra{
+    background-image:linear-gradient(to right ,#e1e8ec,#0079a9,#015b7f, #003d55);
+    border-bottom: solid 1px rgb(31, 171, 171);
+    position: fixed;
+    width: 100%;
+}
+
+a{
+    all:unset;
+}
+.ulBarra{
+    display: inline-block;
+    margin: 17px 60px 25px 60px;
+	padding: 0;
+	list-style: none;
+    
+}
+.ulBarra li {
+    display: inline-block;
+    margin-right: 15px;
+    align-content: center;
+    padding: 10px;
+    font-size: large;
+    color: white;
+}
+.ulBarra li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.ulBarra li:first-child{
+    position: relative;
+    top:10px;
+    padding: 0;
+}
+
+#botonCarrito{
+    position: absolute;
+	top: 15px;
+	right: 20px; 
+	height: 30px;
+    cursor: pointer;
+}
+#carrito{
+    width: 52px;
+}
+#casita{
+    width: 35px;
+}
+
+.barra div{
+    text-align: center;
+}
+
 /*CARRUSEL*/
 #carrusel-caja { 
     /*Tiempo de tránsito y modo de ejecución*/
@@ -66,7 +119,7 @@ body{
                                            linear: misma velocidad de principio a fin*/
     transition: all 5s ease; 
               /*all: en todas las diapositivas
-
+                    5s: Tiempo de transición
                      ease: comienzo lento, luego rápido*/
     height: 66vh;
     width: 300%;
