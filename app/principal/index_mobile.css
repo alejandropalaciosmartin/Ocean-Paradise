@@ -56,8 +56,6 @@ body{
     background-color: var(--gris);
 }
 
-
-
 /*CARRUSEL*/
 #carrusel-caja { 
     /*Tiempo de tránsito y modo de ejecución*/
@@ -73,20 +71,26 @@ body{
     height: 66vh;
     width: 300%;
 }
+/*Ocultar el resto de imágenes y no salga la barra, para evitar desplazar para no verla*/
 #carrusel-contenido {
     overflow: hidden;
     text-align: left;
 }
+/*Misma dimensiones para todas*/
 .imagenes{
     height: 66vh;
     width: 100%;
 }
+/*Div de la imagen esté a la izquierda y ocupe una 3º parte de todo, de ese modo nunca hay espacio cuando en la transición de la siguiente 
+imagen no quede espacio vacío*/
 .carrusel-elemento {
     float: left;
     width: 33.333%;
 }
 
+/*Trasición de izquierda a derecha y vuelta atrás*/
 @keyframes automatizacion {
+    /*Derecha a Izquierda*/
     0% {
         margin-left: 0;
     }
@@ -105,6 +109,7 @@ body{
     50% {
         margin-left: -200%;
     }
+    /*Izquierda a Derecha*/
     60% {
         margin-left: -100%;
     }
