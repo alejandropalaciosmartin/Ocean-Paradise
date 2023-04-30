@@ -6,7 +6,8 @@ body{/*se baja el padding y margen para no tener huecos entre la barra y y el pr
 header{/*color y posicion fijada arriba*/
     background-image:linear-gradient(to right ,#e1e8ec,#0079a9,#015b7f, #003d55);
     border-bottom: solid 1px rgb(31, 171, 171);
-    position: fixed;
+    position: sticky;
+    top:0;
     width: 100%;
 }
 button{/*quita todo estilo del boton y pone el cursor diferente*/
@@ -54,23 +55,32 @@ button{/*quita todo estilo del boton y pone el cursor diferente*/
 #casita{/*imagen de la casita*/
     width: 35px;
 }
-div{/*para centrar el contenido de todos los div*/
+div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS DIVS QUE TENGAIS*//*para centrar el contenido de todos los div*/
     text-align: center;
 }
 
-
+/*------------------------------------main-------------------------------*/
 
 .imagenPrincipal{/*el div que contiene el primer texto y pone la foto de fondo*/
     background-image: URL("..\\..\\Recursos\\Imagen\\Casas\\CasaNormal1\\1.jpg") ;
     background-repeat: no-repeat;
-    background-position-y: -100px;
+    background-position-y: -190px;
     background-size: 100%; /*HAY QUE ARREGLAR. responsivo cuando mas pequeño*/
-    padding: 150px 0 32% 0;
+    padding: 110px 0 30% 0;
     color: white;
 }
 @media (max-width: 1225px) { /*HAY QUE ARREGLAR. para cuando achique la pantalla no se vea tan mal*/
     .imagenPrincipal {
-        background-size: 120%;
+        background-position-y: -190px;
+        background-size: 1300px;
+        background-position-x: -140px;
+    }
+}
+@media (max-width: 790px) { /*HAY QUE ARREGLAR. para cuando achique la pantalla no se vea tan mal*/
+    .imagenPrincipal {
+        background-position-y: -50px;
+        background-size: 1000px;
+        background-position-x: -200px;
     }
 }
 
