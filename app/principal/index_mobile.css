@@ -60,9 +60,14 @@ body{
 
 /*CARRUSEL*/
 #carrusel-caja { 
-    /*Tiempo / Tamaño*/
-    animation: automatizacion 15s infinite linear; /*Tiempo de transisy modo de ejecución*/
-    transition: all 1s ease; /**/
+    /*Tiempo de tránsito y modo de ejecución*/
+    animation: automatizacion 15s infinite linear; 
+             /*automatizacion: Nombre de como se comporta la animación, abajo se especifica -> @keyframes
+                              15s: Tiempo de ejecución por secuencia
+                                   infinite: Nunca termina
+                                           linear: misma velocidad de principio a fin*/
+    transition: all 1s ease; 
+                     /*ease: comienzo lento, luego rápido*/
     height: 66vh;
     width: 300%;
 }
@@ -80,76 +85,7 @@ body{
     float: left;
     width: 33.333%;
 }
-/*Se repite 3 veces porque son tres imágenes*/
-@keyframes automatizacion {
-    0% {
-        margin-left: 0;
-    }
-    30% {
-        margin-left: 0;
-    }
-    35% {
-        margin-left: -100%;
-    }
-    65% {
-        margin-left: -100%;
-    }
-    70% {
-        margin-left: -200%;
-    }
-    95% {
-        margin-left: -200%;
-    }
-    100% {
-        margin-left: 0;
-    }
-}
-@keyframes automatizacion {
-    0% {
-        margin-left: 0;
-    }
-    30% {
-        margin-left: 0;
-    }
-    35% {
-        margin-left: -100%;
-    }
-    65% {
-        margin-left: -100%;
-    }
-    70% {
-        margin-left: -200%;
-    }
-    95% {
-        margin-left: -200%;
-    }
-    100% {
-        margin-left: 0;
-    }
-}
-@keyframes automatizacion {
-    0% {
-        margin-left: 0;
-    }
-    30% {
-        margin-left: 0;
-    }
-    35% {
-        margin-left: -100%;
-    }
-    65% {
-        margin-left: -100%;
-    }
-    70% {
-        margin-left: -200%;
-    }
-    95% {
-        margin-left: -200%;
-    }
-    100% {
-        margin-left: 0;
-    }
-}
+
 @keyframes automatizacion {
     0% {
         margin-left: 0;
