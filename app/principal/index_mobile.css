@@ -27,7 +27,8 @@ header{
     top: 0;                         
     /*Texto*/
     font-family: "OcenaParadise";   
-    font-size: 3vh;        
+    font-size: 3vh;   
+    text-shadow: 0.1em 0.1em 0.2em black; /*Sombrear*/
 }
 
 /*Título de la cabecera*/
@@ -53,22 +54,3 @@ header{
 }
 
 
-/*CONTENEDOR - MAIN*/
-.container{
-    /*GRID*/
-    display: grid; /*Para hacerlo responsive, dividimos por filas y columnas*/
-    grid-template-columns: repeat(2, 1fr); /*Definimos el grosor de las columnas, ponemos para que sean 4 columnas con el mismo grosor(1fr)*/
-    /*Estructuramos de cómo se verán cada parte, dónde irá colocado*/
-    grid-template-areas: "button sunmoon"
-                         "title title"
-                         "image image"
-                         "number type" 
-                         "weightPokemon heightPokemon"
-                         "live speed"
-                         "defense attack"
-                         "defenseSpecial attackSpecial"
-                         "evolution evolution";
-    grid-gap: 5vh;  /*Separación entre elementos*/  
-    color: var(--gris);
-    margin-left: 5vh;
-}
