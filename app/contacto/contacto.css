@@ -122,13 +122,26 @@ button#enviar[type="submit"]:hover {
 
 /*--------------------------------- FOOTER ---------------------------------*/
   
-footer{
+footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	background-image:linear-gradient(to right, #003d55,#015b7f,#0079a9,#e1e8ec);
+	background-image: linear-gradient(to right, #003d55, #015b7f, #0079a9, #e1e8ec);
 	bottom: 0;
 	text-align: center;
 	height: 85px;
-  } 
+  }
+  
+  footer a img {
+	height: 20px;
+  }
+footer a{
+	text-decoration: none;
+	color: #000;
+	margin-right: 20px;
+}  
+
+#copy{
+	margin-right: 20px;
+}
