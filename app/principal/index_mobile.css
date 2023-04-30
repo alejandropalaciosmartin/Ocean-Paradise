@@ -60,7 +60,7 @@ body{
 .barra{
     background-image:linear-gradient(to right ,#78cdff,#0079a9,#015b7f, #003d55);
     border-bottom: solid 1px rgb(31, 171, 171);
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
 }
 
@@ -94,7 +94,7 @@ a{
 
 #botonCarrito{
     position: absolute;
-	top: 15px;
+	top: 25vh;
 	right: 20px; 
 	height: 30px;
     cursor: pointer;
@@ -139,7 +139,7 @@ imagen no quede espacio vacío*/
 
 /*Misma dimensiones para todas*/
 .imagenes{
-    height: 70vh;
+    height: 60vh;
     width: 100%;
 }
 
