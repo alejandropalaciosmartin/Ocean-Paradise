@@ -66,14 +66,14 @@ body{
                               15s: Tiempo de ejecución por secuencia
                                    infinite: Nunca termina
                                            linear: misma velocidad de principio a fin*/
-    transition: all 1s ease; 
-                     /*ease: comienzo lento, luego rápido*/
+    transition: all 5s ease; 
+              /*all: en todas las diapositivas
+
+                     ease: comienzo lento, luego rápido*/
     height: 66vh;
     width: 300%;
 }
 #carrusel-contenido {
-    /* margin-left: 10vh;
-    margin-right: 10vh; */
     overflow: hidden;
     text-align: left;
 }
@@ -90,20 +90,29 @@ body{
     0% {
         margin-left: 0;
     }
-    30% {
+    10% {
         margin-left: 0;
     }
-    35% {
+    20% {
         margin-left: -100%;
     }
-    65% {
+    30% {
+        margin-left: -100%;
+    }
+    40% {
+        margin-left: -200%;
+    }
+    50% {
+        margin-left: -200%;
+    }
+    60% {
         margin-left: -100%;
     }
     70% {
-        margin-left: -200%;
+        margin-left: -100%;
     }
-    95% {
-        margin-left: -200%;
+    80% {
+        margin-left: 0;
     }
     100% {
         margin-left: 0;
