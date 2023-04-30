@@ -23,6 +23,10 @@ body{
     width: 200px;
 
 }
+.logo{
+    height: 300px;    
+    width: 300px;
+}
 .divcontra{
     font-size: x-large;
     
@@ -53,10 +57,10 @@ body{
 }
 .ocean{
     color: aqua;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    src: url(Frosh.ttf) format('truetype');
     font-style: italic;
-    margin-left: 60px;
-    margin-top: -60px;
+    margin-left: 100px;
+    margin-top: -68px;
 }
 .boton{
     background-color: #e1e8ec;
@@ -69,7 +73,7 @@ body{
 }
 .boton:hover {
     transition: all 1s ease;
-    background-image: linear-gradient(to right,#e1e8ec,#5cb3c1);
+    background-image: linear-gradient(to right,#e1e8ec,#5cb3c1,#e1e8ec);
   color: #fff !important;
   }
   
