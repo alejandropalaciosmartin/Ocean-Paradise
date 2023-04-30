@@ -59,6 +59,9 @@ body{
 
 /*BARRA DE NAVEGACIÓN*/
 .barra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-image:linear-gradient(to right ,#78cdff,#0079a9,#015b7f, #003d55);
     border-bottom: solid 1px rgb(31, 171, 171);
     /* position: fixed; */
@@ -180,17 +183,16 @@ imagen no quede espacio vacío*/
     }
 }
 
-#informacion{/*div contenedor de cada persona*/
-    margin:auto;
-    width: 120vh;
-    padding-bottom: 5vh;
-    margin-bottom: 5vh;
+/*CUADRADO INFORMACIÓN DE EMPRESA*/
+#desplazarInformacion{
     margin-top: 2vh;
-    border-radius: 5vh;
-    box-shadow: 0 0 30px -10px /*#f3ba00*/;
 }
 
-#logo{/*la foto de la persona*/
+#informacion{
+    width: 60vh;
+}
+
+#logo{
     width: 20vh;
     display: flex;
     justify-content: start;
@@ -198,14 +200,68 @@ imagen no quede espacio vacío*/
 }
 
 #titulito{
-    font-size: 5vh;
-    margin-top: -25vh;
+    font-size: 3vh;
+    margin-top: -26vh;
 }
 
 .textito{
     font-size: 3vh;
     margin-top: 1vh;
     color: var(--letras);
+}
+
+#colaborar{
+    font-size: 8vh;
+}
+
+/*CUADRADO DE INFORMACIÓN DE SERVICIOS*/
+#container{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1vh;
+}
+
+/*CUADROS DE INFORMACIÓN Y COLABADORES*/
+#colaboradores, #informacion{
+    margin:auto;
+    padding-bottom: 5vh;
+    margin-bottom: 5vh;
+    border-radius: 5vh;
+    box-shadow: 0 0 30px -10px /*#f3ba00*/;
+}
+
+#colaboradores{
+    width: 60vh;
+    height: 25vh;
+}
+
+#minions{
+    width: 30vh;
+    margin-left: -25vh;
+    margin-top: 8vh;
+}
+
+#titulito2{
+    font-size: 3vh;
+    margin-top: -22vh;
+}
+
+.textito2{
+    font-size: 3vh;
+    margin-top: 3vh;
+    margin-left: 25vh;
+    color: var(--letras);
+}
+
+#monos{
+    width: 20vh;
+    margin-left: -35vh;
+    margin-top: 5vh;
+}
+
+#titulito3{
+    font-size: 3vh;
+    margin-top: -25vh;
 }
 
 /*PIE DE PÁGINA*/
@@ -218,4 +274,23 @@ footer{
     height: 8vh;
     color: var(--blanco);
     margin-top: -1vh; /*Para que se pegue al carrusel*/
+}
+
+footer a img {
+	height: 20px;
+	margin-right: 5px;
+}
+footer a{
+	text-decoration: none;
+	color: #ffffff;
+	margin-right: 1vh;
+    font-size: 1.5vh;
+}  
+#copy{
+	margin-right: 20px;
+}
+
+footer a:hover{
+	text-decoration: underline;
+    cursor: pointer;
 }

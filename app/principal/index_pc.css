@@ -12,7 +12,49 @@ header{
     margin-left: 40vh;
 } 
 
-/* #carrusel-contenido {
-    margin-left: 10vh;
-    margin-right: 10vh;
-} */
+#informacion{
+    width: 120vh;
+}
+
+#titulito{
+    font-size: 5vh;
+    margin-top: -25vh;
+}
+
+#container{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#colaboradores{
+    width: 95vh;
+}
+
+#minions{
+    width: 35vh;
+    margin-left: -60vh;
+    margin-top: 5vh;
+}
+
+#titulito2{
+    margin-top: -20vh;
+    margin-left: 40vh;
+}
+
+.textito2{
+    margin-top: 4vh;
+    margin-left: -1vh;
+}
+
+#monos{
+    margin-left: -70vh;
+    margin-top: 5vh;
+}
+
+#titulito3{
+    font-size: 3vh;
+    margin-top: -22vh;
+}
+footer a{
+	font-size: 20px;
+    margin-right: 40px;
+}  
