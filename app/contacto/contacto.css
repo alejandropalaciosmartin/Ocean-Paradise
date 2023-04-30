@@ -1,12 +1,11 @@
 /*--------------------------------- HEADER ---------------------------------*/
-body{
+*{
     margin: 0;
     padding: 0;
 }
 header{
     background-image:linear-gradient(to right ,#e1e8ec,#0079a9,#015b7f, #003d55);
     border-bottom: solid 1px rgb(31, 171, 171);
-    position: fixed;
 	height: 92px;
     width: 100%;
 	top: 0;
@@ -63,16 +62,16 @@ header div{
 
 
 /*--------------------------------- MAIN ---------------------------------*/
-main{
-	margin-top: 92px;
+/* main{
 	padding:57px;
-}
+} */
 #title{
 	text-align: center;
 }
 form {
 	max-width: 600px;
 	margin: 0 auto;
+	margin-top: 5vh;
 	padding: 40px;
 	background-color: #f5f5f5;
 	border-radius: 10px;
@@ -102,10 +101,10 @@ textarea {
 }
   
 button#enviar[type="submit"] {
-	display: block;
+	/* display: block; */
 	width: 100%;
 	padding: 10px;
-	margin-top: 20px;
+	/* margin-top: 20px; */
 	border: none;
 	background-color: #4CAF50;
 	color: #fff;
@@ -128,12 +127,14 @@ footer {
 	align-items: center;
 	width: 100%;
 	background-image: linear-gradient(to right, #003d55, #015b7f, #0079a9, #e1e8ec);
-	bottom: 0;
+	position: absolute;
+	bottom: 0; 
 	text-align: center;
 	height: 85px;
+	margin-top: 8vh;
   }
   
-  footer a img {
+footer a img {
 	height: 20px;
   }
 footer a{
