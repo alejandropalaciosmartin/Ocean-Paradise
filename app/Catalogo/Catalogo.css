@@ -90,13 +90,11 @@ header div{
     max-width: 80%;
     min-width: 220px;
     margin: 20% 10% 20% 10%;
-    padding: auto;
     margin-top: 100px;
 }
 
 .boton { /*Esto es el boton que hay detras de cada foto del catalogo*/
     max-width: 100%;
-    padding: auto;
     margin: 5% 10% 5% 10%;
     border: solid 0;
     border-radius: 10px; 
