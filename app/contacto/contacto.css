@@ -8,6 +8,9 @@ header{
     border-bottom: solid 1px rgb(31, 171, 171);
     position: fixed;
     width: 100%;
+	top: 0;
+    left: 0;
+    right: 0;
 }
 button{
     all:unset;
@@ -60,14 +63,14 @@ header div{
 
 /*--------------------------------- MAIN ---------------------------------*/
 main{
-	padding:40px;
+	margin-top: 168px;
 }
 #title{
 	text-align: center;
 }
 form {
 	max-width: 600px;
-	margin: 0 auto;
+	margin: 77px auto;
 	padding: 40px;
 	background-color: #f5f5f5;
 	border-radius: 10px;
@@ -114,5 +117,16 @@ button#enviar[type="submit"] {
 button#enviar[type="submit"]:hover {
 	background-color: #3e8e41;
 }
+
+/*--------------------------------- FOOTER ---------------------------------*/
   
-  
+footer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	background-image:linear-gradient(to right, #003d55,#015b7f,#0079a9,#e1e8ec);
+	bottom: 0;
+	text-align: center;
+	height: 85px;
+  } 
