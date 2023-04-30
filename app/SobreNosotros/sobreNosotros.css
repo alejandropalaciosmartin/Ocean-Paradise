@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: aqua;
+    border-bottom: solid 1px rgb(0, 122, 122);
+    position: relative; 
+}
+button{
+    all:unset;
+}
+div ul{
+    display: inline-block;
+    margin: 0;
+	padding: 0;
+	list-style: none;
+    
+}
+ul li {
+    display: inline-block;
+    margin-right: 15px;
+    align-content: center;
+    padding: 10px;
+}
+ul li:hover{
+    border: solid 0.5px;
+}
+#logo{
+    position: absolute;
+	top: 10px;
+	left: 20px;
+	height: 90px;
+}
+#botonCarrito{
+    position: absolute;
+	top: 10px;
+	right: 20px; 
+	height: 30px;
+}
+div{
+    text-align: center;
+}
+
+
+.imagenPrincipal{
+    background-image: URL("..\\..\\Recursos\\Imagen\\imagenPlaceHolder.jpg") ;
+    padding: 300px 0 300px 0;
+}
+.textoSobreNosotros{
+
+}
+.visionGeneral{
+
+}
+.contenedorGrid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.cadaPersona{
+    margin:auto;
+    width: 75%;
+    border:solid 1px;
+}
+.fotoPersona{
+    width: 200px;
+}
+.infoEmpresa{
+    margin-bottom: 60px;
+}
+.infoEmpresa p{
+    width: 70%;
+    margin: auto;
+    padding: 30px 0 30px 0;
+}

@@ -1,3 +1,56 @@
-*{
-    background-color: aqua;
+/*VARIABLES*/
+:root{
+    --gris: #e1e8ec;
+    --ocean: #5cb3c1;
+    --paradise: #99d8dd;
 }
+
+/*TODA LA PÁGINA*/
+*{ 
+    /*Para quitar los márgenes*/
+    margin: 0;
+    padding: 0;
+    text-align: center; /*Alinear en el centro los textos*/
+    font-weight: bold;  /*Poner negrita*/
+}
+
+/*Fuente descargada*/
+@font-face{                                       /*Declaramos para usarla*/
+    font-family: OcenaParadise;                         /*Nombre puesto por nosotros*/
+    src: url("../../recursos/Fuentes/Frosh.ttf"); /*Donde se coge*/
+}
+
+/*CABECERA*/
+header{        
+    background-color: var(--gris); 
+    height: 23vh;                  
+    top: 0;                         
+    /*Texto*/
+    font-family: "OcenaParadise";   
+    font-size: 3vh;   
+    text-shadow: 0.1em 0.1em 0.2em black; /*Sombrear*/
+}
+
+/*Título de la cabecera*/
+#tituloCabecera{
+    /*Centrar / colocar a la izquierda del título*/
+    margin-top: -15vh;
+    margin-left: 2vh;
+    color: var(--ocean);
+} 
+
+#tituloCabecera2{
+    /*Centrar / colocar a la izquierda del título*/
+    margin-top: -4vh;
+    margin-left: 30vh;
+    color: var(--paradise);
+} 
+
+#loguitoOcean{
+    width: 20vh;
+    margin-top: -2vh;
+    margin-left: -15vh;
+    margin-right: 15vh;
+}
+
+
