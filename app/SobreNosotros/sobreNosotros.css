@@ -3,16 +3,17 @@ body{
     padding: 0;
 }
 header{
-    background-image:linear-gradient(to bottom right ,#e1e8ec, #01587a);
+    background-image:linear-gradient(to right ,#e1e8ec,#0079a9,#015b7f, #003d55);
     border-bottom: solid 1px rgb(31, 171, 171);
-    position: relative; 
+    position: fixed;
+    width: 100%;
 }
 button{
     all:unset;
 }
-div ul{
+.ulHeader{
     display: inline-block;
-    margin: 25px 60px 25px 60px;
+    margin: 17px 60px 25px 60px;
 	padding: 0;
 	list-style: none;
     
@@ -23,25 +24,38 @@ div ul{
     align-content: center;
     padding: 10px;
     font-size: large;
+    color: white;
 }
 .ulHeader li:hover{
     text-decoration: underline;
+}
+.ulHeader li:first-child{
+    position: relative;
+    top:10px;
+    padding: 0;
 }
 #logo{
     position: absolute;
 	top: 0;
 	left: 20px;
-	height: 90px;
+	height: 100px;
 }
 #botonCarrito{
     position: absolute;
-	top: 10px;
+	top: 15px;
 	right: 20px; 
 	height: 30px;
+}
+#carrito{
+    width: 52px;
+}
+#casita{
+    width: 35px;
 }
 header div{
     text-align: center;
 }
+
 
 
 
