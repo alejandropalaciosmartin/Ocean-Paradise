@@ -54,11 +54,11 @@ button{/*quita todo estilo del boton y pone el cursor diferente*/
 #casita{/*imagen de la casita*/
     width: 35px;
 }
-div{/*para centrar el contenido de todos los div*/
+div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS DIVS QUE TENGAIS*//*para centrar el contenido de todos los div*/
     text-align: center;
 }
 
-
+/*------------------------------------main-------------------------------*/
 
 .imagenPrincipal{/*el div que contiene el primer texto y pone la foto de fondo*/
     background-image: URL("..\\..\\Recursos\\Imagen\\Casas\\CasaNormal1\\1.jpg") ;
