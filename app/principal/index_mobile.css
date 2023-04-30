@@ -179,8 +179,32 @@ imagen no quede espacio vacío*/
     }
 }
 
-#informacion{
+#informacion{/*div contenedor de cada persona*/
+    margin:auto;
+    width: 120vh;
+    padding-bottom: 5vh;
+    margin-bottom: 5vh;
+    margin-top: 2vh;
+    border-radius: 5vh;
+    box-shadow: 0 0 30px -10px /*#f3ba00*/;
+}
 
+#logo{/*la foto de la persona*/
+    width: 20vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+#titulito{
+    font-size: 5vh;
+    margin-top: -25vh;
+}
+
+.textito{
+    font-size: 3vh;
+    margin-top: 1vh;
+    color: var(--gris);
 }
 
 /*PIE DE PÁGINA*/
