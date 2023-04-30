@@ -3,24 +3,28 @@ body{
     margin: 0;
     padding: 0;
 }
+
 header{
+    z-index: 2;
     background-image:linear-gradient(to right ,#e1e8ec,#0079a9,#015b7f, #003d55);
     border-bottom: solid 1px rgb(31, 171, 171);
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
 }
+
 button{
     all:unset;
 }
+
 .ulHeader{
     display: inline-block;
     margin: 17px 60px 25px 60px;
 	padding: 0;
-	list-style: none;
-    
+	list-style: none;  
 }
+
 .ulHeader li {
     display: inline-block;
     margin-right: 15px;
@@ -29,32 +33,39 @@ button{
     font-size: large;
     color: white;
 }
+
 .ulHeader li:hover{
     text-decoration: underline;
 }
+
 .ulHeader li:first-child{
     position: relative;
     top:10px;
     padding: 0;
 }
+
 #logo{
     position: absolute;
 	top: 0;
 	left: 20px;
 	height: 100px;
 }
+
 #botonCarrito{
     position: absolute;
 	top: 15px;
 	right: 20px; 
 	height: 30px;
 }
+
 #carrito{
     width: 52px;
 }
+
 #casita{
     width: 35px;
 }
+
 header div{
     text-align: center;
 }
@@ -87,9 +98,9 @@ header div{
     height: 300px;
     max-width: 100%;
     padding: auto;
-    margin: 10% 10% 10% 10%;
+    margin: 5% 10% 5% 10%;
     border: solid 0;
-    border-radius: 3%; 
+    border-radius: 10px; 
     box-shadow: 0 4px 8px 0 #01587a, 0 6px 20px 0 #01587a;
     transition: transform 0.2s ease-in-out;
 }
@@ -100,7 +111,7 @@ header div{
     height: 300px;
     max-width: 100%;
     border: solid 0;
-    border-radius: 3%;
+    border-radius: 10px;
 
 }
 
@@ -114,6 +125,7 @@ header div{
 .boton:hover{
     box-shadow: 0 4px 8px 0 #f3ba00, 0 6px 20px 0 #f3ba00;
     transform: scale(1.1);
+    z-index: 1;
 }
 
 .texto{ /* Esto es para el texto de cada casa en el catologo*/
@@ -122,3 +134,5 @@ header div{
     max-width: 100%;
     margin: 20% 5% 5% 10%;    
 }
+
+
