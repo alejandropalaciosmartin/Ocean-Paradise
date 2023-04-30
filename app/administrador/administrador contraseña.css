@@ -1,0 +1,75 @@
+html{
+    height: 100%;
+}
+body{
+    font-size: x-large;
+    
+    background-image:  url(casa.png);
+    background-size:  100%;
+    margin-top: 15%;
+}
+.grid{
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(460px,1fr));
+  margin-bottom: 50px;
+  margin:auto;
+}
+.imagen{
+    margin: auto;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+  margin-left: 450px;
+  height: 300px;    
+    width: 200px;
+
+}
+.divcontra{
+    font-size: x-large;
+    
+    color: #e1e8ec;
+    border: 4px solid black;
+    height: 220px;
+    width: 200px;
+    text-align:center;
+    margin-left: 70px;
+    border-bottom-left-radius: 30px ;
+    border-top-right-radius:30px ;
+    margin-top: 60px;
+    
+
+    display: grid;
+  grid-template-columns: auto;
+  
+  
+  
+  
+ 
+  
+}
+.input{
+    background-color: transparent;
+    border-radius: 10%;
+    color: #e1e8ec;
+}
+.ocean{
+    color: aqua;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    margin-left: 60px;
+    margin-top: -60px;
+}
+.boton{
+    background-color: #e1e8ec;
+    
+    color: #000000;
+    border-radius: 7px;
+    border-bottom-left-radius:25px ;
+    background-image: linear-gradient(to right,#5cb3c1,#e1e8ec);
+    transition: all 1s ease;
+}
+.boton:hover {
+    transition: all 1s ease;
+    background-image: linear-gradient(to right,#e1e8ec,#5cb3c1);
+  color: #fff !important;
+  }
+  

@@ -3,8 +3,8 @@ body{
     padding: 0;
 }
 header{
-    background-color: aqua;
-    border-bottom: solid 1px rgb(0, 122, 122);
+    background-image:linear-gradient(to bottom right ,#e1e8ec, #01587a);
+    border-bottom: solid 1px rgb(31, 171, 171);
     position: relative; 
 }
 button{
@@ -12,23 +12,24 @@ button{
 }
 div ul{
     display: inline-block;
-    margin: 0;
+    margin: 25px 60px 25px 60px;
 	padding: 0;
 	list-style: none;
     
 }
-ul li {
+.ulHeader li {
     display: inline-block;
     margin-right: 15px;
     align-content: center;
     padding: 10px;
+    font-size: large;
 }
-ul li:hover{
-    border: solid 0.5px;
+.ulHeader li:hover{
+    text-decoration: underline;
 }
 #logo{
     position: absolute;
-	top: 10px;
+	top: 0;
 	left: 20px;
 	height: 90px;
 }
@@ -38,9 +39,11 @@ ul li:hover{
 	right: 20px; 
 	height: 30px;
 }
-div{
+header div{
     text-align: center;
 }
+
+
 
 
 .imagenPrincipal{
