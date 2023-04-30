@@ -90,7 +90,7 @@ div{/*para centrar el contenido de todos los div*/
     text-align: left;
     text-shadow: 0 0 20px black;
 }
-.contenedorGrid{/*el contenedor de cada persona*/
+.contenedorGrid{/*el contenedor de todas personas*/
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     margin-top: 80px;
@@ -98,9 +98,11 @@ div{/*para centrar el contenido de todos los div*/
 .cadaPersona{/*div contenedor de cada persona*/
     margin:auto;
     width: 75%;
-    border:solid 1px;
+    border:0;
     padding-bottom: 20px;
     margin-bottom:80px;
+    border-radius: 30px;
+    box-shadow: 0 0 30px -10px /*#f3ba00*/;
 }
 .cadaPersona > p{/*son todos los parrafos de cada persona, es decir nombre, puesto...*/
     width: 80%;
@@ -117,4 +119,5 @@ div{/*para centrar el contenido de todos los div*/
     width: 70%;
     margin: auto;
     padding: 30px 0 30px 0;
+    font-size: 20px;
 }

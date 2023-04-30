@@ -56,8 +56,9 @@ body{
     background-color: var(--gris);
 }
 
+/*BARRA DE NAVEGACIÓN*/
 .barra{
-    background-image:linear-gradient(to right ,#e1e8ec,#0079a9,#015b7f, #003d55);
+    background-image:linear-gradient(to right ,#78cdff,#0079a9,#015b7f, #003d55);
     border-bottom: solid 1px rgb(31, 171, 171);
     position: fixed;
     width: 100%;
@@ -109,36 +110,37 @@ a{
     text-align: center;
 }
 
-/*CARRUSEL*/
+/*CUERPO - CARRUSEL*/
+#carrusel-contenido { /*Ocultar el resto de imágenes y no salga la barra, para evitar desplazar para no verla*/
+    overflow: hidden;
+    text-align: left;
+}
+
 #carrusel-caja { 
     /*Tiempo de tránsito y modo de ejecución*/
-    animation: automatizacion 15s infinite linear; 
+    animation: automatizacion 30s infinite linear; 
              /*automatizacion: Nombre de como se comporta la animación, abajo se especifica -> @keyframes
-                              15s: Tiempo de ejecución por secuencia
+                              30s: Tiempo de ejecución por secuencia
                                    infinite: Nunca termina
                                            linear: misma velocidad de principio a fin*/
     transition: all 5s ease; 
               /*all: en todas las diapositivas
                     5s: Tiempo de transición
                      ease: comienzo lento, luego rápido*/
-    height: 66vh;
     width: 300%;
 }
-/*Ocultar el resto de imágenes y no salga la barra, para evitar desplazar para no verla*/
-#carrusel-contenido {
-    overflow: hidden;
-    text-align: left;
-}
-/*Misma dimensiones para todas*/
-.imagenes{
-    height: 66vh;
-    width: 100%;
-}
+
 /*Div de la imagen esté a la izquierda y ocupe una 3º parte de todo, de ese modo nunca hay espacio cuando en la transición de la siguiente 
 imagen no quede espacio vacío*/
 .carrusel-elemento {
     float: left;
     width: 33.333%;
+}
+
+/*Misma dimensiones para todas*/
+.imagenes{
+    height: 70vh;
+    width: 100%;
 }
 
 /*Trasición de izquierda a derecha y vuelta atrás*/
@@ -175,4 +177,16 @@ imagen no quede espacio vacío*/
     100% {
         margin-left: 0;
     }
+}
+
+/*PIE DE PÁGINA*/
+footer{
+    /*Centrar Título*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image:linear-gradient(to right ,#78cdff,#0079a9,#015b7f, #003d55);
+    height: 8vh;
+    color: var(--blanco);
+    margin-top: -1vh; /*Para que se pegue al carrusel*/
 }
