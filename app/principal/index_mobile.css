@@ -35,14 +35,13 @@ header{
 #tituloCabecera{
     /*Centrar / colocar a la izquierda del título*/
     margin-top: -15vh;
-    margin-left: 2vh;
     color: var(--ocean);
 } 
 
 #tituloCabecera2{
     /*Centrar / colocar a la izquierda del título*/
     margin-top: -4vh;
-    margin-left: 30vh;
+    margin-left: 28vh;
     color: var(--paradise);
 } 
 
@@ -57,16 +56,19 @@ body{
     background-color: var(--gris);
 }
 
+
+
 /*CARRUSEL*/
-#carrusel-caja { /*Tiempo / Tamaño*/
-    animation: automatizacion 15s infinite linear;
-    transition: all 1s ease;
+#carrusel-caja { 
+    /*Tiempo / Tamaño*/
+    animation: automatizacion 15s infinite linear; /*Tiempo de transisy modo de ejecución*/
+    transition: all 1s ease; /**/
     height: 66vh;
     width: 300%;
 }
 #carrusel-contenido {
-    margin-left: 10vh;
-    margin-right: 10vh;
+    /* margin-left: 10vh;
+    margin-right: 10vh; */
     overflow: hidden;
     text-align: left;
 }
@@ -78,7 +80,8 @@ body{
     float: left;
     width: 33.333%;
 }
-@-moz-keyframes automatizacion {
+/*Se repite 3 veces porque son tres imágenes*/
+@keyframes automatizacion {
     0% {
         margin-left: 0;
     }
@@ -101,7 +104,30 @@ body{
         margin-left: 0;
     }
 }
-@-webkit-keyframes automatizacion {
+@keyframes automatizacion {
+    0% {
+        margin-left: 0;
+    }
+    30% {
+        margin-left: 0;
+    }
+    35% {
+        margin-left: -100%;
+    }
+    65% {
+        margin-left: -100%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    95% {
+        margin-left: -200%;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+@keyframes automatizacion {
     0% {
         margin-left: 0;
     }

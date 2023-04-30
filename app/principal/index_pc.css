@@ -5,18 +5,14 @@ header{
 #tituloCabecera{
     margin-top: -20vh;
     margin-left: 2vh;
-    color: var(--ocean);
 } 
 
 #tituloCabecera2{
     margin-top: -4vh;
     margin-left: 40vh;
-    color: var(--paradise);
 } 
 
-#loguitoOcean{
-    width: 20vh;
-    margin-top: -2vh;
-    margin-left: -15vh;
-    margin-right: 15vh;
+#carrusel-contenido {
+    margin-left: 10vh;
+    margin-right: 10vh;
 }

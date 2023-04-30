@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./app/principal/index_mobile.css">
     <link rel="stylesheet" media="(min-width: 720px)" href="./app/principal/index_pc.css">
     <link rel="icon" type="image/x-icon" href="./recursos/imagen/logo.png">
-    <script src="https://kit.fontawesome.com/e0f3b21040.js"crossorigin="anonymous"></script>
     <title>Ocean Paradise</title>
 </head>
 <body>
@@ -16,15 +15,28 @@
         <h1 id="tituloCabecera">Ocean</h1>
         <h1 id="tituloCabecera2">Paradise</h1>
     </header>
-    <nav>
-        <ul>
-            <li>Catálogo</li>
-            <li>Sobre nosotros</li>
-            <li>Contacto</li>
-            <li>Adminsitrador</li>
-            <li><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></li>
-        </ul>
-    </nav>
+    <header>
+        <div>
+            <ul class="ulHeader">
+                <li>
+                    <button id="botonPrincipal" onclick=""><img id="casita" src="..\..\Recursos\Imagen\casaBlanca.png"></button>
+                </li>
+                <li>
+                    <button id="botonCatalogo" onclick="">CATÁLOGO</button>
+                </li>
+                <li>
+                    <button id="botonEquipo" onclick="">SOBRE NOSOTROS</button>
+                </li>
+                <li>
+                    <button id="botonContacto" onclick="">CONTACTO</button>
+                </li>
+                <li>
+                    <button id="botonAdmin" onclick="">ADMINISTRADOR</button>
+                </li>
+            </ul>
+            <button id="botonCarrito" onclick=""><img id="carrito" src="..\..\Recursos\Imagen\CarroBlanco.png"></button>
+        </div>
+    </header>
     <div id="carrusel-contenido">
         <div id="carrusel-caja">
             <div class="carrusel-elemento">
