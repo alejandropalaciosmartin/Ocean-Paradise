@@ -95,7 +95,6 @@ header div{
 }
 
 .boton { /*Esto es el boton que hay detras de cada foto del catalogo*/
-    height: 300px;
     max-width: 100%;
     padding: auto;
     margin: 5% 10% 5% 10%;
@@ -107,8 +106,7 @@ header div{
 
 .contenedorFotosYTexto{ /*Esto es para la imagen el bonton y el texto*/
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    height: 300px;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
     max-width: 100%;
     border: solid 0;
     border-radius: 10px;
@@ -116,8 +114,7 @@ header div{
 }
 
 .estiloFotos{ /*Esto es cada div que engloba cada foto del catalogo*/
-    height: 200px;
-    max-width: 100%;
+    width: 90%;
     background-color: #e1e8ec;
     margin: 5% 5% 5% 5%;
 }
