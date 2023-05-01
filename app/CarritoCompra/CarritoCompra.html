@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CarritoCompra.css">
+    <link rel="stylesheet" media="(min-width: 720px)" href="CarritoCompra.css">
+    <title>Carrito de la Compra</title>
+</head>
+<body>
+    <header>
+        <div>
+            <button id="botonLogo" onclick=""><img id="logo" src="..\..\Recursos\Imagen\logo.png"></button>
+            <ul class="ulHeader">
+                <li>
+                    <button id="botonPrincipal" onclick=""><img id="casita" src="..\..\Recursos\Imagen\casaBlanca.png"></button>
+                </li>
+                <li>
+                    <button id="botonCatalogo" onclick="">CATÁLOGO</button>
+                </li>
+                <li>
+                    <button id="botonEquipo" onclick="">SOBRE NOSOTROS</button>
+                </li>
+                <li>
+                    <button id="botonContacto" onclick="">CONTACTO</button>
+                </li>
+                <li>
+                    <button id="botonAdmin" onclick="">ADMINISTRADOR</button>
+                </li>
+            
+            </ul>
+            <button id="botonCarrito" onclick=""><img id="carrito" src="..\..\Recursos\Imagen\CarroBlanco.png"></button>
+        </div>
+    </header>
+
+    <main>
+        <div class="carrito">
+            <h2>Carrito de compras</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Imagen</th>
+                  <th>Producto</th>
+                  <th>Cantidad</th>
+                  <th>Precio</th>
+                  <th>Subtotal</th>
+                </tr>
+              </thead>
+              <tbody><!-- LUEGO EN EL JS HABRA QUE PONER ID EN TBODY Y POR CADA PRODUCTO AÑADIR UN TR CON CADA TD CORRESPONDIENTE -->
+                <tr>
+                  <td><img src="..\..\recursos\imagen\imagenPlaceHolder.jpg"></td>
+                  <td>Nombre Producto</td>
+                  <td>
+                    <div class="contador">
+                        <button class="boton-mas">+</button>
+                        <input id="cantidad" class="numero" min="1" value="1">
+                        <button class="boton-menos">-</button>
+                    </div>
+                  </td>
+                  <td>10.000.000€</td>
+                  <td>10.000.000€</td>
+                </tr>
+                <tr>
+                  <td><img src="..\..\recursos\imagen\imagenPlaceHolder.jpg"></td>
+                  <td>Nombre Producto</td>
+                  <td>
+                    <div class="contador">
+                        <button class="boton-mas">+</button>
+                        <input id="cantidad" class="numero" min="1" value="1">
+                        <button class="boton-menos">-</button>
+                    </div>
+                  </td>
+                  <td>200.000€</td>
+                  <td>200.000€</td>
+                </tr>
+                <tr>
+                  <td><img src="..\..\recursos\imagen\imagenPlaceHolder.jpg"></td>
+                  <td>Nombre Producto</td>
+                  <td><div class="contador">
+                    <button class="boton-mas">+</button>
+                    <input id="cantidad" class="numero" min="1" value="1">
+                    <button class="boton-menos">-</button>
+                </div></td>
+                  <td>30.000€</td>
+                  <td>30.000€</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="4">Total:</td>
+                  <td>10.230.000€</td>
+                </tr>
+              </tfoot>
+            </table>
+            <button class="botonRealizarCompra">Realizar Comprar</button>
+          </div>
+    </main>
+    <footer>
+        <p>
+          &copy; <div id="copy"><b>2023</b></div>
+          <a href="https://github.com/alejandropalaciosmartin" target="_blank">
+            <img src="..\..\Recursos\Imagen\github.png">
+            <b>Alex</b>
+          </a>
+          <a href="https://github.com/Veronicatorogomez" target="_blank">
+            <img src="..\..\Recursos\Imagen\github.png">
+            <b>Verónica</b>
+          </a>
+          <a href="https://github.com/OliverWalters" target="_blank">
+            <img src="..\..\Recursos\Imagen\github.png">
+            <b>Oliver</b>
+          </a>
+          <a href="https://github.com/Albertsak" target="_blank">
+            <img src="..\..\Recursos\Imagen\github.png">
+            <b>Alberto</b>
+          </a>
+          <a href="https://github.com/AdrianLozanoMartinez" target="_blank">
+            <img src="..\..\Recursos\Imagen\github.png">
+            <b>Adrián</b>
+          </a>
+        </p>
+      </footer>
+</body>
+</html>

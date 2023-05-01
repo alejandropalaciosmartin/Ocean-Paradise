@@ -1,16 +1,89 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="icon" type="image/x-icon" href="..\..\recursos\imagen\logo.png">
+        <link id="css" rel="stylesheet" href="Producto.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <header>
-
+            <div>
+                <button id="botonLogo" onclick=""><img id="logo" src="..\..\Recursos\Imagen\logo.png"></button>
+                <ul class="ulHeader">
+                    <li>
+                        <button id="botonPrincipal" onclick=""><img id="casita" src="..\..\Recursos\Imagen\casaBlanca.png"></button>
+                    </li>
+                    <li>
+                        <button id="botonCatalogo" onclick="">CATÁLOGO</button>
+                    </li>
+                    <li>
+                        <button id="botonEquipo" onclick="">SOBRE NOSOTROS</button>
+                    </li>
+                    <li>
+                        <button id="botonContacto" onclick="">CONTACTO</button>
+                    </li>
+                    <li>
+                        <button id="botonAdmin" onclick="">ADMINISTRADOR</button>
+                    </li>
+                
+                </ul>
+                <button id="botonCarrito" onclick=""><img id="carrito" src="..\..\Recursos\Imagen\CarroBlanco.png"></button>
+            </div>
         </header>
         <main>
-
+            <div class="imagenYTextoYContenedor">
+                <div class="contenedorImagenes">    
+                    <button id="botonImagen1" onclick="" class="botonImagen"><img src="..\..\Recursos\Imagen\imagenPlaceHolder.jpg" class="imagenes"></button>
+                    <button id="botonImagen2" onclick="" class="botonImagen"><img src="..\..\Recursos\Imagen\imagenPlaceHolder.jpg" class="imagenes"></button>
+                    <button id="botonImagen3" onclick="" class="botonImagen"><img src="..\..\Recursos\Imagen\imagenPlaceHolder.jpg" class="imagenes"></button>
+                    <button id="botonImagen4" onclick="" class="botonImagen"><img src="..\..\Recursos\Imagen\imagenPlaceHolder.jpg" class="imagenes"></button>
+                    <button id="botonImagen5" onclick="" class="botonImagen"><img src="..\..\Recursos\Imagen\imagenPlaceHolder.jpg" class="imagenes"></button>
+                </div>
+                <div><!--Esto es para que el grid de la pagina no se me joda!!!!!!!--></div>
+                <div >
+                    <img src="..\..\Recursos\imagen\Casas\CasaIsla1\1.jpg" alt="imagen" class="imagen">
+                </div>
+                <div class="texto">
+                    <p>Nombre</p>
+                    <p>precio</p>
+                    <p>Descrición: ¡Bienvenidos a esta hermosa casa isla rústica! Esta propiedad es una oportunidad única para aquellos que buscan la tranquilidad y la conexión con la naturaleza. Ubicada en una isla, esta casa ofrece un ambiente tranquilo y relajado, alejado del bullicio de la ciudad.<br>La casa isla rústica tiene una construcción de alta calidad y ha sido diseñada para complementar su entorno natural. Con una superficie de 390 metros cuadrados, la casa cuenta con amplios espacios abiertos que permiten disfrutar de la belleza natural que rodea la propiedad.<br>En resumen, esta casa isla rústica es el lugar perfecto para aquellos que buscan un estilo de vida tranquilo y relajado en un entorno natural. Si está buscando una propiedad única y exclusiva, no dude en contactarnos para programar una visita y conocer más acerca de esta increíble propiedad.</p>
+                    
+                </div>
+                <div class="cantidadSeleccionarYComprar">
+                    <div class="contador">
+                        <button class="boton-mas">+</button>
+                        <input id="cantidad" class="numero" value="0">
+                        <button class="boton-menos">-</button>
+                    </div>
+                    <button id="botonAñadirCarrito">Añadir al carrito </button>
+                    <button id="botonRealizarCompra">Realizar compra </button>
+                </div>
+            </div>
         </main>
         <footer>
-            
-        </footer>
+            <p>
+              &copy; <div id="copy"><b>2023</b></div>
+              <a href="https://github.com/alejandropalaciosmartin" target="_blank">
+                <img src="..\..\Recursos\Imagen\github.png">
+                <b>Alex</b>
+              </a>
+              <a href="https://github.com/Veronicatorogomez" target="_blank">
+                <img src="..\..\Recursos\Imagen\github.png">
+                <b>Verónica</b>
+              </a>
+              <a href="https://github.com/OliverWalters" target="_blank">
+                <img src="..\..\Recursos\Imagen\github.png">
+                <b>Oliver</b>
+              </a>
+              <a href="https://github.com/Albertsak" target="_blank">
+                <img src="..\..\Recursos\Imagen\github.png">
+                <b>Alberto</b>
+              </a>
+              <a href="https://github.com/AdrianLozanoMartinez" target="_blank">
+                <img src="..\..\Recursos\Imagen\github.png">
+                <b>Adrián</b>
+              </a>
+            </p>
+          </footer>
     </body>
 </html>
