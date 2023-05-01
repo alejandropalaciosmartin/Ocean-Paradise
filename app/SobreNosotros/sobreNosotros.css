@@ -133,7 +133,7 @@ div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS 
 }
   /*--------------------------------- footer ---------------------------------*/
   
-  footer {
+  footer {/*estilo barra inferior*/
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -145,12 +145,12 @@ div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS 
 	height: 85px;
 }
 
-footer a img {
+footer a img {/*tamaño de las imagenes en los enlaces*/
 	height: 20px;
 	margin-right: 5px;
 }
 
-footer a{
+footer a{/*estilo de los enlaces*/
 	text-decoration: none;
 	color: #ffffff;
 	margin-right: 40px;
@@ -159,38 +159,33 @@ footer a{
 	font-size: 20px;
 }  
 
-#copy{
+#copy{/*texto copyright*/
 	margin-right: 20px;
 }
 
-footer a:hover{
+footer a:hover{/*subraya cuando te pones encima*/
 	text-decoration: underline;
 }
-@media (max-width:615px) {
+@media (max-width:615px) {/*PARA ARREGLAR EL RESPONSIVO DEL FOOTER*/
     footer a img {
         height: 15px;
     }
-    
     footer a{
-        text-decoration: none;
-        color: #ffffff;
         margin-right: 18px;
-        display: flex;
-        align-items: center;
         font-size: 15px;
     }  
 }
 /*--------------------barra lateral------------------*/
-::-webkit-scrollbar {
+::-webkit-scrollbar {/*define tamaño de la barra para subir y bajar*/
     width: 10px;
     height: 5px;
   }
   
-  ::-webkit-scrollbar-thumb {
+  ::-webkit-scrollbar-thumb {/*estilo de lo que mueves de la barra*/
     background-color:#f3ba00;
     border-radius: 5px;
   }
   
-  ::-webkit-scrollbar-track {
+  ::-webkit-scrollbar-track {/*estilo del fondo de la barra*/
     background-image: linear-gradient(to bottom, #003d55, #015b7f, #0079a9, #e1e8ec);
   }
