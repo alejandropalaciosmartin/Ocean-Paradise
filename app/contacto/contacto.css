@@ -115,6 +115,41 @@ button#enviar[type="submit"]:hover {
 	background-color: #3e8e41;
 }
 
+.container {
+	position: relative;
+  }
+  
+.telefono {
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	position: absolute;
+	width: 250px;
+	height: 35px;
+	border-style: groove;
+	border-color: #5cb3d1;
+	border-radius: 10px;
+	top: 100px;
+	left: 50px;
+	background-color: #01587a;
+	color: #fff;
+}
+  
+.ubicacion {
+	justify-content: center;
+	display: flex;
+	position: absolute;
+	width: 250px;
+	height: 300px;
+	border-style: groove;
+	border-color: #5cb3d1;
+	border-radius: 10px;
+	top: 150px;
+	left: 50px;
+	background-color: #01587a;
+	color: #fff;
+}
+
 /*--------------------------------- FOOTER ---------------------------------*/
   
 footer {
