@@ -33,10 +33,6 @@ header{
     margin-top: -25vh;
 }
 
-#container{
-    grid-template-columns: repeat(2, 1fr);
-}
-
 #colaboradores, #colaboradores2{
     width: 75vh;
 }
