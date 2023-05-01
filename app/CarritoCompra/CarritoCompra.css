@@ -199,3 +199,18 @@ footer a{
 footer a:hover{
 	text-decoration: underline;
 }
+
+/*--------------------barra lateral------------------*/
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color:#f3ba00;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-image: linear-gradient(to bottom, #003d55, #015b7f, #0079a9, #e1e8ec);
+  }
