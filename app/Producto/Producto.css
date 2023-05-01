@@ -254,6 +254,21 @@ footer a:hover{
 	text-decoration: underline;
 }
 
+@media (max-width:615px) {
+    footer a img {
+        height: 15px;
+    }
+    
+    footer a{
+        text-decoration: none;
+        color: #ffffff;
+        margin-right: 18px;
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+    }  
+}
+
 /*--------------------barra lateral------------------*/
 ::-webkit-scrollbar {
     width: 10px;

@@ -72,7 +72,7 @@ div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS 
 @media (max-width: 1225px) { /*HAY QUE ARREGLAR. para cuando achique la pantalla no se vea tan mal*/
     .imagenPrincipal {
         background-position-y: -190px;
-        background-size: 1300px;
+        background-size: 1355px;
         background-position-x: -140px;
     }
 }
@@ -165,6 +165,20 @@ footer a{
 
 footer a:hover{
 	text-decoration: underline;
+}
+@media (max-width:615px) {
+    footer a img {
+        height: 15px;
+    }
+    
+    footer a{
+        text-decoration: none;
+        color: #ffffff;
+        margin-right: 18px;
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+    }  
 }
 /*--------------------barra lateral------------------*/
 ::-webkit-scrollbar {
