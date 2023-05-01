@@ -112,7 +112,7 @@ div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS 
     padding-bottom: 20px;
     margin-bottom:80px;
     border-radius: 30px;
-    box-shadow: 0 0 30px -10px /*#f3ba00*/;
+    box-shadow: 0 4px 8px 0 #99d8dd, 0 6px 20px 0 #99d8dd;
 }
 .cadaPersona > p{/*son todos los parrafos de cada persona, es decir nombre, puesto...*/
     width: 80%;

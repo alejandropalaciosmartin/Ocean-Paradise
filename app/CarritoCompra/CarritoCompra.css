@@ -70,7 +70,7 @@ div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS 
     border-radius: 10px;
     box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.2);
   }
-  
+
   .carrito h2 {
     font-size: xx-large;
     margin-bottom: 50px;
@@ -123,7 +123,8 @@ div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS 
     max-height: 250px;
     vertical-align: middle;
   }
-
+  
+    
 
 /*CSS CANTIDAD PRODUCTOS*/
   .contador {
@@ -163,6 +164,22 @@ div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS 
     background-color: #aaa;
   }
 
+  @media (max-width:830px) {
+    .carrito {
+      font-size:medium;
+      padding: 3%;
+    }
+    .carrito img {
+      max-width: 90px;
+      max-height: 90px;
+    }
+    .carrito input {
+      width: 20px;
+    }
+    .contador {
+      width: 70px;
+    }
+  }
 
   /*--------------------------------- footer ---------------------------------*/
   
