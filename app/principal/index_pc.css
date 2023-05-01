@@ -12,6 +12,18 @@ header{
     margin-left: 40vh;
 } 
 
+.barra{
+    height: 10vh;
+}
+.ulBarra li {
+    padding: 10px;
+}
+
+.imagenes{
+    height: 65vh;
+    width: 100%;
+}
+
 #informacion{
     width: 120vh;
 }
@@ -25,8 +37,8 @@ header{
     grid-template-columns: repeat(2, 1fr);
 }
 
-#colaboradores{
-    width: 95vh;
+#colaboradores, #colaboradores2{
+    width: 75vh;
 }
 
 #minions{
@@ -40,20 +52,38 @@ header{
     margin-left: 40vh;
 }
 
+.textito{
+    margin-left: 0;
+}
+
 .textito2{
     margin-top: 4vh;
-    margin-left: -1vh;
+    margin-left: 22vh;
 }
 
 #monos{
-    margin-left: -70vh;
+    margin-left: -50vh;
     margin-top: 5vh;
 }
 
 #titulito3{
     font-size: 3vh;
     margin-top: -22vh;
+    margin-left: 5vh;
 }
+
+#minions{
+    width: 30vh;
+    margin-left: -25vh;
+    margin-top: 10vh;
+}
+
+#titulito2{
+    font-size: 3vh;
+    margin-left: 1vh;
+    margin-top: -23vh;
+}
+
 footer a{
 	font-size: 20px;
     margin-right: 40px;
