@@ -102,7 +102,7 @@ div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS 
 }
 .contenedorGrid{/*el contenedor de todas personas*/
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     margin-top: 120px;
 }
 .cadaPersona{/*div contenedor de cada persona*/
