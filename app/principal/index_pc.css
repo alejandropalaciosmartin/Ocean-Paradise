@@ -25,12 +25,12 @@ header{
 }
 
 #informacion, #colaboradores, #colaboradores2{
-    width: 60%;
+    width: 90%;
     height: 70%;
 }
 
 #titulito{
-    font-size: 5vh;
+    font-size: 200%;
     margin-top: -25vh;
 }
 
