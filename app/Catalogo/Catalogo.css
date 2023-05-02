@@ -14,7 +14,7 @@ header{
     width: 100%;
 }
 
-button{
+header button{
     all:unset;
 }
 
@@ -71,6 +71,22 @@ header div{
 }
 
 /*CSS DEL MAIN :*/
+.cuadradBuscador{ /*El div que engloba el buscador*/
+    margin: 40px 10% 15px 10%;
+    
+
+}
+ 
+#buscador{/*El buscador en si */
+    text-align: left;
+    margin-top: 40px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 0;
+    box-shadow: 0 4px 8px 0 #01587a, 0 6px 20px 0 #01587a;
+    
+}
+
 .principal{
     background-image:linear-gradient(to right bottom ,#e1e8ec,#0079a9,#015b7f, #003d55,#015b7f,#0079a9,#e1e8ec);
 }
@@ -89,8 +105,8 @@ header div{
     background-color: #e1e8ec;
     max-width: 80%;
     min-width: 220px;
-    margin: 20% 10% 20% 10%;
-    margin-top: 100px;
+    margin: 40px 10% 5% 10%;
+    
 }
 
 .boton { /*Esto es el boton que hay detras de cada foto del catalogo*/

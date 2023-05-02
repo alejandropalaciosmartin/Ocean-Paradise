@@ -75,7 +75,7 @@ header div{
 
 /*CSS DEL MAIN*/
 
-.imagenYTextoYContenedor{
+.imagenYTextoYContenedor{ /*Esto es un contenedor de la imagen el texto y todo en general*/
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(430px,1fr));
     padding: 20px;
@@ -85,7 +85,7 @@ header div{
    
 }
 
-.imagen{
+.imagen{ /*Css de la imagen en si*/
     width: 120%;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -94,7 +94,7 @@ header div{
     
 }
 
-.texto{
+.texto{ /*Css del texto en si*/
     text-align: left;
     height: 345px;
     width: 90%;
@@ -104,55 +104,55 @@ header div{
 }
 
 
-.texto p{
+.texto p{ /*Css del parrafo que sale dentro del texto*/
     margin-left: 20px;
     margin-right: 20px;
 }
 
-.contenedorImagenes{
+.contenedorImagenes{ /*contenedor de imagenes pequeñitas*/
     display: grid;
     grid-template-columns: repeat(5,1fr);
     max-width: 100%;
 }
 
-.imagenes{
+.imagenes{ /*Css de las imagenes pequeñitas en si*/
     width: 100%;
     
 }
 
-.botonImagen{
+.botonImagen{ /*Boton de cuando clickas en una imagen pequeñita*/
     margin-left: 20px;
     box-shadow: 0 4px 8px 0 #01587a, 0 6px 20px 0 #01587a;
     transition: transform 0.2s ease-in-out;
     border: 0;
 }
 
-.botonImagen:hover{
+.botonImagen:hover{/*Boton de cuando pasas por encima en una imagen pequeñita*/
     box-shadow: 0 4px 8px 0 #f3ba00, 0 6px 20px 0 #f3ba00;
     transform: scale(1.1);
     z-index: 1;
 }
 
 
-@media (max-width :1025px) {
+@media (max-width :1025px) { /*Cambios responsivos de la imagen para que cambie de tamaño al hacerlo pequeño*/
     .imagen{
     width: 100%;
 }
-.texto{
+.texto{ /*Cambios responsivos del texto para que cambie de tamaño al hacerlo pequeño*/
     width: auto;
     margin: 10% auto 0 10px;
     margin-bottom: 50px;
 }
 }
 
-.cantidadSeleccionarYComprar{
+.cantidadSeleccionarYComprar{ /*Contenedor del boton de aumentar cantidad,seleccionar carrito y comprar*/
     display: grid;
     grid-template-columns: repeat(3,1fr);
     margin-bottom: 10%;
 
 }
 
-.contador {
+.contador { /*Css del contdor de seleccionar cantidad*/
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -167,7 +167,7 @@ header div{
     transition: transform 0.2s ease-in-out;
   }
   
-  .numero {
+  .numero { /*numeritos del contador*/
     font-size: 24px;
     font-weight: bold;
     width: 40px;
@@ -176,7 +176,7 @@ header div{
   }
   
   .boton-mas,
-  .boton-menos {
+  .boton-menos { /*Botones de mas y menos*/
     font-size: 24px;
     font-weight: bold;
     width: 30px;
@@ -188,32 +188,32 @@ header div{
   }
   
   .boton-mas:hover,
-  .boton-menos:hover {
+  .boton-menos:hover { /*Lo que pasa cuando pasas el raton por encima del boton*/
     background-color: #aaa;
     
   }
 
-  #botonAñadirCarrito{
+  #botonAñadirCarrito{ /*Boton especifico de añadir al carrito*/
     margin: 0 10px 0 0;
     border: solid 0;
     border-radius: 10px; 
     box-shadow: 0 4px 8px 0 #01587a, 0 6px 20px 0 #01587a;
     transition: transform 0.2s ease-in-out;
   }
-  #botonAñadirCarrito:hover{
+  #botonAñadirCarrito:hover{/*Lo que pasa cuando pasas el raton por encim del boton del añadir a carrito*/
     box-shadow: 0 4px 8px 0 #f3ba00, 0 6px 20px 0 #f3ba00;
     transform: scale(1.1);
     z-index: 1;
 }
 
-  #botonRealizarCompra{
+  #botonRealizarCompra{/*Boton de realiar compra*/
     margin: 0 10px 0 10px;
     border: solid 0;
     border-radius: 10px; 
     box-shadow: 0 4px 8px 0 #01587a, 0 6px 20px 0 #01587a;
     transition: transform 0.2s ease-in-out;
   }
-  #botonRealizarCompra:hover{
+  #botonRealizarCompra:hover{/*Lo que pasa cuando pasas el raton por encima del boton realizar compra*/
     box-shadow: 0 4px 8px 0 #f3ba00, 0 6px 20px 0 #f3ba00;
     transform: scale(1.1);
     z-index: 1;
