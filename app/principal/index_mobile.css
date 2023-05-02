@@ -146,7 +146,7 @@ imagen no quede espacio vacío*/
 /*Misma dimensiones para todas*/
 .imagenes{
     height: 55vh;
-    width: 60vh;
+    width: 100%;
 }
 
 /*Trasición de izquierda a derecha y vuelta atrás*/
