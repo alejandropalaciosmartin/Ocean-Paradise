@@ -24,17 +24,14 @@ header{
     width: 100%;
 }
 
-#informacion{
-    width: 120vh;
+#informacion, #colaboradores, #colaboradores2{
+    width: 60%;
+    height: 70%;
 }
 
 #titulito{
     font-size: 5vh;
     margin-top: -25vh;
-}
-
-#colaboradores, #colaboradores2{
-    width: 75vh;
 }
 
 #minions{

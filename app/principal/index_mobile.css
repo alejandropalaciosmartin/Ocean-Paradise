@@ -190,8 +190,9 @@ imagen no quede espacio vacío*/
     margin-top: 2vh;
 }
 
-#informacion{
-    width: 50vh;
+#colaboradores, #colaboradores2, #informacion{
+    width: 90%;
+    height: 70%;
 }
 
 #logo{
@@ -231,11 +232,6 @@ imagen no quede espacio vacío*/
     margin-bottom: 5vh;
     border-radius: 5vh;
     box-shadow: 0 0 30px -10px /*#f3ba00*/;
-}
-
-#colaboradores, #colaboradores2{
-    width: 50vh;
-    height: 25vh;
 }
 
 #minions{
