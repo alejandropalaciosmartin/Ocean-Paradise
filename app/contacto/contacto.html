@@ -1,78 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mi página</title>
     <link rel="stylesheet" type="text/css" href="contacto.css">
-    <title>Document</title>
 </head>
 <body>
-      <header>
-        <div>
+	<header>
+		<div>
             <button id="botonLogo" onclick=""><img id="logo" src="..\..\Recursos\Imagen\logo.png"></button>
             <ul class="ulHeader">
-                <li>
-                    <button id="botonPrincipal" onclick=""><img id="casita" src="..\..\Recursos\Imagen\casaBlanca.png"></button>
-                </li>
-                <li>
-                    <button id="botonCatalogo" onclick="">CATÁLOGO</button>
-                </li>
-                <li>
-                    <button id="botonEquipo" onclick="">SOBRE NOSOTROS</button>
-                </li>
-                <li>
-                    <button id="botonContacto" onclick="">CONTACTO</button>
-                </li>
-                <li>
-                    <button id="botonAdmin" onclick="">ADMINISTRADOR</button>
-                </li>
-            
+                <li><button id="botonPrincipal" onclick=""><img id="casita" src="..\..\Recursos\Imagen\casaBlanca.png"></button></li>
+                <li><button id="botonCatalogo" onclick="">CATÁLOGO</button></li>
+                <li><button id="botonEquipo" onclick="">SOBRE NOSOTROS</button></li>
+                <li><button id="botonContacto" onclick="">CONTACTO</button></li>
+                <li><button id="botonAdmin" onclick="">ADMINISTRADOR</button></li>
             </ul>
             <button id="botonCarrito" onclick=""><img id="carrito" src="..\..\Recursos\Imagen\CarroBlanco.png"></button>
         </div>
-    </header>
-    <div class="container">
-      <p class="telefono"><b>Teléfono Contacto: 999999999</b></p>
-      <p class="ubicacion"><b>Ubicación de la empresa:</b></p>
-    </div>
-    
-    <form id="formulario" >
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <label for="asunto">Asunto:</label>
-        <input type="text" id="asunto" name="asunto">
-        <label for="contenidoMensaje">Mensaje:</label>
-        <textarea id="contenidoMensaje" name="contenidoMensaje" required></textarea>
-        <button id="enviar" type="submit"><b>ENVIAR</b></button>
-    </form>
-
-    <footer>
-      <p>
-        &copy; <div id="copy"><b>2023</b></div>
-        <a href="https://github.com/alejandropalaciosmartin" target="_blank">
-          <img src="..\..\Recursos\Imagen\github.png">
-          <b>Alex</b>
-        </a>
-        <a href="https://github.com/Veronicatorogomez" target="_blank">
-          <img src="..\..\Recursos\Imagen\github.png">
-          <b>Verónica</b>
-        </a>
-        <a href="https://github.com/OliverWalters" target="_blank">
-          <img src="..\..\Recursos\Imagen\github.png">
-          <b>Oliver</b>
-        </a>
-        <a href="https://github.com/Albertsak" target="_blank">
-          <img src="..\..\Recursos\Imagen\github.png">
-          <b>Alberto</b>
-        </a>
-        <a href="https://github.com/AdrianLozanoMartinez" target="_blank">
-          <img src="..\..\Recursos\Imagen\github.png">
-          <b>Adrián</b>
-        </a>
-      </p>
-    </footer>
-  
-    <script src="contacto.js"></script>
+	</header>
+	<main>
+		<div class="container">
+            <p class="telefono"><b>Teléfono Contacto: 999999999</b></p>
+            <p class="ubicacion"><b>Ubicación de la empresa:</b></p>
+          </div>
+          
+          <form id="formulario" >
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+              <label for="asunto">Asunto:</label>
+              <input type="text" id="asunto" name="asunto">
+              <label for="contenidoMensaje">Mensaje:</label>
+              <textarea id="contenidoMensaje" name="contenidoMensaje" required></textarea>
+              <button id="enviar" type="submit"><b>ENVIAR</b></button>
+          </form>
+	</main>
+	<footer>
+		<p>
+            &copy; <div id="copy"><b>2023</b></div>
+            <a href="https://github.com/alejandropalaciosmartin" target="_blank">
+              <img src="..\..\Recursos\Imagen\github.png">
+              <b>Alex</b>
+            </a>
+            <a href="https://github.com/Veronicatorogomez" target="_blank">
+              <img src="..\..\Recursos\Imagen\github.png">
+              <b>Verónica</b>
+            </a>
+            <a href="https://github.com/OliverWalters" target="_blank">
+              <img src="..\..\Recursos\Imagen\github.png">
+              <b>Oliver</b>
+            </a>
+            <a href="https://github.com/Albertsak" target="_blank">
+              <img src="..\..\Recursos\Imagen\github.png">
+              <b>Alberto</b>
+            </a>
+            <a href="https://github.com/AdrianLozanoMartinez" target="_blank">
+              <img src="..\..\Recursos\Imagen\github.png">
+              <b>Adrián</b>
+            </a>
+          </p>
+	</footer>
 </body>
 </html>
