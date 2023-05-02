@@ -1,33 +1,29 @@
 /*--------------------------------- HEADER ---------------------------------*/
 
-*{
+body{/*se baja el padding y margen para no tener huecos entre la barra y y el principio de la pagina*/
     margin: 0;
     padding: 0;
+    background-color:#e1e8ec ;
 }
-body{
-	background-color: 	#99d8dd;
-}
-header{
+header{/*color y posicion fijada arriba*/
     background-image:linear-gradient(to right ,#e1e8ec,#0079a9,#015b7f, #003d55);
     border-bottom: solid 1px rgb(31, 171, 171);
-	height: 92px;
+    position: sticky;
+    top:0;
     width: 100%;
-	top: 0;
-    left: 0;
-    right: 0;
 }
-a{
-    text-decoration: none;
-	color: #fff;
+button{/*quita todo estilo del boton y pone el cursor diferente*/
+    all:unset;
+    cursor: pointer;
 }
-.ulHeader{
+.ulHeader{/*es el contenedor de la lista*/
     display: inline-block;
     margin: 17px 60px 25px 60px;
 	padding: 0;
 	list-style: none;
     
 }
-.ulHeader li {
+.ulHeader li {/*cada elemento de la lista*/
     display: inline-block;
     margin-right: 15px;
     align-content: center;
@@ -35,33 +31,33 @@ a{
     font-size: large;
     color: white;
 }
-.ulHeader li:hover{
+.ulHeader li:hover{/*subrayado cuando te pones encima*/
     text-decoration: underline;
 }
-.ulHeader li:first-child{
+.ulHeader li:first-child{/*cambia el css de la casita porque sino cambia el tamaño de la barra y lo descuadra*/
     position: relative;
     top:10px;
     padding: 0;
 }
-#logo{
+#logo{/*img del logo*/
     position: absolute;
 	top: 0;
 	left: 20px;
 	height: 100px;
 }
-#botonCarrito{
+#botonCarrito{/*boton del carrito*/
     position: absolute;
 	top: 15px;
 	right: 20px; 
 	height: 30px;
 }
-#carrito{
+#carrito{/*imagen del carrito*/
     width: 52px;
 }
-#casita{
+#casita{/*imagen de la casita*/
     width: 35px;
 }
-header div{
+div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS DIVS QUE TENGAIS*//*para centrar el contenido de todos los div*/
     text-align: center;
 }
 
@@ -73,13 +69,26 @@ header div{
 }
 form {
 	max-width: 600px;
-	margin: 0 auto;
+	margin: 60px auto;
 	margin-top: 9vh;
 	padding: 40px;
 	background-color: #f5f5f5;
 	border-radius: 10px;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 } 
+@media (max-width:1285px) {
+	form{
+		margin: 300px auto;
+		margin-top: 7vh;
+	}
+}
+@media (max-width:720px) {
+	form{
+		max-width: 300px;
+		margin: 350px auto;
+		margin-top: 7vh;
+	}
+}
 label {
 	display: block;
 	margin-bottom: 10px;
@@ -117,7 +126,7 @@ button#enviar[type="submit"]:hover {
 
 .container {
 	position: relative;
-  }
+}
   
 .telefono {
 	align-items: center;
@@ -133,7 +142,22 @@ button#enviar[type="submit"]:hover {
 	left: 50px;
 	background-color: #01587a;
 	color: #fff;
+
 }
+@media (max-width:1285px) {
+	.telefono{
+		top:580px;
+		left: calc(30vw - 125px);
+	}
+}
+@media (max-width:720px) {
+	.telefono{
+		top:485px;
+		left: calc(50vw - 125px);
+	}
+}
+
+
   
 .ubicacion {
 	justify-content: center;
@@ -149,27 +173,40 @@ button#enviar[type="submit"]:hover {
 	background-color: #01587a;
 	color: #fff;
 }
+@media (max-width:1285px) {
+	.ubicacion{
+		top:490px;
+		height: 261px;
+		left: calc(70vw - 125px);
+	}
+}
+@media (max-width:720px) {
+	.ubicacion{
+		top:540px;
+		height: 261px;
+		left: calc(50vw - 125px);
+	}
+}
 
-/*--------------------------------- FOOTER ---------------------------------*/
+/*--------------------------------- footer ---------------------------------*/
   
-footer {
+footer {/*estilo barra inferior*/
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
 	background-image: linear-gradient(to right, #003d55, #015b7f, #0079a9, #e1e8ec);
 	position: absolute;
-	bottom: 0; 
 	text-align: center;
 	height: 85px;
 }
 
-footer a img {
+footer a img {/*tamaño de las imagenes en los enlaces*/
 	height: 20px;
 	margin-right: 5px;
 }
 
-footer a{
+footer a{/*estilo de los enlaces*/
 	text-decoration: none;
 	color: #ffffff;
 	margin-right: 40px;
@@ -178,11 +215,33 @@ footer a{
 	font-size: 20px;
 }  
 
-#copy{
+#copy{/*texto copyright*/
 	margin-right: 20px;
 }
 
-footer a:hover{
+footer a:hover{/*subraya cuando te pones encima*/
 	text-decoration: underline;
-	cursor: pointer;
 }
+@media (max-width:615px) {/*PARA ARREGLAR EL RESPONSIVO DEL FOOTER*/
+    footer a img {
+        height: 15px;
+    }
+    footer a{
+        margin-right: 18px;
+        font-size: 15px;
+    }  
+}
+/*--------------------barra lateral------------------*/
+::-webkit-scrollbar {/*define tamaño de la barra para subir y bajar*/
+    width: 10px;
+    height: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb {/*estilo de lo que mueves de la barra*/
+    background-color:#f3ba00;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {/*estilo del fondo de la barra*/
+    background-image: linear-gradient(to bottom, #003d55, #015b7f, #0079a9, #e1e8ec);
+  }
