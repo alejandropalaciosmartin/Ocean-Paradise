@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Mi página</title>
-    <link rel="stylesheet" type="text/css" href="contacto.css">
+	<title>Contacto</title> <!--TITULO DE LA VENTANA-->
+    <link rel="stylesheet" type="text/css" href="contacto.css"> <!--LINK CSS-->
+    <link rel="icon" type="image/x-icon" href="../../recursos/imagen/logo.png"> <!--FAVICON DE LA VENTANA-->
 </head>
 <body>
-	<header>
+	<header> <!--BARRA DE NAVEGACIÓN-->
 		<div>
             <button id="botonLogo" onclick=""><img id="logo" src="..\..\Recursos\Imagen\logo.png"></button>
             <ul class="ulHeader">
@@ -18,13 +19,13 @@
             <button id="botonCarrito" onclick=""><img id="carrito" src="..\..\Recursos\Imagen\CarroBlanco.png"></button>
         </div>
 	</header>
-	<main>
+	<main><!--FORMULARIO, TELÉFONO Y UBICACIÓN-->
 		<div class="container">
-            <p class="telefono"><b>Teléfono Contacto: 999999999</b></p>
-            <p class="ubicacion"><b>Ubicación de la empresa:</b></p>
+            <p class="telefono"><b>Teléfono Contacto: 999999999</b></p> <!--TELÉFONO-->
+            <p class="ubicacion"><b>Ubicación de la empresa:</b></p> <!--UBICACIÓN-->
           </div>
           
-          <form id="formulario" >
+          <form id="formulario" > <!--FORMULARIO-->
               <label for="email">Email:</label>
               <input type="email" id="email" name="email" required>
               <label for="asunto">Asunto:</label>
@@ -34,7 +35,7 @@
               <button id="enviar" type="submit"><b>ENVIAR</b></button>
           </form>
 	</main>
-	<footer>
+	<footer> <!--BARRA DE ABAJO-->
 		<p>
             &copy; <div id="copy"><b>2023</b></div>
             <a href="https://github.com/alejandropalaciosmartin" target="_blank">
