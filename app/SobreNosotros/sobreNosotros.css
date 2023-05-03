@@ -9,6 +9,7 @@ header{/*color y posicion fijada arriba*/
     position: sticky;
     top:0;
     width: 100%;
+    z-index: 2;
 }
 button{/*quita todo estilo del boton y pone el cursor diferente*/
     all:unset;
@@ -60,23 +61,27 @@ div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS 
 }
 
 /*------------------------------------main-------------------------------*/
-
 .imagenPrincipal{/*el div que contiene el primer texto y pone la foto de fondo*/
     background-image: URL("..\\..\\Recursos\\Imagen\\Casas\\CasaNormal1\\1.jpg") ;
     background-repeat: no-repeat;
     background-position-y: -190px;
-    background-size: 100%; /*HAY QUE ARREGLAR. responsivo cuando mas pequeño*/
-    padding: 110px 0 30% 0;
+    background-size: 100%;
     color: white;
+    z-index: 1;
 }
-@media (max-width: 1225px) { /*HAY QUE ARREGLAR. para cuando achique la pantalla no se vea tan mal*/
+.imagenPrincipal div{
+    backdrop-filter: brightness(0.6) blur(1px);
+    padding: 110px 0 29% 0;
+}
+
+@media (max-width: 1225px) {/*el responsivo de la imagen de fondo*/
     .imagenPrincipal {
         background-position-y: -190px;
         background-size: 1355px;
         background-position-x: -140px;
     }
 }
-@media (max-width: 790px) { /*HAY QUE ARREGLAR. para cuando achique la pantalla no se vea tan mal*/
+@media (max-width: 790px) {/*el responsivo de la imagen de fondo*/
     .imagenPrincipal {
         background-position-y: -50px;
         background-size: 1000px;
@@ -85,12 +90,13 @@ div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS 
 }
 
 .textoSobreNosotros{/*El titulo de sobre nosotros*/
+    color:rgb(0, 251, 255);
     text-align: left;
     width: 60%;
     font-size: x-large;
     margin: auto;
     margin-bottom: 10px;
-    text-shadow: 0 0 20px black;
+    text-shadow: 0 0 20px rgb(196, 196, 196);
 }
 .visionGeneral{/*la frase breve debajo de sobreNostros*/
     font-weight: bold;
@@ -98,7 +104,10 @@ div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS 
     width: 60%;
     margin: auto;
     text-align: left;
-    text-shadow: 0 0 20px black;
+    text-shadow: 0 0 20px rgb(196, 196, 196);/*HAY QUE MIRAR QUE COLORES PONER EN EL GRADIENTE*/
+    background-image: linear-gradient(to bottom right,rgb(0, 251, 255),rgb(0, 242, 255),rgb(0, 255, 68));
+    -webkit-background-clip: text;/*poner a textoSobreNosotros el mismo color que el primero del gradiente*/
+-webkit-text-fill-color: transparent;
 }
 .contenedorGrid{/*el contenedor de todas personas*/
     display: grid;
@@ -121,6 +130,7 @@ div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS 
 }
 .fotoPersona{/*la foto de la persona*/
     width:70%;
+    margin:30px auto 20px auto;
 }
 .infoEmpresa{/*contenedor de los textos de mision vision y valores*/
     margin-bottom: 60px;
