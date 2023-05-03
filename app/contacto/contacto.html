@@ -3,62 +3,81 @@
 <head>
 	<title>Contacto</title> <!--TITULO DE LA VENTANA-->
     <link rel="stylesheet" type="text/css" href="contacto.css"> <!--LINK CSS-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgbr52ky3bu44_fvT5nT0MBaAK7ENte94"></script> <!--ESTO ES PARA LO DE GOOGLE MAPS-->
     <link rel="icon" type="image/x-icon" href="../../recursos/imagen/logo.png"> <!--FAVICON DE LA VENTANA-->
-</head>
-<body>
+
+    <script> /*ESTE SCRIPT ES PARA PONER EL MAPA (LA FUNCIÓN ESTÁ EN EL BODY)*/
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16, //Ajusta este valor para controlar el nivel de zoom
+          center: {lat: 36.510097, lng: -4.883969}, //Reemplaza con la latitud y longitud de tu local
+        });
+        var marker = new google.maps.Marker({
+          position: {lat: 36.510097, lng: -4.883969}, 
+          map: map,
+          title: 'OceanParadise'
+        });
+      }
+  </script>
+
+  </head>
+<body onload="initMap()"> <!--ESTO ES UNA FUNCIÓN PARA QUE APAREZCA EL MAPA EN EL HTML-->
 	<header> <!--BARRA DE NAVEGACIÓN-->
 		<div>
-            <button id="botonLogo" onclick=""><img id="logo" src="..\..\Recursos\Imagen\logo.png"></button>
-            <ul class="ulHeader">
-                <li><button id="botonPrincipal" onclick=""><img id="casita" src="..\..\Recursos\Imagen\casaBlanca.png"></button></li>
-                <li><button id="botonCatalogo" onclick="">CATÁLOGO</button></li>
-                <li><button id="botonEquipo" onclick="">SOBRE NOSOTROS</button></li>
-                <li><button id="botonContacto" onclick="">CONTACTO</button></li>
-                <li><button id="botonAdmin" onclick="">ADMINISTRADOR</button></li>
-            </ul>
-            <button id="botonCarrito" onclick=""><img id="carrito" src="..\..\Recursos\Imagen\CarroBlanco.png"></button>
-        </div>
+      <button id="botonLogo" onclick=""><img id="logo" src="..\..\Recursos\Imagen\logo.png"></button>
+      <ul class="ulHeader">
+        <li><button id="botonPrincipal" onclick=""><img id="casita" src="..\..\Recursos\Imagen\casaBlanca.png"></button></li>
+        <li><button id="botonCatalogo" onclick="">CATÁLOGO</button></li>
+        <li><button id="botonEquipo" onclick="">SOBRE NOSOTROS</button></li>
+        <li><button id="botonContacto" onclick="">CONTACTO</button></li>
+        <li><button id="botonAdmin" onclick="">ADMINISTRADOR</button></li>
+      </ul>
+      <button id="botonCarrito" onclick=""><img id="carrito" src="..\..\Recursos\Imagen\CarroBlanco.png"></button>
+    </div>
 	</header>
 	<main><!--FORMULARIO, TELÉFONO Y UBICACIÓN-->
 		<div class="container">
-            <p class="telefono"><b>Teléfono Contacto: 999999999</b></p> <!--TELÉFONO-->
-            <p class="ubicacion"><b>Ubicación de la empresa:</b></p> <!--UBICACIÓN-->
-          </div>
+      <p class="telefono"><b>Teléfono Contacto: 999999999</b></p> <!--TELÉFONO-->
+      <p class="ubicacion"><div id="map"></div></p> <!--UBICACIÓN-->
+    </div>
           
-          <form id="formulario" > <!--FORMULARIO-->
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required>
-              <label for="asunto">Asunto:</label>
-              <input type="text" id="asunto" name="asunto">
-              <label for="contenidoMensaje">Mensaje:</label>
-              <textarea id="contenidoMensaje" name="contenidoMensaje" required></textarea>
-              <button id="enviar" type="submit"><b>ENVIAR</b></button>
-          </form>
+    <form id="formulario" > <!--FORMULARIO-->
+      <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      <label for="asunto">Asunto:</label>
+        <input type="text" id="asunto" name="asunto">
+      <label for="contenidoMensaje">Mensaje:</label>
+        <textarea id="contenidoMensaje" name="contenidoMensaje" required></textarea>
+      <button id="enviar" type="submit"><b>ENVIAR</b></button>
+    </form>
 	</main>
+
 	<footer> <!--BARRA DE ABAJO-->
 		<p>
-            &copy; <div id="copy"><b>2023</b></div>
-            <a href="https://github.com/alejandropalaciosmartin" target="_blank">
-              <img src="..\..\Recursos\Imagen\github.png">
-              <b>Alex</b>
-            </a>
-            <a href="https://github.com/Veronicatorogomez" target="_blank">
-              <img src="..\..\Recursos\Imagen\github.png">
-              <b>Verónica</b>
-            </a>
-            <a href="https://github.com/OliverWalters" target="_blank">
-              <img src="..\..\Recursos\Imagen\github.png">
-              <b>Oliver</b>
-            </a>
-            <a href="https://github.com/Albertsak" target="_blank">
-              <img src="..\..\Recursos\Imagen\github.png">
-              <b>Alberto</b>
-            </a>
-            <a href="https://github.com/AdrianLozanoMartinez" target="_blank">
-              <img src="..\..\Recursos\Imagen\github.png">
-              <b>Adrián</b>
-            </a>
-          </p>
+      &copy; <div id="copy"><b>2023</b></div>
+      <a href="https://github.com/alejandropalaciosmartin" target="_blank">
+        <img src="..\..\Recursos\Imagen\github.png">
+        <b>Alex</b>
+      </a>
+      <a href="https://github.com/Veronicatorogomez" target="_blank">
+        <img src="..\..\Recursos\Imagen\github.png">
+        <b>Verónica</b>
+      </a>
+      <a href="https://github.com/OliverWalters" target="_blank">
+        <img src="..\..\Recursos\Imagen\github.png">
+        <b>Oliver</b>
+      </a>
+      <a href="https://github.com/Albertsak" target="_blank">
+        <img src="..\..\Recursos\Imagen\github.png">
+        <b>Alberto</b>
+      </a>
+      <a href="https://github.com/AdrianLozanoMartinez" target="_blank">
+        <img src="..\..\Recursos\Imagen\github.png">
+        <b>Adrián</b>
+      </a>
+    </p>
 	</footer>
+
+  <sript src="contacto.js"></sript>
 </body>
 </html>
