@@ -90,7 +90,6 @@ div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS 
 }
 
 .textoSobreNosotros{/*El titulo de sobre nosotros*/
-    color:rgb(0, 251, 255);
     text-align: left;
     width: 60%;
     font-size: x-large;
@@ -105,9 +104,6 @@ div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS 
     margin: auto;
     text-align: left;
     text-shadow: 0 0 20px rgb(196, 196, 196);/*HAY QUE MIRAR QUE COLORES PONER EN EL GRADIENTE*/
-    background-image: linear-gradient(to bottom right,rgb(0, 251, 255),rgb(0, 242, 255),rgb(0, 255, 68));
-    -webkit-background-clip: text;/*poner a textoSobreNosotros el mismo color que el primero del gradiente*/
--webkit-text-fill-color: transparent;
 }
 .contenedorGrid{/*el contenedor de todas personas*/
     display: grid;
