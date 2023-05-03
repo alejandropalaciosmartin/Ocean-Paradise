@@ -94,7 +94,12 @@ form {
 	border-radius: 10px;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 } 
-@media (max-width:1290px) {
+@media (max-width:1490px) {
+	.telefono{
+		margin-top: 1vh;
+	  }
+}
+@media (max-width:1291px) {
 	form{
 		margin: 500px auto;
 		margin-top: 2vh;
@@ -144,7 +149,7 @@ button#enviar[type="submit"]:hover {
 .container {
 	position: relative;
 } 
-@media (max-width:1290px) {
+@media (max-width:1291px) {
 	.container{
 		flex-direction: column;
   		align-items: center;
@@ -170,7 +175,13 @@ button#enviar[type="submit"]:hover {
 .phone{
 	width: 30px;
 }
-@media (max-width:1290px) {
+@media (max-width:1490px) {
+	.telefono{
+		left:150px;
+		top: 1px;
+	  }
+}
+@media (max-width:1291px) {
 	.telefono{
 		top:460px;
 		left: 50%;
@@ -203,7 +214,13 @@ button#enviar[type="submit"]:hover {
 	width: 23px;
 	margin-left: 5px
 }
-@media (max-width:1290px) {
+@media (max-width:1490px) {
+	.direccion{
+		left:150px;
+		top: 37px;
+	  }
+}
+@media (max-width:1291px) {
 	.direccion{
 		top:525px;
 		left: 50%;
@@ -283,7 +300,13 @@ footer a:hover{ /*subraya cuando te pones encima*/
 	border-radius: 10px;
 
 }
-@media (max-width:1290px) {
+@media (max-width:1490px) {
+	#map{
+		width: 440px;
+		top: 125px;
+	  }
+}
+@media (max-width:1291px) {
 	#map{
 		width: 670px;
 		height: 320px;
