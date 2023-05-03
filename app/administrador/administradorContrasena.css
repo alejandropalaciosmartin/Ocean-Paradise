@@ -79,3 +79,31 @@ body{
     background-image: linear-gradient(to right,#e1e8ec,#5cb3c1,#e1e8ec);
     color: #fff !important;
   }
+
+  /*para la alerta de si escribes la contraseña mal*/
+  #custom-alert {/*esto es el div entero de la alerta*/
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 2px solid #ff0000;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    display:none;/*esto hace que no se vea al principio y es lo que hace que cambie*/
+  }
+  
+  #custom-alert h2 {/*esto es el titulo de la alera*/
+    margin-top: 0;
+  }
+  
+  #custom-alert button {/*esto es el boton de la alerta*/
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
