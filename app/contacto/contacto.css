@@ -103,8 +103,8 @@ form {
 @media (max-width:720px) {
 	form{
 		max-width: 300px;
-		margin: 350px auto;
-		margin-top: 7vh;
+		margin: 380px auto;
+		margin-top: 1vh;
 	}
 }
 label {
@@ -144,6 +144,13 @@ button#enviar[type="submit"]:hover {
 .container {
 	position: relative;
 } 
+@media (max-width:1290px) {
+	.container{
+		flex-direction: column;
+  		align-items: center;
+  	justify-content: center;
+	}
+}
 .telefono {
 	align-items: center;
 	justify-content: center;
@@ -154,7 +161,7 @@ button#enviar[type="submit"]:hover {
 	border-style: groove;
 	border-color: #5cb3d1;
 	border-radius: 10px;
-	top: 50px;
+	top: 20px;
 	left: 75px;
 	background-color: #01587a;
 	color: #fff;
@@ -165,14 +172,16 @@ button#enviar[type="submit"]:hover {
 }
 @media (max-width:1290px) {
 	.telefono{
-		top:430px;
-		left: calc(50vw - 125px);
+		top:460px;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 }
 @media (max-width:720px) {
 	.telefono{
-		top:470px;
-		left: calc(46.3vw - 125px);
+		top:448px;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 }
 .direccion {
@@ -185,7 +194,7 @@ button#enviar[type="submit"]:hover {
 	border-style: groove;
 	border-color: #5cb3d1;
 	border-radius: 10px;
-	top: 45px;
+	top: 15px;
 	left: 390px;
 	background-color: #01587a;
 	color: #fff;
@@ -196,46 +205,18 @@ button#enviar[type="submit"]:hover {
 }
 @media (max-width:1290px) {
 	.direccion{
-		top:520px;
-		left: calc(50vw - 125px);
+		top:525px;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 }
 @media (max-width:720px) {
 	.direccion{
-		top:470px;
-		left: calc(46.3vw - 125px);
+		top:500px;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 }
-/* .ubicacion {
-	margin: auto; 
-	justify-content: center;
-	display: flex;
-	position: absolute;
-	width: 670px;
-	height: 300px;
-	border-style: groove;
-	border-color: #5cb3d1;
-	border-radius: 10px;
-	top: 130px;
-	left: 30px;
-	background-color: #01587a;
-	color: #fff;
-}
-@media (max-width:1290px) {
-	.ubicacion{
-		top:600px;
-		height: 280px;
-		width: 550px;
-		right: calc(12vw - 125px);
-	}
-}
-@media (max-width:720px) {
-	.ubicacion{
-		top:525px;
-		height: 280px;
-		left: calc(46.3vw - 125px);
-	}
-} */
 
 /* ---------------------------------------------- FOOTER ---------------------------------------------- */
 footer {
@@ -294,7 +275,7 @@ footer a:hover{ /*subraya cuando te pones encima*/
 #map{
 	display: flex;
 	position: absolute;
-	top: 140px;
+	top: 110px;
 	left: 44px;
 	width: 645px; 
 	height: 280px;
@@ -304,16 +285,19 @@ footer a:hover{ /*subraya cuando te pones encima*/
 }
 @media (max-width:1290px) {
 	#map{
-		top:610px;
-		height: 260px;
-		width: 560px;
-		left: calc(33vw - 125px);
-	}
+		width: 670px;
+		height: 320px;
+		top: 750px;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	  }
 }
 @media (max-width:720px) {
 	#map{
-		top:550px;
+		top:685px;
+		width: 400px;
 		height: 261px;
-		left: calc(48.2vw - 125px);
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 }
