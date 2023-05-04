@@ -42,12 +42,13 @@ body{/*El body normal*/
     margin-bottom: 20px;
 }
 .input{/*El input para poner la contraseña*/
-    background-color: transparent;
+    background-color: white;
+    opacity: 50%;
     border-radius: 7px;
     border-color: #000000;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     width: 96%;
-    height: 50%;
+    height: 45%;
     margin: 0 auto 0 auto;
     
 }
