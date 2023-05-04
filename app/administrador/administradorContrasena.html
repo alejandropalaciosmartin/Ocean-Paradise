@@ -2,31 +2,41 @@
 <html>
  <head>
     <meta charset="UTF-8">
-    <title> Modo administrador</title>
-    <link id="css" rel="stylesheet" href="administradorcontrasena.css">
+    <title>Modo administrador</title>
+    <link rel="icon" type="image/x-icon" href="..\..\recursos\imagen\logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link id="css" rel="stylesheet" href="administradorContrasena.css">
+    
 
  </head>
  <body>
-<div class="grid">
-   <div class="imagen">
-      <img  class="logo" src="logo2.png" width="250px" height="250px">
-      <p class="ocean">OCEAN-PARADISE</p>
-   </div>
+
    <div class="medio">
+      
+      
+      
+      <div class="imagen">
+         <img  class="logo" src="logo2.png">
+         <p class="ocean">OCEAN PARADISE</p>
+      </div>
    
    
-    <div class="divcontra">
-       <p>Introduce la contraseña</p>
-       <input id="contrasena" class="input" type="password" placeholder="Contraseña">
-       <button class="boton" type="button" onclick="entrarAdmin()">Acceder</button>
-    </div>
-
-   </div>
+      <div class="divcontra">
+       
+       
+      <input id="contrasena" class="input" type="password" placeholder="Contraseña">
+      <button class="boton" type="button" onclick="entrarAdmin()">Acceder</button>
+   
+      </div>
+  </div>
+   
   
-</div>
 
-      <!-- Esta es la alerta que en un principio esta escondido y al equivocarte se muestra -->
-   <div id="custom-alert">
+ 
+</div>
+    <!-- Esta es la alerta que en un principio esta escondido y al equivocarte se muestra -->
+    <div id="custom-alert">
       <h2>¡Error!</h2>
       <p>La contraseña ingresada es incorrecta. Por favor, inténtalo de nuevo.</p>
       <button onclick="hideAlert()">Cerrar</button>
@@ -35,6 +45,3 @@
       <!-- Para vincular el javascript -->
    <script src="administradorContrasena.js"></script>
  </body>
-
- 
-</html>

@@ -23,5 +23,3 @@ function entrarAdmin() {
 function hideAlert() {/*Para ocultar la alerta*/
     customAlert.style.display = 'none';
   }
-
-  

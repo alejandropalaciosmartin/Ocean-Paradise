@@ -1,87 +1,101 @@
+
 html{
     height: 100%;
 }
-body{
+body{/*El body normal*/
     font-size: x-large;
     background-image:  url(casa.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    margin-top: 110px;
+    margin-top: 0%;
     height:100%;
-    
     backdrop-filter: blur(5px);
+    margin-left: 0%;
+    margin-right: 0%;
 }
-.grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(460px,1fr));
-    margin-bottom: 50px;
-    margin:auto;
-}
-.imagen{
+.imagen{/* Es el div que engloba a el logo más el input*/
     margin: auto;
-    padding-bottom: 30px;
-    margin-bottom: 20px;
-    margin-left: 450px;
-    height: 300px;    
-    width: 200px;
+    padding-bottom: 15%;
+    margin-bottom: 5%;
+    margin-left: 66%;
+    height: 80%;    
+    width: 25%;
 }
-.logo{
-    height: 300px;    
-    width: 300px;
-    margin-left: -240px;
-    
+.logo{/* Logo de la empresa*/
+    height: 30%;    
+    width: 60%;
+    margin-left: -94%;
+    margin-top: -10%;   
 }
 
-.divcontra{
+.divcontra{ /*Es el div en el que se encuentra el input de la contraseña y el botón de acceder*/
     font-size: x-large;
     color: #e1e8ec;
-    border: 4px solid #5cb3c1;
-    border: 4px solid black;
     height: 220px;
-    width: 200px;
-    text-align:center;
-    margin-left: 70px;
-    margin-left: 250px;
-    border-bottom-left-radius: 30px ;
-    border-top-right-radius:30px ;
-    margin-top: 60px;
-    margin-top: 20px;
+    width: 100%;
+    max-width: 200px;
+    margin: auto;
+    border-radius: 30px;
+    margin-top: -10%;
     display: grid;
     grid-template-columns: auto;  
-    background-image: linear-gradient(#e1e8ec,#5cb3c1);
-   
+    margin-bottom: 20px;
 }
-.input{
+.input{/*El input para poner la contraseña*/
     background-color: transparent;
-    border-radius: 10%;
+    border-radius: 7px;
     border-color: #000000;
+    color: rgb(255, 255, 255);
+    width: 96%;
+    height: 50%;
+    margin: 0 auto 0 auto;
+    
+}
+@font-face{/*Tipografía*/
+    font-family: OCEAN;
+    src: url("../../recursos/Fuentes/Frosh.ttf");
+}
+.ocean{/* Las palabras que se encuentran debajo del logo(OCEAN PARADISE)*/
     color: #e1e8ec;
-    color: black;
-}
-.ocean{
-    color: aqua;
-    src: url(Frosh.ttf) format('truetype');
+    font-family: 'OCEAN';
     font-style: italic;
-    margin-left: 100px;
-    margin-left: -195px;
-    margin-top: -68px;
+    margin-left: -87%;
+    margin-top: -10%;
+    height: 15px;
+    width: 200px;
+    font-size: xx-large;
+    
 }
-.boton{
+.boton{ /*Boton de acceder*/
     background-color: #e1e8ec;
     color: #000000;
     border-radius: 7px;
-    border-bottom-left-radius:25px ;
-    background-image: linear-gradient(to right,#5cb3c1,#e1e8ec);
-    transition: all 1s ease;
+    width: 100%;
+    height: 50%;
+    margin: -25% auto 0 auto;
 }
-.boton:hover {
+.boton:hover { /* HOVER DEL BOTÓN*/
     transition: all 1s ease;
-    background-image: linear-gradient(to right,#e1e8ec,#5cb3c1,#e1e8ec);
+    background-image:linear-gradient(to right,#e1e8ec,#5cb3c1,#e1e8ec);
     color: #fff !important;
-  }
-
-  /*para la alerta de si escribes la contraseña mal*/
-  #custom-alert {/*esto es el div entero de la alerta*/
+}
+/*  
+#casita{
+    width: 40px;
+    height: 50px;
+}
+#botonPrincipal{
+    background-color: transparent;
+    border-radius: 7px;
+    margin-left: 8%;
+    margin-top: 5%;
+}
+#botonPrincipal:hover{
+    transition: all 1s ease;
+    box-shadow: 2px 2px 2px 2px black;
+}*/
+ /*para la alerta de si escribes la contraseña mal*/
+ #custom-alert {/*esto es el div entero de la alerta*/
     position: fixed;
     top: 50%;
     left: 50%;
@@ -107,3 +121,4 @@ body{
     font-size: 16px;
     cursor: pointer;
   }
+  
