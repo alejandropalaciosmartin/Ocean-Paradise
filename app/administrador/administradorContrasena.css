@@ -25,7 +25,7 @@ body{/*El body normal*/
     height: 30%;    
     width: 60%;
     margin-left: -94%;
-    margin-top: -10%;   
+    margin-top: 10%;   
 }
 
 .divcontra{ /*Es el div en el que se encuentra el input de la contraseña y el botón de acceder*/

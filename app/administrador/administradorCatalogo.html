@@ -26,13 +26,51 @@
     </header>
     <div class="barraizquierda1">
         
-        <a  href="https://www.youtube.com/watch?v=hPr-Yc92qaY&ab_channel=A2ZHighlights"><img class="usuarios" src="usuarios.png"> </a>
+        <button type="button" onclick="apareceusuario()"><img class="usuarios" src="usuarios.png"></button>
 
-        <a  href="https://www.youtube.com/watch?v=hPr-Yc92qaY&ab_channel=A2ZHighlights"><img class="mensajes" src="mensajes.png"> </a>
+        <button type="button" onclick="aparecemensaje()"><img class="mensajes" src="mensajes.png"></button>
 
         
     </div>
-    
+
+    <div id="botonusuario" class="boton1"> 
+        <div class="informacion">
+            <p id="parrafo">Usuario:</p> <p id="parrafo"> ID O NOMBRE DEL USUARIO</p>
+        </div>
+        <table style="width:100%">
+            <tr>
+              <th>Producto</th>
+              <th>Descripción</th>
+              <th>Precio</th>
+              <th>Cantidad</th>
+            </tr>
+            <tr>
+              <td>
+                <div class="imagenproducto">
+                    <img src="usuarios.jpg" height="100%" width="100%" >
+              </div>
+            </td>
+              <td>Descripción del producto</td>
+              <td>Precio del producto</td>
+              <td>Cantidad</td>
+            </tr>
+          </table>
+    </div>
+    <script src="./administradorCatalogo.js"></script>
+
+    <div id="botonmensaje" class="boton2">
+      <!----><div class="informacionmensaje">
+        <p id="parrafo">Email de contacto:</p> <p id="parrafo"> Asunto:</p>
+      </div>
+      <div class="mensaje">
+        Este es un texto de prueba para saber como se ven los mensajes enviados por los usuarios, al parecer se ven bien
+      </div>
+
+
+
+
+
+    </div>
 
 
 

@@ -91,10 +91,10 @@ div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS 
     font-weight: bold;
   }
   
-  .carrito input {
+  /*.carrito input {
     width: 50px;
     text-align: center;
-  }
+  }*/
   .carrito div{
     text-align: center;
     margin:auto;
@@ -123,8 +123,12 @@ div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS 
     max-height: 250px;
     vertical-align: middle;
   }
+  .inputs{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
   
-    
+  
 
 /*CSS CANTIDAD PRODUCTOS*/
   .contador {
@@ -139,10 +143,18 @@ div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS 
     
   }
   
+  .inputprecio{ 
+    height: 80%; 
+    width: 80%;
+    background-color: transparent;
+    text-align: center;
+    font-size: 20px;
+    border: 0px ;
+  }
   .numero {
     font-size: 24px;
     font-weight: bold;
-    width: 20px;
+    width: 25px;
     text-align: center;
     border: none;
   }
@@ -239,3 +251,6 @@ footer a:hover{
   ::-webkit-scrollbar-track {
     background-image: linear-gradient(to bottom, #003d55, #015b7f, #0079a9, #e1e8ec);
   }
+
+
+
