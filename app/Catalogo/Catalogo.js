@@ -11,18 +11,17 @@ async function cogerCasas(){
     {
         // console.log(json.casas[i]);
         const casa = json.casas[i];
-        const card = document.createElement("div");
-        // card.classList.add("xx");
+        const card = document.createElement("button");
+         card.classList.add("boton");
         card.innerHTML = `
-        <button class="boton">
             <div id="fotos" class="contenedorFotosYTexto"> 
-                <img src="${casa.imagenes.primero}">
-                <div class="texto grid-container">
+                <img src="${casa.imagenes[0]}" alt="fotoCasa" class="estiloFotos">
+                <div class="texto">
                     <span class="name">${casa.nombre}</span>
                     <p>${casa.precio}</p>
                 </div>
-            </div>
-        </button>`;
+            </div>`;
+
         container.appendChild(card);
     }
 }
