@@ -36,6 +36,9 @@ function aparecemensaje(){
 
 let cantidad = 1;
 
+let local = localStorage.getItem("cantidad");
+
+console.log(local);
 
 /*function botonmas(){
    cantidad= cantidad + 1;

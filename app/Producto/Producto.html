@@ -8,6 +8,7 @@
     </head>
     <body>
         <header>
+            
             <div>
                 <button id="botonLogo" onclick=""><img id="logo" src="..\..\Recursos\Imagen\logo.png"></button>
                 <ul class="ulHeader">
@@ -45,19 +46,20 @@
                     <img src="..\..\Recursos\imagen\Casas\CasaIsla1\1.jpg" alt="imagen" class="imagen">
                 </div>
                 <div class="texto">
-                    <p>Nombre</p>
-                    <p>precio</p>
+                    <p id="idproducto"></p>
+                    <p id="nombre">Alberto</p>
+                    <p id="precio">15626</p>
                     <p>Descrición: ¡Bienvenidos a esta hermosa casa isla rústica! Esta propiedad es una oportunidad única para aquellos que buscan la tranquilidad y la conexión con la naturaleza. Ubicada en una isla, esta casa ofrece un ambiente tranquilo y relajado, alejado del bullicio de la ciudad.<br>La casa isla rústica tiene una construcción de alta calidad y ha sido diseñada para complementar su entorno natural. Con una superficie de 390 metros cuadrados, la casa cuenta con amplios espacios abiertos que permiten disfrutar de la belleza natural que rodea la propiedad.<br>En resumen, esta casa isla rústica es el lugar perfecto para aquellos que buscan un estilo de vida tranquilo y relajado en un entorno natural. Si está buscando una propiedad única y exclusiva, no dude en contactarnos para programar una visita y conocer más acerca de esta increíble propiedad.</p>
                     
                 </div>
                 <div class="cantidadSeleccionarYComprar">
                     <div class="contador">
-                        <button class="boton-mas">+</button>
-                        <input id="cantidad" class="numero" value="1">
-                        <button class="boton-menos">-</button>
+                        <button class="boton-mas" onclick="botonmas()" id="botonsumar">+</button>
+                        <p id="cantidad" class="numero" min="1">1</p>
+                        <button class="boton-menos" onclick="botonmenos()" id="botonrestar">-</button>
                     </div>
-                    <button id="botonAñadirCarrito">Añadir al carrito </button>
-                    <button id="botonRealizarCompra">Realizar compra </button>
+                    <button id="botonAñadirCarrito"  onclick="añadircarrito()">Añadir al carrito </button>
+                    <button id="botonRealizarCompra" onclick="realizarcompra()">Realizar compra </button>
                 </div>
             </div>
         </main>
@@ -86,5 +88,9 @@
               </a>
             </p>
           </footer>
+          <script src="Producto.js"></script>
+            
+         
     </body>
+    
 </html>
