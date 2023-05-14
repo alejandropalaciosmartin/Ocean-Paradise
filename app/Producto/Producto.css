@@ -195,11 +195,14 @@ header div{
   }
 
   #botonAñadirCarrito{ /*Boton especifico de añadir al carrito*/
-    margin: 0 10px 0 0;
+    margin-left: -25%;
+    width: 70%;
+    margin-right: 50%;
     border: solid 0;
     border-radius: 10px; 
     box-shadow: 0 4px 8px 0 #01587a, 0 6px 20px 0 #01587a;
     transition: transform 0.2s ease-in-out;
+    
   }
   #botonAñadirCarrito:hover{/*Lo que pasa cuando pasas el raton por encim del boton del añadir a carrito*/
     box-shadow: 0 4px 8px 0 #f3ba00, 0 6px 20px 0 #f3ba00;
@@ -208,7 +211,9 @@ header div{
 }
 
   #botonRealizarCompra{/*Boton de realiar compra*/
-    margin: 0 10px 0 10px;
+    width: 100%;
+    margin-left: 260%;
+    margin-top: -19%;
     border: solid 0;
     border-radius: 10px; 
     box-shadow: 0 4px 8px 0 #01587a, 0 6px 20px 0 #01587a;
@@ -219,6 +224,25 @@ header div{
     transform: scale(1.1);
     z-index: 1;
 }
+
+#ConfirmarCantidad{
+
+    width: 75%;
+    margin-left: -30%;
+    
+    border: solid 0;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px 0 #01587a, 0 6px 20px 0 #01587a;
+    transition: transform 0.2s ease-in-out;
+}
+
+#ConfirmarCantidad:hover{
+    box-shadow: 0 4px 8px 0 #f3ba00, 0 6px 20px 0 #f3ba00;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+
 
 /*FOOTER CSS*/
 footer {
