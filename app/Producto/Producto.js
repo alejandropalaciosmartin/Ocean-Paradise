@@ -1,21 +1,33 @@
 /* LOCALSTORAGE */
+const enlace = window.location.search;
+
+const urlparametros = new URLSearchParams(enlace);
+
+const id = urlparametros.get("id"); 
+
+
+
 var elementoNombre = document.getElementById("nombre");
 var contenidoNombre = elementoNombre.innerHTML;
-localStorage.setItem("nombre", contenidoNombre);
+
 
 var elementoPrecio = document.getElementById("precio");
 var contenidoPrecio = elementoPrecio.innerHTML;
-localStorage.setItem("precio", contenidoPrecio);
+
 
 
 var elementoCantidad = document.getElementById("cantidad");
 var contenidoCantidad= elementoCantidad.innerHTML;
-localStorage.setItem("cantidad", contenidoCantidad);
+
+const datos = [contenidoPrecio, contenidoCantidad, contenidoNombre]
 
 
 
 
-let datos = [contenidoPrecio, contenidoCantidad, contenidoNombre]
+
+
+
+
 
 let cantidad = 1; /* ESTA CANTIDAD NO ES LA MISMA QUE LA DEL LOCALSTORAGE*/
 
@@ -55,9 +67,17 @@ function realizarcompra(){
 
 function confirmarcantidad()/* ESTA FUNCIÓN SIRVE PARA QUE EL EN LOCAL STORAGE SE ALMACENE LA CANTIDAD DEL PRODUCTO SEECCIONADO*/
 {
-    localStorage.setItem("cantidad", cantidad)
+    var elementoCantidad = document.getElementById("cantidad");
+    var contenidoCantidad= elementoCantidad.innerHTML;
+
+    const datos = [contenidoNombre,contenidoPrecio, contenidoCantidad ]
+
+    sessionStorage.setItem(id, datos)
 
 }
+
+
+
 
 
 
