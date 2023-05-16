@@ -1,4 +1,3 @@
-
 let idNum = parseInt(localStorage.getItem("idNum")) || 0; // Tenemos que poner esto por que necesitamos guardar el numero por el que iba la id en
 // nuestro localStorage y si no hay ninguno coge el 0 pa que no de fallo.
 
