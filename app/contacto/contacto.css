@@ -324,3 +324,8 @@ footer a:hover{ /*subraya cuando te pones encima*/
 		transform: translate(-50%, -50%);
 	}
 }
+
+a{
+    all:unset;
+    cursor: pointer;
+}
