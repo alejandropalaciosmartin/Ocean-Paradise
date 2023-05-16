@@ -194,32 +194,27 @@ header div{
     
   }
 
-  #botonAñadirCarrito{ /*Boton especifico de añadir al carrito*/
-    margin-left: -25%;
-    width: 70%;
-    margin-right: 50%;
+  #botonAñadirCarrito{
+    margin: 0 10px 0 0;
     border: solid 0;
     border-radius: 10px; 
     box-shadow: 0 4px 8px 0 #01587a, 0 6px 20px 0 #01587a;
     transition: transform 0.2s ease-in-out;
-    
   }
-  #botonAñadirCarrito:hover{/*Lo que pasa cuando pasas el raton por encim del boton del añadir a carrito*/
+  #botonAñadirCarrito:hover{
     box-shadow: 0 4px 8px 0 #f3ba00, 0 6px 20px 0 #f3ba00;
     transform: scale(1.1);
     z-index: 1;
 }
 
-  #botonRealizarCompra{/*Boton de realiar compra*/
-    width: 100%;
-    margin-left: 260%;
-    margin-top: -19%;
+#botonRealizarCompra{
+    margin: 0 10px 0 10px;
     border: solid 0;
     border-radius: 10px; 
     box-shadow: 0 4px 8px 0 #01587a, 0 6px 20px 0 #01587a;
     transition: transform 0.2s ease-in-out;
   }
-  #botonRealizarCompra:hover{/*Lo que pasa cuando pasas el raton por encima del boton realizar compra*/
+  #botonRealizarCompra:hover{
     box-shadow: 0 4px 8px 0 #f3ba00, 0 6px 20px 0 #f3ba00;
     transform: scale(1.1);
     z-index: 1;
