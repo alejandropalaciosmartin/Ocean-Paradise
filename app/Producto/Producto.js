@@ -63,7 +63,7 @@ function botonmenos() {
 }
 
 function realizarcompra() {
-  window.location.href = "file:///C:/Users/Albertsack/Documents/GitHub/Ocean-Paradise/app/CarritoCompra/CarritoCompra.html";
+  window.location.href = "../CarritoCompra/CarritoCompra.html";
 }
 
 function añadirCarrito() {
