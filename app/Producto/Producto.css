@@ -64,6 +64,22 @@ header button{
     width: 52px;
 }
 
+#sumaTotalCarrito {
+    position: absolute;
+    top: 50px;
+    right: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
 #casita{
     width: 35px;
 }
