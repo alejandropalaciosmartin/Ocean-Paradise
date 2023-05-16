@@ -71,8 +71,8 @@ body{
 
 a{
     all:unset;
-    /* font-size: 2vh; */
 }
+
 .ulBarra{
     display: inline-block;
     margin: 17px 60px 25px 60px;

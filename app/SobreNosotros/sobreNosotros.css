@@ -195,3 +195,8 @@ footer a:hover{/*subraya cuando te pones encima*/
   ::-webkit-scrollbar-track {/*estilo del fondo de la barra*/
     background-image: linear-gradient(to bottom, #003d55, #015b7f, #0079a9, #e1e8ec);
   }
+
+  a{
+    all:unset;
+    cursor: pointer;
+}
