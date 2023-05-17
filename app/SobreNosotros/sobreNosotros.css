@@ -222,8 +222,8 @@ footer a:hover{/*subraya cuando te pones encima*/
 #botonFlecha{
     display: none; 
     position: fixed; 
-    bottom: 40px; 
-    right: 40px; 
+    bottom: 50px; 
+    right: 9px; 
     z-index: 99; 
     border: none;
     background-color: transparent;
