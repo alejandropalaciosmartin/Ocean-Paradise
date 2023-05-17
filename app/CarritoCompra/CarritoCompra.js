@@ -33,23 +33,25 @@ async function CogerDatos(){
     for (let i = 0; i < sessionStorage.length; i++) { // Recorrer todas las claves en el Session Storage
       const key = sessionStorage.key(i); // Obtener la clave actual
       const value = JSON.parse(sessionStorage.getItem(key)); // Obtener el valor correspondiente a la clave 
-      
+      let subTotal = parseInt(value[2]) * parseInt((json.casas[key].precio).replace(/\./g, ""));
+      let subTotalConPuntos = subTotal.toLocaleString();
+
       const tr = document.createElement("tr");
-      tr.id = key;
+      // tr.id = key;
       tr.innerHTML = 
       `<td><img src="${json.casas[key].imagenes[0]}"></td>
       <td>${json.casas[key].nombre}</td>
       <td>
         <div class="contador">
             <button class="boton-mas" onclick="botonmas(${key})" id="botonsumar">+</button> 
-            <p id="cantidad" class="numero" min="1">${value[2]}</p>
+            <p id="${key}" class="numero">${value[2]}</p>
             <button class="boton-menos" onclick="botonmenos(${key})" id="botonrestar">-</button>
         </div>
       </td>
         <td >
         <input class="inputprecio" id="precio" value="${json.casas[key].precio}" readonly>
         </td>
-      <td id="subtotal"></td>`;
+      <td id="${key}subtotal">${subTotalConPuntos} €</td>`;
       bodyTable.appendChild(tr);
     }
 
@@ -73,10 +75,17 @@ function botonmas(key){
   let cantidad = value[2];
   cantidad += 1;
 
-  document.querySelector("#cantidad").innerHTML= cantidad
+  document.getElementById(key).innerText = cantidad;
+  
   if( cantidad < 1){
-    document.querySelector("#cantidad").innerHTML= 1
+    document.getElementById(key).innerText= 1
   }
+
+  let subTotal = parseInt(cantidad) * parseInt((value[1]).replace(/\./g, ""));
+  let subTotalConPuntos = subTotal.toLocaleString();
+
+  document.getElementById(`${key}subtotal`).innerText = subTotalConPuntos;
+
   const datosGuardados = sessionStorage.getItem(key);
   const datos = JSON.parse(datosGuardados);
   datos[2] = cantidad;
@@ -93,9 +102,6 @@ function botonmas(key){
     sumaTotal += cantidad;
   }
   actualizarNumeroCarrito(sumaTotal);
-
-  //  document.querySelector("#subtotal").innerHTML = precio * cantidad + "€"
-
 }
 
   
@@ -104,8 +110,11 @@ function botonmenos(key){
   const value = JSON.parse(sessionStorage.getItem(key));
   let cantidad = value[2];
   cantidad -= 1;
-  document.querySelector("#cantidad").innerHTML= cantidad
+  
+  document.getElementById(key).innerText = cantidad;
+
   let element = document.getElementById(key);
+
   if( cantidad < 1){
     sessionStorage.removeItem(key);
     element.remove();
@@ -114,6 +123,11 @@ function botonmenos(key){
     CogerDatos();
   }
   else{
+    let subTotal = parseInt(cantidad) * parseInt((value[1]).replace(/\./g, ""));
+    let subTotalConPuntos = subTotal.toLocaleString();
+
+    document.getElementById(`${key}subtotal`).innerText = subTotalConPuntos;
+
     const datosGuardados = sessionStorage.getItem(key);
     const datos = JSON.parse(datosGuardados);
     datos[2] = cantidad;
@@ -132,6 +146,4 @@ function botonmenos(key){
     sumaTotal += cantidad2;
   }
   actualizarNumeroCarrito(sumaTotal);
-
-  //  document.querySelector("#subtotal").innerHTML = precio * cantidad + "€"
 }
