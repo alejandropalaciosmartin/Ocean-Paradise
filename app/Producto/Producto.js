@@ -43,11 +43,11 @@ if (datosGuardados) {
   elementoCantidad.innerHTML = cantidadd;
 }
 
-// Manejar el evento beforeunload para guardar los datos antes de abandonar la página
-window.addEventListener("beforeunload", function() {
-  const datos = [contenidoNombre, contenidoPrecio, cantidadd];
-  sessionStorage.setItem(id, JSON.stringify(datos));
-});
+// // Manejar el evento beforeunload para guardar los datos antes de abandonar la página
+// window.addEventListener("beforeunload", function() {
+//   const datos = [contenidoNombre, contenidoPrecio, cantidadd];
+//   sessionStorage.setItem(id, JSON.stringify(datos));
+// });
 
 // Restablecer la cantidad a 1 al volver a la página
 document.addEventListener("DOMContentLoaded", function() {
@@ -55,14 +55,16 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function botonmas() {
-  cantidadd += 1;
-  elementoCantidad.innerHTML = cantidadd;
+  let cantidadd2 = parseInt(elementoCantidad.innerHTML);
+  cantidadd2 += 1;
+  elementoCantidad.innerHTML = cantidadd2;
 }
 
 function botonmenos() {
-  if (cantidadd > 1) {
-    cantidadd -= 1;
-    elementoCantidad.innerHTML = cantidadd;
+  let cantidadd2 = parseInt(elementoCantidad.innerHTML);
+  if (cantidadd2 > 1) {
+    cantidadd2 -= 1;
+    elementoCantidad.innerHTML = cantidadd2;
   }
 }
 
