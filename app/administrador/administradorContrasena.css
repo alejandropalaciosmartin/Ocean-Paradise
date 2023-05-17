@@ -4,7 +4,7 @@ html{
 }
 body{/*El body normal*/
     font-size: x-large;
-    background-image:  url(casa.png);
+    background-image:  url(../../Recursos/Imagen/casa.png);
     background-repeat: no-repeat;
     background-size: 100%;
     margin-top: 0%;

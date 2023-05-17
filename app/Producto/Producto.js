@@ -18,6 +18,10 @@ actualizarNumeroCarrito(sumaTotal);
 
 //--------------------------------------------------------------------------------------------------------------------
 
+
+
+
+/* que la cantidad de los botones sea igual a la cantidad final*/
 const enlace = window.location.search;
 const urlparametros = new URLSearchParams(enlace);
 const id = urlparametros.get("id");
