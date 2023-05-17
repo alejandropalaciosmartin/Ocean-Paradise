@@ -71,8 +71,6 @@ async function CogerDatos(){
 
 
 
-
-
 //  let precio = parseInt(document.getElementById("precio").value);
 
 function botonmas(key){
@@ -155,7 +153,7 @@ function botonmenos(key){
   actualizarTotal();
 }
 
-function actualizarTotal() {
+function actualizarTotal() { //Esta función lo que hace es actualizar el precio total para cada vez que le doy al boton mas o menos
   let sumaTotal = 0;
 
   // Recorrer todas las filas de la tabla
