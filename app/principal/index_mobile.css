@@ -69,8 +69,9 @@ body{
     height: 20vh;
 }
 
-a{
+.menuEnlace{
     all:unset;
+    cursor: pointer;
 }
 
 .ulBarra{

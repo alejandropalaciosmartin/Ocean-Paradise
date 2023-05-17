@@ -14,8 +14,9 @@ header{
     width: 100%;
 }
 
-header button{
+header button, .menuEnlace{
     all:unset;
+    cursor: pointer;
 }
 
 .ulHeader{
