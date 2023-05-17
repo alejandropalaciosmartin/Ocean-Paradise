@@ -69,15 +69,14 @@ async function CogerDatos(){
 //  let precio = parseInt(document.getElementById("precio").value);
 
 function botonmas(key){
-    const value = JSON.parse(sessionStorage.getItem(key));
-    let cantidad = value[2];
-    cantidad += 1;
+  const value = JSON.parse(sessionStorage.getItem(key));
+  let cantidad = value[2];
+  cantidad += 1;
 
-   document.querySelector("#cantidad").innerHTML= cantidad
-   if( cantidad < 1){
+  document.querySelector("#cantidad").innerHTML= cantidad
+  if( cantidad < 1){
     document.querySelector("#cantidad").innerHTML= 1
-   }
-
+  }
   const datosGuardados = sessionStorage.getItem(key);
   const datos = JSON.parse(datosGuardados);
   datos[2] = cantidad;
@@ -101,6 +100,7 @@ function botonmas(key){
 
   
 function botonmenos(key){
+
   const value = JSON.parse(sessionStorage.getItem(key));
   let cantidad = value[2];
   cantidad -= 1;
@@ -113,12 +113,12 @@ function botonmenos(key){
     tbody.innerHTML = "";
     CogerDatos();
   }
-else{
-  const datosGuardados = sessionStorage.getItem(key);
-  const datos = JSON.parse(datosGuardados);
-  datos[2] = cantidad;
-  sessionStorage.setItem(key, JSON.stringify(datos));
-}
+  else{
+    const datosGuardados = sessionStorage.getItem(key);
+    const datos = JSON.parse(datosGuardados);
+    datos[2] = cantidad;
+    sessionStorage.setItem(key, JSON.stringify(datos));
+  }
   
 
   //Código para calcular la cantidad total guardada en el SessionStorage para poner el numero en el carrito de la compra
