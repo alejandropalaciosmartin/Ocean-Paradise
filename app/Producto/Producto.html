@@ -31,6 +31,7 @@
                     </li>
                 </ul>
                 <button id="botonCarrito" onclick=""><img id="carrito" src="..\..\Recursos\Imagen\CarroBlanco.png"></button>
+                <span id="sumaTotalCarrito" id="sumaTotalCarrito">0</span>
             </div>
         </header>
         <main>
@@ -59,8 +60,8 @@
                         <p id="cantidad" class="numero" min="1">1</p>
                         <button class="boton-menos" onclick="botonmenos()" id="botonrestar">-</button>
                     </div>
-                    <button id="ConfirmarCantidad" onclick="confirmarcantidad()"> Confirmar cantidad</button>
-                    <button id="botonAñadirCarrito"  onclick="añadircarrito()">Añadir al carrito </button>
+                    
+                    <button id="botonAñadirCarrito"  onclick="añadirCarrito()">Añadir al carrito </button>
                     <button id="botonRealizarCompra" onclick="realizarcompra()">Realizar compra </button>
                 </div>
             </div>

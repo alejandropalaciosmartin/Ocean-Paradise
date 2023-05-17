@@ -147,6 +147,11 @@ header div{
     margin: 20% 5% 5% 10%;    
 }
 
+/*Cuando buscas algo este es el css que predomina!!!!!!!!*/
+.loBuscado { 
+    display: none;
+}
+
 /*FOOTER CSS*/
 footer {
 	display: flex;
