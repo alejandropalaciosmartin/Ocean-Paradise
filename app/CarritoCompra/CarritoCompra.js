@@ -29,12 +29,14 @@ async function CogerDatos(){
     json = await res.json();
     
     const bodyTable = document.getElementById("tbody")
+    let sumaSubtotales = 0;
 
     for (let i = 0; i < sessionStorage.length; i++) { // Recorrer todas las claves en el Session Storage
       const key = sessionStorage.key(i); // Obtener la clave actual
       const value = JSON.parse(sessionStorage.getItem(key)); // Obtener el valor correspondiente a la clave 
       let subTotal = parseInt(value[2]) * parseInt((json.casas[key].precio).replace(/\./g, ""));
       let subTotalConPuntos = subTotal.toLocaleString();
+      sumaSubtotales += subTotal;
 
       const tr = document.createElement("tr");
       // tr.id = key;
@@ -51,9 +53,12 @@ async function CogerDatos(){
         <td >
         <input class="inputprecio" id="precio" value="${json.casas[key].precio}" readonly>
         </td>
-      <td id="${key}subtotal">${subTotalConPuntos} €</td>`;
+      <td id="${key}subtotal" class="subtotal">${subTotalConPuntos} €</td>`;
       bodyTable.appendChild(tr);
     }
+
+    const precioTotalElement = document.getElementById("precioTotal");
+    precioTotalElement.innerText = sumaSubtotales.toLocaleString() + " €";
 
     if(sessionStorage.length == 0){
       const tr = document.createElement("tr");
@@ -102,6 +107,7 @@ function botonmas(key){
     sumaTotal += cantidad;
   }
   actualizarNumeroCarrito(sumaTotal);
+  actualizarTotal();
 }
 
   
@@ -146,4 +152,21 @@ function botonmenos(key){
     sumaTotal += cantidad2;
   }
   actualizarNumeroCarrito(sumaTotal);
+  actualizarTotal();
+}
+
+function actualizarTotal() {
+  let sumaTotal = 0;
+
+  // Recorrer todas las filas de la tabla
+  const filas = document.querySelectorAll("#tbody tr");
+  filas.forEach((fila) => {
+    const subTotalElement = fila.querySelector(".subtotal");
+    const subTotal = parseFloat(subTotalElement.innerText.replace(" €", "").replace(/\./g, ""));
+    sumaTotal += subTotal;
+  });
+
+  // Actualizar el elemento del total
+  const precioTotalElement = document.getElementById("precioTotal");
+  precioTotalElement.innerText = sumaTotal.toLocaleString() + " €";
 }
