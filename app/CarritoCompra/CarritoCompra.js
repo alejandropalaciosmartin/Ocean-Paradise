@@ -89,7 +89,7 @@ function botonmas(key){
   let subTotal = parseInt(cantidad) * parseInt((value[1]).replace(/\./g, ""));
   let subTotalConPuntos = subTotal.toLocaleString();
 
-  document.getElementById(`${key}subtotal`).innerText = subTotalConPuntos;
+  document.getElementById(`${key}subtotal`).innerText = subTotalConPuntos + " €";
 
   const datosGuardados = sessionStorage.getItem(key);
   const datos = JSON.parse(datosGuardados);
@@ -132,7 +132,7 @@ function botonmenos(key){
     let subTotal = parseInt(cantidad) * parseInt((value[1]).replace(/\./g, ""));
     let subTotalConPuntos = subTotal.toLocaleString();
 
-    document.getElementById(`${key}subtotal`).innerText = subTotalConPuntos;
+    document.getElementById(`${key}subtotal`).innerText = subTotalConPuntos + " €";
 
     const datosGuardados = sessionStorage.getItem(key);
     const datos = JSON.parse(datosGuardados);
