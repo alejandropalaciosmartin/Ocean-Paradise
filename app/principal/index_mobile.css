@@ -323,7 +323,7 @@ footer a:hover{/*subraya cuando te pones encima*/
     background-image: linear-gradient(to bottom, #003d55, #015b7f, #0079a9, #e1e8ec);
   }
 
-  /* -----------Botón volver arriba----------- */
+/* -----------Botón volver arriba----------- */
 #botonFlecha{
     display: none; 
     position: fixed; 
@@ -333,7 +333,7 @@ footer a:hover{/*subraya cuando te pones encima*/
     border: none;
     background-color: transparent;
   }
-  
+
   #botonFlecha:hover{
     cursor: pointer;
     box-shadow: 0 0 20px rgb(171, 185, 96);

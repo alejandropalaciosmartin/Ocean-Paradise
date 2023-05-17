@@ -217,3 +217,25 @@ footer a:hover{/*subraya cuando te pones encima*/
     transition: box-shadow 0.3s ease-in-out;
     border-radius: 50%;
   }
+
+   /* -----------Botón volver arriba----------- */
+#botonFlecha{
+    display: none; 
+    position: fixed; 
+    bottom: 40px; 
+    right: 40px; 
+    z-index: 99; 
+    border: none;
+    background-color: transparent;
+  }
+
+  #botonFlecha:hover{
+    cursor: pointer;
+    box-shadow: 0 0 20px rgb(171, 185, 96);
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 50%;
+  }
+
+#flechita{
+    width: 10vh;
+}

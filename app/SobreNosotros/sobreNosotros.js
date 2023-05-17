@@ -41,3 +41,11 @@ fetch('https://getpantry.cloud/apiv1/pantry/464bfeaa-daae-4ecd-81c0-3a675193d25e
     }
   })
   .catch(error => console.error(error));
+
+  //Flecha ir arriba
+window.onscroll = function() {
+    const myBtn = document.getElementById("botonFlecha");
+    myBtn.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none"; };
+    
+  function topFunction() {
+    document.documentElement.scrollTop = 0; }
