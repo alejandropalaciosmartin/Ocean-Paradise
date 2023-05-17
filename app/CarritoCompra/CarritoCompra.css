@@ -133,7 +133,12 @@ div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS 
     margin-right: 5%;
   }
   
-  
+  #sinProductos{
+    margin: 40px;
+    padding: 70px;
+    font-weight: bold;
+    font-size: xx-large;
+  }
 
 /*CSS CANTIDAD PRODUCTOS*/
   .contador {
