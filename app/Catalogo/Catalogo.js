@@ -1,12 +1,31 @@
+//Función para actualizar el número del carrito
+function actualizarNumeroCarrito(numero) {
+    const elementoNumero = document.getElementById('sumaTotalCarrito');
+    elementoNumero.textContent = numero;
+  }
+  
+  //Código para calcular la cantidad total guardada en el SessionStorage para poner el numero en el carrito de la compra
+    
+  let sumaTotal = 0; // Inicializar la variable para almacenar la suma total
+  
+  for (let i = 0; i < sessionStorage.length; i++) { // Recorrer todas las claves en el Session Storage
+    const key = sessionStorage.key(i); // Obtener la clave actual
+    const value = JSON.parse(sessionStorage.getItem(key)); // Obtener el valor correspondiente a la clave 
+    const cantidad = value[2]; // Obtener la cantidad del valor y sumarla a la suma total
+    sumaTotal += cantidad;
+  }
+  actualizarNumeroCarrito(sumaTotal);
+  
+  //--------------------------------------------------------------------------------------------------------------------
+
 const urlCasa = "https://getpantry.cloud/apiv1/pantry/464bfeaa-daae-4ecd-81c0-3a675193d25e/basket/Casas";
 
 let nombre = document.getElementById("nombre"); 
 const container = document.querySelector(".gridCatalogo");
-
+const casaNombre = [];
 async function cogerCasas(){
     let res = await fetch(urlCasa), 
     json = await res.json();
-    console.log(json.casas);
     for(i = 1; i < 8; i++) //Recorremos 8 porque son los artículos que tenemos actualmente
     {
         // console.log(json.casas[i]);
@@ -27,6 +46,39 @@ async function cogerCasas(){
         // Manda id a la otra web
         card.addEventListener('click', () => { window.location.href = `../Producto/Producto.html?id=${casa.id}`; });
         container.appendChild(card);
+        casaNombre[i]=casa.nombre.toLowerCase();//Aprovechamos los datos cogidos de la api y lo pasamos el nombre a minusculas todo PARA EL BUSCADOR
+
+
     }
 }
 cogerCasas();
+
+ function buscar(){ // Metodo de buscar
+
+    var letrasIntroducidas = document.getElementById('buscador').value.toLowerCase(); //guardamos del input las letras en minusculas
+    const item = document.querySelectorAll(".boton"); //coge los elementos del html que tienen esa clase
+    for(let i = 1; i < item.length; i++) // bucle que recorre los productos 
+    {
+         if(casaNombre[i].includes(letrasIntroducidas)){ //este if mira si el array de nombres hecho arriba incluye o contiene las letras que voy metiendo
+                item[i-1].classList.remove("loBuscado"); /*lo del menos 1 es por que las casas su id empieza desde 1 no desde cero, entonces el bucle
+                                                         empieza en 1 pues para acceder al primero es 1-1 =0 POR QUE ITEM ES UN ARRAY!! y el remove elimine 
+                                                         lo de que se esconda*/
+                
+         }
+         else{
+            item[i-1].classList.add("loBuscado");/*lo del menos 1 es por que las casas su id empieza desde 1 no desde cero, entonces el bucle
+            empieza en 1 pues para acceder al primero es 1-1 =0 POR QUE ITEM ES UN ARRAY!! y aqui el add hace que se agregue el esconder de la clase "loBuscado"*/
+         }
+       
+    }
+    
+    
+}
+
+//Flecha ir arriba
+window.onscroll = function() {
+    const myBtn = document.getElementById("botonFlecha");
+    myBtn.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none"; };
+    
+  function topFunction() {
+    document.documentElement.scrollTop = 0; }

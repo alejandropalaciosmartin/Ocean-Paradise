@@ -33,10 +33,12 @@ header {
 		height: 210px;
 	}
 }
-button{ /*quita todo estilo del boton y pone el cursor diferente*/
-    all:unset;
-    cursor: pointer;
+
+header button, .menuEnlace{ /*quita todo estilo del boton y pone el cursor diferente*/
+	all:unset;
+	cursor: pointer;
 }
+
 .ulHeader{ /*es el contenedor de la lista*/
     display: inline-block;
     margin: 17px 60px 25px 60px;
@@ -325,7 +327,40 @@ footer a:hover{ /*subraya cuando te pones encima*/
 	}
 }
 
-a{
-    all:unset;
+ /* -----------Botón volver arriba----------- */
+ #botonFlecha{
+    display: none; 
+    position: fixed; 
+    bottom: 50px; 
+    right: 9px; 
+    z-index: 99; 
+    border: none;
+    background-color: transparent;
+  }
+
+  #botonFlecha:hover{
     cursor: pointer;
+    box-shadow: 0 0 20px rgb(171, 185, 96);
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 50%;
+  }
+
+#flechita{
+    width: 10vh;
 }
+
+#sumaTotalCarrito {
+    position: absolute;
+    top: 50px;
+    right: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+  }

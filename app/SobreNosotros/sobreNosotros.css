@@ -196,7 +196,7 @@ footer a:hover{/*subraya cuando te pones encima*/
     background-image: linear-gradient(to bottom, #003d55, #015b7f, #0079a9, #e1e8ec);
   }
 
-  a{
+.menuEnlace{
     all:unset;
     cursor: pointer;
 }
@@ -216,4 +216,42 @@ footer a:hover{/*subraya cuando te pones encima*/
     box-shadow: 0 0 20px rgb(255, 0, 0);
     transition: box-shadow 0.3s ease-in-out;
     border-radius: 50%;
+  }
+
+   /* -----------Botón volver arriba----------- */
+#botonFlecha{
+    display: none; 
+    position: fixed; 
+    bottom: 50px; 
+    right: 9px; 
+    z-index: 99; 
+    border: none;
+    background-color: transparent;
+  }
+
+  #botonFlecha:hover{
+    cursor: pointer;
+    box-shadow: 0 0 20px rgb(171, 185, 96);
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 50%;
+  }
+
+#flechita{
+    width: 10vh;
+}
+
+#sumaTotalCarrito {
+    position: absolute;
+    top: 50px;
+    right: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
   }

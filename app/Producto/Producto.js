@@ -101,7 +101,14 @@ function añadirCarrito() {
   // Aquí puedes agregar cualquier otra lógica relacionada con añadir al carrito
 }
 
-
+//Flecha ir arriba
+window.onscroll = function() {
+  const myBtn = document.getElementById("botonFlecha");
+  myBtn.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none"; };
+  
+function topFunction() {
+  document.documentElement.scrollTop = 0; }
+  
 /*const enlace = window.location.search;
 const urlparametros = new URLSearchParams(enlace);
 const id = urlparametros.get("id");

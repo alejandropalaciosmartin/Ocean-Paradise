@@ -9,32 +9,38 @@
     </head>
     <body class="principal">
         <header>
+          <!-- Flecha ir arriba -->
+          <button onclick="topFunction()" id="botonFlecha" title="Go to top">
+            <img src="../../recursos/imagen/arrow0.png" alt="Volver arriba" id="flechita">
+          </button>
             <div>
                 <button id="botonLogo" onclick=""><img id="logo" src="..\..\Recursos\Imagen\logo.png"></button>
                 <ul class="ulHeader">
-                    <li>
-                        <button id="botonPrincipal" onclick=""><img id="casita" src="..\..\Recursos\Imagen\casaBlanca.png"></button>
-                    </li>
-                    <li>
-                        <button id="botonCatalogo" onclick="">CATÁLOGO</button>
-                    </li>
-                    <li>
-                        <button id="botonEquipo" onclick="">SOBRE NOSOTROS</button>
-                    </li>
-                    <li>
-                        <button id="botonContacto" onclick="">CONTACTO</button>
-                    </li>
-                    <li>
-                        <button id="botonAdmin" onclick="">ADMINISTRADOR</button>
-                    </li>
-                
-                </ul>
+                  <li>
+                      <a class="menuEnlace" href="../../index.html">
+                          <img id="casita" src="../../recursos/imagen/CasaBlanca.png">
+                      </a>
+                  </li>
+                  <li>
+                      <a class="menuEnlace" href="../catalogo/Catalogo.html">CATÁLOGO</a>
+                  </li>
+                  <li>
+                      <a class="menuEnlace" href="../SobreNosotros/sobreNosotros.html">SOBRE NOSOTROS</a>
+                  </li>   
+                  <li>
+                      <a class="menuEnlace" href="../contacto/contacto.html">CONTACTO</a>
+                  </li>
+                  <li>
+                      <a class="menuEnlace" href="../administrador/administradorContrasena.html">ADMINISTRADOR</a>
+                  </li>
+              </ul>
                 <button id="botonCarrito" onclick=""><img id="carrito" src="..\..\Recursos\Imagen\CarroBlanco.png"></button>
-            </div>
+                <span id="sumaTotalCarrito" id="sumaTotalCarrito">0</span>
+              </div>
         </header>
         <main>
             <div class="cuadradBuscador"> 
-                <input id="buscador" onkeyup="" type="search" class="input-buscador"  placeholder="Introduzca Nombre"> 
+                <input id="buscador" onkeyup="buscar()" type="search" class="input-buscador"  placeholder="Introduzca Nombre"> 
             </div>
             <div class="gridCatalogo"></div>
         </main>
