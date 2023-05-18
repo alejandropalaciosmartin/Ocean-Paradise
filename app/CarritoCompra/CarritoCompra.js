@@ -171,15 +171,28 @@ function actualizarTotal() { //Esta función lo que hace es actualizar el precio
 
 /*Realizar compra */
 function realizarCompra(){
-  var nombre;
-  var edad;
-  nombre=prompt('Ingrese su nombre:','');
-  edad=prompt('Ingrese su edad:','');
-  document.write('Hola ');
-  document.write(nombre);
-  document.write(' asi que tienes ');
-  document.write(edad);
-  document.write(' años');
+  //Pide datos
+  //Confirmacion
+   var resultado = window.confirm('Estas seguro?');
+   var nombre;
+   var edad;
+   if (resultado === true) {
+    nombre=prompt('Ingrese su nombre:','');
+      //  window.alert('Okay, si estas seguro.');
+   } 
+  //  else { 
+  //      window.alert('Pareces indeciso, pienselo y cuando estés seguro pulse aceptar');
+  //  }
+
+    //  edad=prompt('Ingrese su edad:','');
+    //  document.write('Hola ');
+    //  document.write(nombre);
+    //  document.write(' asi que tienes ');
+    //  document.write(edad);
+    //  document.write(' años');
+
+  
+// window.open("http://www.desarrolloweb.com" , "ventana1" , "width=120,height=300,scrollbars=NO") //Abre ventana secundaria
 }
 
 
