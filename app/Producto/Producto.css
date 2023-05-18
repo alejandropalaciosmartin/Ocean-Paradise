@@ -96,7 +96,7 @@ header div{
 .imagenYTextoYContenedor{ /*Esto es un contenedor de la imagen el texto y todo en general*/
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(430px,1fr));
-    padding: 20px;
+    padding: 40px;
     background-color: #e1e8ec;
     width:80%;
     margin: 5% 10% 10% 10%;

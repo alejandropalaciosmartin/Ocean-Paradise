@@ -109,7 +109,32 @@ function topFunction() {
   fetch('https://getpantry.cloud/apiv1/pantry/464bfeaa-daae-4ecd-81c0-3a675193d25e/basket/Casas')
   .then(response => response.json())
   .then(data => {
-    document.getElementById("nombre").innerHTML = (data.casa["1"].nombre);
     
+    const div = document.createElement('div')
+    document.getElementById("foto").src= data.casas[id].imagenes[0];
+    document.getElementById("imagen1").src = data.casas[id].imagenes[1];
+    document.getElementById("imagen2").src = data.casas[id].imagenes[2];
+    document.getElementById("imagen3").src = data.casas[id].imagenes[3];
+    document.getElementById("imagen4").src = data.casas[id].imagenes[4];
+
+
+
+
+
+  div.innerHTML = 
+  /*`<div >
+  <img id="foto" src="${ console.log(data.casas[id].imagenes[0])}" alt="imagen" class="imagen">
+</div>`*/
+
+
+  `<div class="texto">
+                   
+  <p id="nombre">${document.getElementById("nombre").innerHTML = data.casas[id].nombre}</p>
+  <p id="precio">${document.getElementById("precio").innerHTML = data.casas[id].precio}</p>
+  // <p>Descrición:${document.getElementById("descripcion".innerHTML = data.casas[id].descripcion)}</p>
+  
+</div>`
   })
+
+ 
 
