@@ -169,30 +169,63 @@ function actualizarTotal() { //Esta función lo que hace es actualizar el precio
   precioTotalElement.innerText = sumaTotal.toLocaleString() + " €";
 }
 
-/*Realizar compra */
+/*Realizar compra - POPUP */
 function realizarCompra(){
-  //Pide datos
-  //Confirmacion
-   var resultado = window.confirm('Estas seguro?');
-   var nombre;
-   var edad;
-   if (resultado === true) {
-    nombre=prompt('Ingrese su nombre:','');
-      //  window.alert('Okay, si estas seguro.');
-   } 
-  //  else { 
-  //      window.alert('Pareces indeciso, pienselo y cuando estés seguro pulse aceptar');
-  //  }
-
-    //  edad=prompt('Ingrese su edad:','');
-    //  document.write('Hola ');
-    //  document.write(nombre);
-    //  document.write(' asi que tienes ');
-    //  document.write(edad);
-    //  document.write(' años');
-
-  
-// window.open("http://www.desarrolloweb.com" , "ventana1" , "width=120,height=300,scrollbars=NO") //Abre ventana secundaria
+  Swal
+  .fire({
+      text: "¿Desea realizar la compra?",
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: "Sí, comprar",
+      cancelButtonText: "Cancelar",
+  })
+  .then(resultado => {
+    //Botón "Sí, comprar"
+      if (resultado.value) { 
+          //Preguntamos por el nombre
+          Swal
+          .fire({
+              title: "Introduzca su nombre",
+              input: "text",
+              showCancelButton: true,
+              confirmButtonText: "Guardar",
+              cancelButtonText: "Cancelar",
+          })
+          //Cogemos el resultado de guardar nombre 
+          .then(resultado => {
+              //Si se introduce valor/nombre
+              if (resultado.value) {
+                  sessionStorage.setItem("nombre", resultado.value) //Guardamos en el sessionStorage el valor introducido con la clave name
+                  Swal
+                  .fire({
+                      title: "Compra realizada <br> Gracias por confiar en nosotros",
+                      text: "Pronto uno de nuestros vendedores se pondrá en contacto con usted",
+                      icon: 'success',
+                      confirmButtonText: "Entendido",
+                  })
+              }
+              //Sino se introduce valor/nombre
+              else{
+                Swal
+                .fire({
+                    title: "¡¡Oh se le olvidó introducir un nombre",
+                    text: "Sino se introduce nombre no podremos realizar la compra",
+                    icon: 'error',
+                    confirmButtonText: "Entendido",
+                })
+              }
+          });
+      //Botón "Cancelar"
+      } else {  
+        Swal
+        .fire({
+            title: "¡¡Oh lástima!! <br> Esperamos verle pronto",
+            text: "Si necesita asesoramiento, nuestros experto estarán encantados en ayudarle",
+            icon: 'info',
+            confirmButtonText: "Entendido",
+        })
+      }
+  });
 }
 
 
