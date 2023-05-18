@@ -11,12 +11,14 @@ function actualizarNumeroCarrito(numero) {
   //Código para calcular la cantidad total guardada en el SessionStorage para poner el numero en el carrito de la compra
     
   let sumaTotal = 0; // Inicializar la variable para almacenar la suma total
-  
+  let valueLocal;
+
   for (let i = 0; i < sessionStorage.length; i++) { // Recorrer todas las claves en el Session Storage
     const key = sessionStorage.key(i); // Obtener la clave actual
     const value = JSON.parse(sessionStorage.getItem(key)); // Obtener el valor correspondiente a la clave 
     const cantidad = value[2]; // Obtener la cantidad del valor y sumarla a la suma total
     sumaTotal += cantidad;
+    valueLocal = value;
   }
   actualizarNumeroCarrito(sumaTotal);
   
@@ -195,7 +197,9 @@ function realizarCompra(){
           .then(resultado => {
               //Si se introduce valor/nombre
               if (resultado.value) {
-                  sessionStorage.setItem("nombre", resultado.value) //Guardamos en el sessionStorage el valor introducido con la clave name
+                    localStorage.setItem("value", valueLocal);
+                    localStorage.setItem("cantidad", sumaTotal);
+                    localStorage.setItem("nombre", resultado.value); //Guardamos en el localStorage el valor introducido con la clave name
                   Swal
                   .fire({
                       title: "Compra realizada <br> Gracias por confiar en nosotros",
