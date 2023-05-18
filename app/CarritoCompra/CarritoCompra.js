@@ -45,14 +45,14 @@ async function CogerDatos(){
       <td>${json.casas[key].nombre}</td>
       <td>
         <div class="contador">
-            <button class="boton-mas" onclick="botonmas(${key})" id="botonsumar">+</button> 
-            <p id="${key}" class="numero">${value[2]}</p>
-            <button class="boton-menos" onclick="botonmenos(${key})" id="botonrestar">-</button>
+          <button class="boton-menos" onclick="botonmenos(${key})" id="botonrestar">-</button> 
+          <p id="${key}" class="numero">${value[2]}</p>
+          <button class="boton-mas" onclick="botonmas(${key})" id="botonsumar">+</button> 
         </div>
       </td>
-        <td >
+      <td >
         <input class="inputprecio" id="precio" value="${json.casas[key].precio}" readonly>
-        </td>
+      </td>
       <td id="${key}subtotal" class="subtotal">${subTotalConPuntos} €</td>`;
       bodyTable.appendChild(tr);
     }
