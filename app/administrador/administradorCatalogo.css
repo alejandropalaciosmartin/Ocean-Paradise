@@ -68,9 +68,11 @@ header div{
     text-align: center;
 }
 .barraizquierda1{
+    position:absolute;
     width: 15%;
     height: 765px;
     background-image: linear-gradient(#e1e8ec,#0079a9,#015b7f,#003d55 );
+    margin-right: 0;
 }
 .usuarios:hover{
     box-shadow: 5px 5px 5px 5px black;
@@ -105,11 +107,9 @@ header div{
 .boton2{
     height: 180px;
     width: 50%;
-    background-color: #15769d;
     margin-left: 30%;
     margin-top: -42%;
     border-radius: 5px;
-    display: none;
 }
 
 #parrafo{
@@ -137,7 +137,19 @@ border-bottom: 1px solid black;
     background-color: red;
     margin-right: 15%;
 }
-td{
+
+.tablaDeInformacion,th,tr{
+   margin-left: 30%;
+   margin-top: 5%;
+   border: 2px solid black;
+   border-collapse: collapse;
+   padding: 15px;
+}
+
+
+
+
+/*td{
     text-align: center;
 }
 .informacionmensaje{
@@ -155,7 +167,7 @@ td{
     margin-bottom: 10%;
     border-radius: 7%;
     text-align: center;
-}
+}*/
 /*.contador {
     display: flex;
     align-items: center;

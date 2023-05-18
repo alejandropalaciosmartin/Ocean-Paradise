@@ -34,6 +34,19 @@ function aparecemensaje(){
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 let cantidad = 1;
 
 let local = localStorage.getItem("cantidad");
