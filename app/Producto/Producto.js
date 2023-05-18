@@ -117,6 +117,8 @@ function topFunction() {
     document.getElementById("imagen3").src = data.casas[id].imagenes[3];
     document.getElementById("imagen4").src = data.casas[id].imagenes[4];
 
+    document.getElementById("descripcion").innerHTML = data.casas[id].descripcion;
+
 
 
 
@@ -131,8 +133,7 @@ function topFunction() {
                    
   <p id="nombre">${document.getElementById("nombre").innerHTML = data.casas[id].nombre}</p>
   <p id="precio">${document.getElementById("precio").innerHTML = data.casas[id].precio}</p>
-  // <p>Descrición:${document.getElementById("descripcion".innerHTML = data.casas[id].descripcion)}</p>
-  
+ 
 </div>`
   })
 
