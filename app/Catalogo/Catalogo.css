@@ -117,6 +117,7 @@ header div{
     border-radius: 10px; 
     box-shadow: 0 4px 8px 0 #01587a, 0 6px 20px 0 #01587a;
     transition: transform 0.2s ease-in-out;
+    cursor: pointer;
 }
 
 .contenedorFotosYTexto{ /*Esto es para la imagen el bonton y el texto*/

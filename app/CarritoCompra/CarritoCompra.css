@@ -203,6 +203,10 @@ div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS 
     }
   }
 
+  .boton{
+    cursor: pointer;
+  }
+
   /*--------------------------------- footer ---------------------------------*/
   
 footer {
