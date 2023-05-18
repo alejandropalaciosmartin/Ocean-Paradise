@@ -168,3 +168,24 @@ function actualizarTotal() { //Esta función lo que hace es actualizar el precio
   const precioTotalElement = document.getElementById("precioTotal");
   precioTotalElement.innerText = sumaTotal.toLocaleString() + " €";
 }
+
+/*Realizar compra */
+function realizarCompra(){
+  var nombre;
+  var edad;
+  nombre=prompt('Ingrese su nombre:','');
+  edad=prompt('Ingrese su edad:','');
+  document.write('Hola ');
+  document.write(nombre);
+  document.write(' asi que tienes ');
+  document.write(edad);
+  document.write(' años');
+}
+
+
+
+
+
+
+
+
