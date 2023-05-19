@@ -22,8 +22,9 @@ function actualizarNumeroCarrito(numero) {
   
 //--------------------------------------------------------------------------------------------------------------------
 
-//metiendo datitos al carrito
+let precioTotal = 0; //Para meterlo en el LocalStorage, se usa más abajo en enviarDatos()
 
+//metiendo datitos al carrito
 async function CogerDatos(){
   let res = await fetch(urlCasa), 
     json = await res.json();
@@ -59,6 +60,8 @@ async function CogerDatos(){
 
     const precioTotalElement = document.getElementById("precioTotal");
     precioTotalElement.innerText = sumaSubtotales.toLocaleString() + " €";
+
+    precioTotal = sumaSubtotales.toLocaleString() + " €";  //Para meter el precio total en el LocalStorage, se usa más abajo en enviarDatos()
 
     if(sessionStorage.length == 0){
       const tr = document.createElement("tr");
@@ -237,30 +240,32 @@ function realizarCompra(){
 
   let numCompra=0;
   let cont=0;
-  let compra;
-  let numeroNombre = 0;
-  let casitas = "";
-  let valueJson;
+  let compra = " ";
+  let numeroNombre = 1;
+  let valueJson = " ";
+  let compraTotal = " ";
 
-function enviarDatos(nombreL){
- 
-
+function enviarDatos(nombreL){ //nombre del popup
     for (let i = 0; i < sessionStorage.length; i++) { // Recorrer todas las claves en el Session Storage
       key = sessionStorage.key(i); // Obtener la clave actual
       value = JSON.parse(sessionStorage.getItem(key)); // Obtener el valor correspondiente a la clave
         // console.log(key);
         // console.log(value);
-        compra = { // Creo un objeto para meter todos los datos despues de golpe!!!
+        compra = { // Creo un objeto para meter todos los datos 
           id : key,
-          nombre : nombreL,
-          numNombre: numeroNombre,
+          nombre : nombreL, //Cogemos el nombre del popup
+          idNombre: numeroNombre,
           casa : value[0],
           precio : value[1],
           cantidad: value[2],
-          total: sumaTotal,
+          //totalCompra: precioTotal, //suma total -> lo cogemos de la funcion cogerDatos() que lo metemos en la variable
         };
-          valueJson += JSON.stringify(compra); //Los convierto en un archivo Json
-        }
+        valueJson += JSON.stringify(compra); //Los convierto en un archivo Json
+      }
+        compraTotal = {
+          totalCompra: precioTotal, //suma total -> lo cogemos de la funcion cogerDatos() que lo metemos en la variable
+        };
+        valueJson += JSON.stringify(compraTotal); //Los convierto en un archivo Json
 
       console.log(valueJson); //Se ve todas las casas compradas en JSON
     
