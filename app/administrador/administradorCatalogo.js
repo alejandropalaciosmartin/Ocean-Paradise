@@ -1,10 +1,8 @@
 var x = document.getElementById("botonusuario");
-
+var y = document.getElementById("botonmensaje");
 
 function apareceusuario(){
-    
-   
-    
+
     if (x.style.display === "none") {
         x.style.display = "block";
     } else {
@@ -18,7 +16,7 @@ function apareceusuario(){
 
 }
 function aparecemensaje(){
-    var y = document.getElementById("botonmensaje");
+
     if (y.style.display === "none") {
         y.style.display = "block";
     } 
@@ -30,38 +28,31 @@ function aparecemensaje(){
         x.style.display = "none"
        y.style.display = "block"
     }
-    
-}
 
-
-let cantidad = 1;
-
-let local = localStorage.getItem("cantidad");
-
-console.log(local);
-
-/*function botonmas(){
-   cantidad= cantidad + 1;
-
-   document.querySelector("#cantidad").innerHTML= cantidad
-   if( cantidad < 1){
-    cantidad= cantidad + 0;
-
-    document.querySelector("#cantidad").innerHTML= 1
-   }
-
+   
 
 }
 
-function botonmenos(){
-    if( cantidad < 1){
-        cantidad = cantidad -0;
-        document.querySelector("#cantidad").innerHTML= 1
-    }else
-    cantidad = cantidad -1;
+//METODO PARA COGER INFORMACION DEL LOCAL Y METERLA EN LOS MENSAJES AL DARLE AL BOTON
+ function cogerMensajesUsuarios(){
+    const meterDatosHtml = document.getElementById("tablaParaMeterDatos");
+    for(let i =0;i<=localStorage.length;i++){   //Esto lee el local store y coge su tamaño para recorrerlo y coger los datos
+      
+        const datosDeMensajesEnObjeto = JSON.parse(localStorage.getItem(`${i}`));//mete en la variable datosDeMensajes pasando a json pa que siga siendo un objeto y podamos entrar en las propiedades.
 
-    document.querySelector("#cantidad").innerHTML= cantidad
+        if(datosDeMensajesEnObjeto != null){    //hay que ver que no sea null el objeto en si       
+            const nuevaFilaParaDatos = document.createElement("tr");      //creamos un tr para cada dato
+            nuevaFilaParaDatos.innerHTML=`<td>${datosDeMensajesEnObjeto.id}</td> 
+                                           <td>${datosDeMensajesEnObjeto.email}</td>
+                                           <td>${datosDeMensajesEnObjeto.asunto}</td>
+                                           <td>${datosDeMensajesEnObjeto.contenidoMensaje}</td>`; //metemos sus propiedades dentro de cada tr creado en el html
+            //console.log(datosDeMensajesEnObjeto.id);
+            meterDatosHtml.appendChild(nuevaFilaParaDatos); //agregamos los datos a la tabla del html
+        }      
+    }
+}
 
 
-  
-}*/
+cogerMensajesUsuarios();
+
+
