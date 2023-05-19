@@ -138,7 +138,7 @@ border-bottom: 1px solid black;
     margin-right: 15%;
 }
 
-.tablaDeInformacion,th,tr{
+.td{
    margin-left: 30%;
    margin-top: 5%;
    border: 2px solid black;
@@ -146,55 +146,18 @@ border-bottom: 1px solid black;
    padding: 15px;
 }
 
-
-
-
-/*td{
-    text-align: center;
+.tablaDeInformacion{
+    margin-left: 30%;
+   margin-top: 5%;
+   padding: 15px;
 }
-.informacionmensaje{
-    height: 15%;
-    width: 100%;
-    border-bottom: 1px solid black;
+
+.tr{
+    margin-left: 30%;
+    margin-top: 5%;
+    padding: 55px;
 }
-.mensaje{
-    height: 70%;
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    background-color: white;
-    margin-top: 2%;
-    margin-bottom: 10%;
-    border-radius: 7%;
-    text-align: center;
-}*/
-/*.contador {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: 100px;
-    height: 25px;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 5px;
-    margin-left: 5%;   
+
+  #botonmensaje{
+    display: none;
   }
-  .boton-mas,
-  .boton-menos {
-    font-size: 24px;
-    font-weight: bold;
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-    background-color: #ccc;
-    border: none;
-    cursor: pointer;
-    margin-left: 5%;
-  }
-  .numero {
-    font-size: 24px;
-    font-weight: bold;
-    width: 25px;
-    text-align: center;
-    border: none;
-  }*/
