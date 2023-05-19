@@ -172,6 +172,7 @@ function actualizarTotal() { //Esta función lo que hace es actualizar el precio
 }
 
 /*Realizar compra - POPUP */
+let nombreGuardado;
 function realizarCompra(){
   Swal
   .fire({
@@ -197,9 +198,11 @@ function realizarCompra(){
           .then(resultado => {
               //Si se introduce valor/nombre
               if (resultado.value) {
-                    localStorage.setItem("value", valueLocal);
+                    nombreGuardado = resultado.value; //guardamos el nombre
+                    enviarDatos();
+                    /*localStorage.setItem("value", valueLocal);
                     localStorage.setItem("cantidad", sumaTotal);
-                    localStorage.setItem("nombre", resultado.value); //Guardamos en el localStorage el valor introducido con la clave name
+                    localStorage.setItem("nombre", resultado.value); //Guardamos en el localStorage el valor introducido con la clave name*/
                   Swal
                   .fire({
                       title: "Compra realizada <br> Gracias por confiar en nosotros",
@@ -212,7 +215,7 @@ function realizarCompra(){
               else{
                 Swal
                 .fire({
-                    title: "¡¡Oh se le olvidó introducir un nombre",
+                    title: "¡¡Oh se le olvidó introducir un nombre!!",
                     text: "Sino se introduce nombre no podremos realizar la compra",
                     icon: 'error',
                     confirmButtonText: "Entendido",
@@ -232,6 +235,37 @@ function realizarCompra(){
   });
 }
 
+//--------------------------------------------------------------------------------------------------------------------
+
+let idNum = parseInt(localStorage.getItem("idNum")) || 0; // Tenemos que poner esto por que necesitamos guardar el numero por el que iba la id en
+// nuestro localStorage y si no hay ninguno coge el 0 pa que no de fallo.
+
+function crearID(){//Esto me crea el id de la propiedad id de mensaje ABAJO!!!
+    idNum++;
+    localStorage.setItem("idNum",idNum); //Me sube el incremento de id
+    return idNum;
+}
+
+function cogerDatos(){ //cojo los datos mediante su id, el valor!!!
+
+    const valueL = valueLocal;
+    const sumaTotalL = sumaTotal;
+    const nombreL = nombreGuardado;
+    
+    const compra = { // Creo un objeto para meter todos los datos despues de golpe!!!
+        id : crearID(),
+        nombre :nombreL,
+        casa : valueL,
+        sumaTotal : sumaTotalL
+    };
+    return compra;
+}
+
+function enviarDatos(){
+    const compraL = cogerDatos(); // Llamo el metodo donde hago lo de agrupar los datos.
+    const compraJson = JSON.stringify(compraL); //Los convierto en un archivo Json
+    localStorage.setItem(compraL.id,compraJson); // Los meto al local storage con un id
+}
 
 
 
