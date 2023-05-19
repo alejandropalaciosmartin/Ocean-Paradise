@@ -140,16 +140,20 @@ td{
    margin-left: 30%;
    margin-top: 5%;
    border: 2px solid #015b7f;
-   padding: 0% 15% 0% 2%;
-   /*width: 20%;*/
+   padding: 2% 15% 2% 2%;
+   width: 20%;
+   
 }
 
 .tablaDeInformacion{
    margin-left: 20%;
    margin-top: 5%;
-   /*width: 80%;*/
+   width: 75%;
    border-collapse: collapse;
    padding: 5vh;
+   font-size: x-large;
+
+   
 
 }
 
@@ -165,17 +169,24 @@ tr{
     padding: 0% 15% 0% 2%;
 }
 
-.datosMensajeEnObjeto{
-    /*width: 40%;*/
+.correo{
+    width: 30%;
+    margin: 5%;
+    text-align: center;
 }
 
 .contenidoMensaje{
-    /*width: 70%;*/
-    /*padding-right: 15%;
-    /*overflow:auto;*/
-    /*padding-left: 5%; */
+    width: 50%;
+    margin: 5%;
+    overflow-y: auto;
+    text-align: center;
+}
+
+.idMensaje{
+    width: 5%;
+    margin: 5%;
 }
 
 #botonmensaje{
-    display: none;
+    /*display: none;*/
   }
