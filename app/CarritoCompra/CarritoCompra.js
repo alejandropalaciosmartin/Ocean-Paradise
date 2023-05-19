@@ -11,14 +11,12 @@ function actualizarNumeroCarrito(numero) {
   //Código para calcular la cantidad total guardada en el SessionStorage para poner el numero en el carrito de la compra
     
   let sumaTotal = 0; // Inicializar la variable para almacenar la suma total
-  let valueLocal;
 
   for (let i = 0; i < sessionStorage.length; i++) { // Recorrer todas las claves en el Session Storage
     const key = sessionStorage.key(i); // Obtener la clave actual
     const value = JSON.parse(sessionStorage.getItem(key)); // Obtener el valor correspondiente a la clave 
     const cantidad = value[2]; // Obtener la cantidad del valor y sumarla a la suma total
     sumaTotal += cantidad;
-    valueLocal = value;
   }
   actualizarNumeroCarrito(sumaTotal);
   
@@ -199,7 +197,7 @@ function realizarCompra(){
               //Si se introduce valor/nombre
               if (resultado.value) {
                     nombreGuardado = resultado.value; //guardamos el nombre
-                    enviarDatos();
+                    enviarDatos(nombreGuardado);
                     /*localStorage.setItem("value", valueLocal);
                     localStorage.setItem("cantidad", sumaTotal);
                     localStorage.setItem("nombre", resultado.value); //Guardamos en el localStorage el valor introducido con la clave name*/
@@ -235,38 +233,47 @@ function realizarCompra(){
   });
 }
 
-//--------------------------------------------------------------------------------------------------------------------
+  //--------------------------------------------------------------------------------------------------------------------
 
-let idNum = parseInt(localStorage.getItem("idNum")) || 0; // Tenemos que poner esto por que necesitamos guardar el numero por el que iba la id en
-// nuestro localStorage y si no hay ninguno coge el 0 pa que no de fallo.
+  let numCompra=0;
+  let cont=0;
+  let compra;
+  let numeroNombre = 0;
+  let casitas = "";
+  let valueJson;
 
-function crearID(){//Esto me crea el id de la propiedad id de mensaje ABAJO!!!
-    idNum++;
-    localStorage.setItem("idNum",idNum); //Me sube el incremento de id
-    return idNum;
-}
+function enviarDatos(nombreL){
+ 
 
-function cogerDatos(){ //cojo los datos mediante su id, el valor!!!
+    for (let i = 0; i < sessionStorage.length; i++) { // Recorrer todas las claves en el Session Storage
+      key = sessionStorage.key(i); // Obtener la clave actual
+      value = JSON.parse(sessionStorage.getItem(key)); // Obtener el valor correspondiente a la clave
+        // console.log(key);
+        // console.log(value);
+        compra = { // Creo un objeto para meter todos los datos despues de golpe!!!
+          id : key,
+          nombre : nombreL,
+          numNombre: numeroNombre,
+          casa : value[0],
+          precio : value[1],
+          cantidad: value[2],
+          total: sumaTotal,
+        };
+          valueJson += JSON.stringify(compra); //Los convierto en un archivo Json
+        }
 
-    const valueL = valueLocal;
-    const sumaTotalL = sumaTotal;
-    const nombreL = nombreGuardado;
+      console.log(valueJson); //Se ve todas las casas compradas en JSON
     
-    const compra = { // Creo un objeto para meter todos los datos despues de golpe!!!
-        id : crearID(),
-        nombre :nombreL,
-        casa : valueL,
-        sumaTotal : sumaTotalL
-    };
-    return compra;
-}
+      numeroNombre++;
 
-function enviarDatos(){
-    const compraL = cogerDatos(); // Llamo el metodo donde hago lo de agrupar los datos.
-    const compraJson = JSON.stringify(compraL); //Los convierto en un archivo Json
-    localStorage.setItem(compraL.id,compraJson); // Los meto al local storage con un id
+      for (let i = 0; i < cont; i++){
+        numCompra = i;
+        cont++;
+      }
+    
+      localStorage.setItem(numeroNombre,valueJson); // Los meto al local storage con un id
+      valueJson ="";
 }
-
 
 
 
