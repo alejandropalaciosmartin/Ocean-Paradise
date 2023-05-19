@@ -135,54 +135,50 @@ border-bottom: 1px solid black;
 
 /*--------------------------------------------------------------------------------------*/
 
-
-td{
-   margin-left: 30%;
-   margin-top: 5%;
-   border: 2px solid #015b7f;
-   padding: 2% 15% 2% 2%;
-   width: 20%;
-   
-}
-
-.tablaDeInformacion{
+.tablaDeInformacion{ /*ESTO es el css de la tabla en si */
    margin-left: 20%;
    margin-top: 5%;
    width: 75%;
    border-collapse: collapse;
    padding: 5vh;
    font-size: x-large;
-
-   
-
 }
 
-th{
+td{ /*ESTO es el css de cada td*/
+    margin-left: 30%;
+    margin-top: 5%;
+    border: 2px solid #015b7f;
+    padding: 2% 15% 2% 2%;
+    width: 20%;
+    
+ } 
+
+th{ /*ESTO es el css de cada th */
     border: 2px solid #015b7f;
     color: #e1e8ec;
     background-color: #15769d;
 }
 
-tr{
+tr{ /*ESTO es el css de cada tr*/
     margin-left: 30%;
     margin-top: 5%;
     padding: 0% 15% 0% 2%;
 }
 
-.correo{
+.correo{  /*ESTO es el css de la columna del correo (email)*/
     width: 30%;
     margin: 5%;
     text-align: center;
 }
 
-.contenidoMensaje{
+.contenidoMensaje{ /*ESTO es el css de la columna del contenido del mensaje*/
     width: 50%;
     margin: 5%;
     overflow-y: auto;
     text-align: center;
 }
 
-.idMensaje{
+.idMensaje{ /*ESTO es el css de la columna del id del mensaje*/
     width: 5%;
     margin: 5%;
 }
