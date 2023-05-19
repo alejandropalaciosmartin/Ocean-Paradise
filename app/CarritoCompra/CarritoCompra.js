@@ -237,9 +237,6 @@ function realizarCompra(){
 }
 
   //--------------------------------------------------------------------------------------------------------------------
-
-  let numCompra=0;
-  let cont=0;
   let compra = " ";
   let numeroNombre = 1;
   let valueJson = " ";
@@ -255,29 +252,24 @@ function enviarDatos(nombreL){ //nombre del popup
           id : key,
           nombre : nombreL, //Cogemos el nombre del popup
           idNombre: numeroNombre,
-          casa : value[0],
+          casa : value[0], //Cogemos cada parte del archivo que nos da el sessionStorage
           precio : value[1],
           cantidad: value[2],
           //totalCompra: precioTotal, //suma total -> lo cogemos de la funcion cogerDatos() que lo metemos en la variable
         };
         valueJson += JSON.stringify(compra); //Los convierto en un archivo Json
       }
-        compraTotal = {
+        compraTotal = { //Hacemos otro json para no repetir en cada artículo y hacerlo como artículo diferente con ese dato
           totalCompra: precioTotal, //suma total -> lo cogemos de la funcion cogerDatos() que lo metemos en la variable
         };
-        valueJson += JSON.stringify(compraTotal); //Los convierto en un archivo Json
+        valueJson += JSON.stringify(compraTotal); 
 
-      console.log(valueJson); //Se ve todas las casas compradas en JSON
+      // console.log(valueJson); //Se ve todas las casas compradas en JSON
     
-      numeroNombre++;
-
-      for (let i = 0; i < cont; i++){
-        numCompra = i;
-        cont++;
-      }
+      numeroNombre++; //Sumamos la id para separar las personas
     
-      localStorage.setItem(numeroNombre,valueJson); // Los meto al local storage con un id
-      valueJson ="";
+      localStorage.setItem(numeroNombre,valueJson); // Los meto al local storage con un id de la persona
+      valueJson =""; //Reiniciamos los datos para que no haya duplicados
 }
 
 
