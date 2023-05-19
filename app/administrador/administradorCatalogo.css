@@ -186,3 +186,8 @@ tr{ /*ESTO es el css de cada tr*/
 .desaparecio{
     display: none;
   }
+
+  .imagenBasurita{
+    width: 30px;
+    margin-top:20px;
+  }

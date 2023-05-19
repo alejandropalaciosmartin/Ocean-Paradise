@@ -49,7 +49,7 @@ function aparecemensaje(){
                                            <td class="correo">${datosDeMensajesEnObjeto.email}</td>
                                            <td>${datosDeMensajesEnObjeto.asunto}</td>
                                            <td class="contenidoMensaje">${datosDeMensajesEnObjeto.contenidoMensaje}</td>
-                                           <td> a </td>`; //metemos sus propiedades dentro de cada tr creado en el html
+                                           <td><button onclick="" ><img class="imagenBasurita" src="../../Recursos/Imagen/basuraNegra.png" /><button></td>`; //metemos sus propiedades dentro de cada tr creado en el html
 
             //console.log(datosDeMensajesEnObjeto.id);
             meterDatosHtml.appendChild(nuevaFilaParaDatos); //agregamos los datos a la tabla del html
@@ -59,5 +59,4 @@ function aparecemensaje(){
 
 
 cogerMensajesUsuarios();
-
 
