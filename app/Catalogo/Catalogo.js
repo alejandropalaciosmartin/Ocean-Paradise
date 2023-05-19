@@ -47,7 +47,7 @@ async function cogerCasas(){
         card.addEventListener('click', () => { window.location.href = `../Producto/Producto.html?id=${casa.id}`; });
         container.appendChild(card);
         casaNombre[i]=casa.nombre.toLowerCase();//Aprovechamos los datos cogidos de la api y lo pasamos el nombre a minusculas todo PARA EL BUSCADOR
-
+        
 
     }
 }
@@ -56,8 +56,9 @@ cogerCasas();
  function buscar(){ // Metodo de buscar
 
     var letrasIntroducidas = document.getElementById('buscador').value.toLowerCase(); //guardamos del input las letras en minusculas
+    console.log(letrasIntroducidas);
     const item = document.querySelectorAll(".boton"); //coge los elementos del html que tienen esa clase
-    for(let i = 1; i < item.length; i++) // bucle que recorre los productos 
+    for(let i = 1; i <= item.length; i++) // bucle que recorre los productos 
     {
          if(casaNombre[i].includes(letrasIntroducidas)){ //este if mira si el array de nombres hecho arriba incluye o contiene las letras que voy metiendo
                 item[i-1].classList.remove("loBuscado"); /*lo del menos 1 es por que las casas su id empieza desde 1 no desde cero, entonces el bucle

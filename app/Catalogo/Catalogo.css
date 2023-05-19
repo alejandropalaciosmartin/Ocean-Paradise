@@ -72,6 +72,10 @@ header div{
 }
 
 /*CSS DEL MAIN :*/
+main {
+    min-height: 700px;
+}
+
 .cuadradBuscador{ /*El div que engloba el buscador*/
     margin: 40px 10% 15px 10%;
     
@@ -155,24 +159,19 @@ header div{
 
 /*FOOTER CSS*/
 footer {
-	display: flex;
+    display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
-    border-top: solid 1px rgb(31, 171, 171);
-	background-image:linear-gradient(to right , #003d55,#015b7f,#0079a9,#e1e8ec);
-	position: static;
-	bottom: 0; 
-	text-align: center;
-	height: 85px;
+    background-image: linear-gradient(to right, #003d55, #015b7f, #0079a9, #e1e8ec);
+    height: 70px;
+    padding: 10px;
+    margin-top: auto;
 }
-
-footer a img {
+footer a img { /*tamaño de las imagenes en los enlaces*/
 	height: 20px;
 	margin-right: 5px;
 }
-
-footer a{
+footer a{ /*estilo de los enlaces*/
 	text-decoration: none;
 	color: #ffffff;
 	margin-right: 40px;
@@ -180,30 +179,22 @@ footer a{
     align-items: center;
 	font-size: 20px;
 }  
-
-#copy{
+#copy{ /*texto copyright*/
 	margin-right: 20px;
 }
 
-footer a:hover{
+footer a:hover{ /*subraya cuando te pones encima*/
 	text-decoration: underline;
 }
-
-@media (max-width:615px) {
+@media (max-width:615px) { /*PARA ARREGLAR EL RESPONSIVO DEL FOOTER*/
     footer a img {
         height: 15px;
     }
-    
     footer a{
-        text-decoration: none;
-        color: #ffffff;
         margin-right: 18px;
-        display: flex;
-        align-items: center;
         font-size: 15px;
     }  
 }
-
 
 /*--------------------barra lateral------------------*/
 ::-webkit-scrollbar {
