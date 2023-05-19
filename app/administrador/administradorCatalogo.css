@@ -124,12 +124,7 @@ width: 100%;
 border-bottom: 1px solid black;
 
 }
-/*th{
-    display: inline;
-    margin-left: 8%;
-    margin-right: 34%;
-    width: 100%;
-}*/
+
 .imagenproducto{
     margin-left: 15%;
     height: 120px;
@@ -138,26 +133,49 @@ border-bottom: 1px solid black;
     margin-right: 15%;
 }
 
-.td{
+/*--------------------------------------------------------------------------------------*/
+
+
+td{
    margin-left: 30%;
    margin-top: 5%;
-   border: 2px solid black;
-   border-collapse: collapse;
-   padding: 15px;
+   border: 2px solid #015b7f;
+   padding: 0% 15% 0% 2%;
+   /*width: 20%;*/
 }
 
 .tablaDeInformacion{
-    margin-left: 30%;
+   margin-left: 20%;
    margin-top: 5%;
-   padding: 15px;
+   /*width: 80%;*/
+   border-collapse: collapse;
+   padding: 5vh;
+
 }
 
-.tr{
+th{
+    border: 2px solid #015b7f;
+    color: #e1e8ec;
+    background-color: #15769d;
+}
+
+tr{
     margin-left: 30%;
     margin-top: 5%;
-    padding: 55px;
+    padding: 0% 15% 0% 2%;
 }
 
-  #botonmensaje{
+.datosMensajeEnObjeto{
+    /*width: 40%;*/
+}
+
+.contenidoMensaje{
+    /*width: 70%;*/
+    /*padding-right: 15%;
+    /*overflow:auto;*/
+    /*padding-left: 5%; */
+}
+
+#botonmensaje{
     display: none;
   }

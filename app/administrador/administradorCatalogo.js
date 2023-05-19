@@ -5,13 +5,14 @@ function apareceusuario(){
 
     if (x.style.display === "none") {
         x.style.display = "block";
+        y.style.display = "none";
     } else {
         x.style.display = "none";
     }
-    if(y.style.display === "block"){
-        y.style.display = "none"
+    /*if(y.style.display === "block"){
+        
         x.style.display = "block"
-    }
+    }*/
    
 
 }
@@ -19,15 +20,16 @@ function aparecemensaje(){
 
     if (y.style.display === "none") {
         y.style.display = "block";
+        x.style.display = "none";
     } 
      else {
         y.style.display = "none";
         
     }
-    if(x.style.display === "block"){
-        x.style.display = "none"
+    /*if(x.style.display === "block"){
+        
        y.style.display = "block"
-    }
+    }*/
 
    
 
@@ -43,9 +45,9 @@ function aparecemensaje(){
         if(datosDeMensajesEnObjeto != null){    //hay que ver que no sea null el objeto en si       
             const nuevaFilaParaDatos = document.createElement("tr");      //creamos un tr para cada dato
             nuevaFilaParaDatos.innerHTML=`<td>${datosDeMensajesEnObjeto.id}</td> 
-                                           <td>${datosDeMensajesEnObjeto.email}</td>
+                                           <td class="datosMensajeEnObjeto">${datosDeMensajesEnObjeto.email}</td>
                                            <td>${datosDeMensajesEnObjeto.asunto}</td>
-                                           <td>${datosDeMensajesEnObjeto.contenidoMensaje}</td>`; //metemos sus propiedades dentro de cada tr creado en el html
+                                           <td class="contenidoMensaje">${datosDeMensajesEnObjeto.contenidoMensaje}</td>`; //metemos sus propiedades dentro de cada tr creado en el html
             //console.log(datosDeMensajesEnObjeto.id);
             meterDatosHtml.appendChild(nuevaFilaParaDatos); //agregamos los datos a la tabla del html
         }      
