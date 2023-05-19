@@ -183,6 +183,6 @@ tr{ /*ESTO es el css de cada tr*/
     margin: 5%;
 }
 
-#botonmensaje{
-    /*display: none;*/
+.desaparecio{
+    display: none;
   }

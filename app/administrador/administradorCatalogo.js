@@ -1,14 +1,14 @@
-var x = document.getElementById("botonusuario");
-var y = document.getElementById("botonmensaje");
+var botonUsuario = document.getElementById("botonusuario");
+var botonMensaje = document.getElementById("botonmensaje");
 
 
 function apareceusuario(){
 
-    if (x.style.display === "none") {
-        x.style.display = "inline-block";
-        y.style.display = "none";
+    if (botonUsuario.classList.contains("desaparecio")) {
+        botonUsuario.classList.remove("desaparecio");
+        botonMensaje.classList.add("desaparecio");
     } else {
-        x.style.display = "none";
+        botonUsuario.classList.add("desaparecio");
     }
     /*if(y.style.display === "block"){
         
@@ -19,12 +19,12 @@ function apareceusuario(){
 }
 function aparecemensaje(){
 
-    if (y.style.display === "none") {
-        y.style.display = "inline-block";
-        x.style.display = "none";
+    if (botonMensaje.classList.contains("desaparecio")) {
+        botonMensaje.classList.remove("desaparecio");
+        botonUsuario.classList.add("desaparecio");
     } 
      else {
-        y.style.display = "none";
+        botonMensaje.classList.add("desaparecio");
         
     }
     /*if(x.style.display === "block"){
