@@ -5,7 +5,7 @@ function actualizarNumeroCarrito(numero) {
 }
 
 //Código para calcular la cantidad total guardada en el SessionStorage para poner el numero en el carrito de la compra
-  
+const elementoNumero = document.getElementById('sumaTotalCarrito');  
 let sumaTotal = 0; // Inicializar la variable para almacenar la suma total
 
 for (let i = 0; i < sessionStorage.length; i++) { // Recorrer todas las claves en el Session Storage
@@ -14,7 +14,13 @@ for (let i = 0; i < sessionStorage.length; i++) { // Recorrer todas las claves e
   const cantidad = value[2]; // Obtener la cantidad del valor y sumarla a la suma total
   sumaTotal += cantidad;
 }
-actualizarNumeroCarrito(sumaTotal);
+
+if(sumaTotal > 0){
+  actualizarNumeroCarrito(sumaTotal);
+}
+else{
+  elementoNumero.style.display = "none";
+}
 
 //--------------------------------------------------------------------------------------------------------------------
 

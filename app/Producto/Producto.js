@@ -2,13 +2,14 @@ const enlace = window.location.search;
 const urlparametros = new URLSearchParams(enlace);
 const id = urlparametros.get("id");
 
-// Función para actualizar el número del carrito
+//Función para actualizar el número del carrito
 function actualizarNumeroCarrito(numero) {
   const elementoNumero = document.getElementById('sumaTotalCarrito');
   elementoNumero.textContent = numero;
 }
 
-// Código para calcular la cantidad total guardada en el SessionStorage para poner el número en el carrito de la compra
+//Código para calcular la cantidad total guardada en el SessionStorage para poner el numero en el carrito de la compra
+const elementoNumero = document.getElementById('sumaTotalCarrito');  
 let sumaTotal = 0; // Inicializar la variable para almacenar la suma total
 
 for (let i = 0; i < sessionStorage.length; i++) { // Recorrer todas las claves en el Session Storage
@@ -18,7 +19,12 @@ for (let i = 0; i < sessionStorage.length; i++) { // Recorrer todas las claves e
   sumaTotal += cantidad;
 }
 
-actualizarNumeroCarrito(sumaTotal);
+if(sumaTotal > 0){
+  actualizarNumeroCarrito(sumaTotal);
+}
+else{
+  elementoNumero.style.display = "none";
+}
 
 //--------------------------------------------------------------------------------------------------------------------
 
@@ -102,6 +108,9 @@ function añadirCarrito() {
 
     // Código para calcular la cantidad total guardada en el SessionStorage para poner el número en el carrito de la compra
     sumaTotal += contenidoCantidad;
+    if(elementoNumero.style.display == "none"){
+      elementoNumero.style.display = "flex";
+    }
     actualizarNumeroCarrito(sumaTotal);
   } else {
     const datosGuardados = sessionStorage.getItem(id);
@@ -113,6 +122,9 @@ function añadirCarrito() {
 
     // Código para actualizar la cantidad total en el carrito de la compra
     sumaTotal += contenidoCantidad;
+    if(elementoNumero.style.display == "none"){
+      elementoNumero.style.display = "flex";
+    }
     actualizarNumeroCarrito(sumaTotal);
   }
 }
