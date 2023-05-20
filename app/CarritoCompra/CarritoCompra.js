@@ -241,7 +241,7 @@ function realizarCompra(){
   let numeroNombre = 1;
   let valueJson = " ";
   let compraTotal = " ";
-  let compra2 = " ";
+  let array = [];
 
 function enviarDatos(nombreL){ //nombre del popup
     for (let i = 0; i < sessionStorage.length; i++) { // Recorrer todas las claves en el Session Storage
@@ -251,46 +251,44 @@ function enviarDatos(nombreL){ //nombre del popup
         // console.log(value);
 
         //OPCIÓN OBJETO
-        /*compra = { // Creo un objeto para meter todos los datos 
-          id : key,
-          nombre : nombreL, //Cogemos el nombre del popup
-          idNombre: numeroNombre,
-          casa : value[0], //Cogemos cada parte del archivo que nos da el sessionStorage
-          precio : value[1],
-          cantidad: value[2],
-          //totalCompra: precioTotal, //suma total -> lo cogemos de la funcion cogerDatos() que lo metemos en la variable
-        };*/
-
-        //OPCIÓN ARRAY
-        //compra = ["idCompra"+key, nombreL, "idNombre"+numeroNombre, value[0], value[1], value[2], precioTotal];
-        
-        //OPCIÓN OBJETO+ARRAY con todos
         compra = { // Creo un objeto para meter todos los datos 
           id : key,
-          nombre : nombreL, //Cogemos el nombre del popup
-          idNombre: numeroNombre,
           casa : value[0], //Cogemos cada parte del archivo que nos da el sessionStorage
           precio : value[1],
           cantidad: value[2],
-          //totalCompra: precioTotal, //suma total -> lo cogemos de la funcion cogerDatos() que lo metemos en la variable
         };
-
-        compra2 = [compra];
-
-        valueJson += JSON.stringify(compra2); //Los convierto en un archivo Json
+        valueJson += JSON.stringify(compra)+ ","; //Los convierto en un archivo Json, SE AÑADE , AL FINAL PARA QUE LOS JSON SE SEPARE CORRECTAMENTE MENOS EL ÚLTIMO QUE AÑADIMOS
       }
-        compraTotal = { //Hacemos otro json para no repetir en cada artículo y hacerlo como artículo diferente con ese dato
-          totalCompra: precioTotal, //suma total -> lo cogemos de la funcion cogerDatos() que lo metemos en la variable
-        };
-        valueJson += JSON.stringify(compraTotal); 
+      compraTotal = { //Hacemos otro json para no repetir en cada artículo y hacerlo como artículo diferente con ese dato
+        nombre : nombreL, //Cogemos el nombre del popup
+        idNombre: numeroNombre,
+        totalCompra: precioTotal, //suma total -> lo cogemos de la funcion cogerDatos() que lo metemos en la variable
+      };
+      valueJson += JSON.stringify(compraTotal); 
 
-      // console.log(valueJson); //Se ve todas las casas compradas en JSON
-    
       numeroNombre++; //Sumamos la id para separar las personas
+      array="["+valueJson+"]"; //Para convertir en array todo el conjunto
+      localStorage.setItem("Comprar"+numeroNombre,array); // Los meto al local storage con un id de la persona
+      array =""; //Reiniciamos los datos para que no haya duplicados
+      
+
+      //ADMINISTRADOR - COGER DATOS - OLIVER
+     /* var variable = localStorage.getItem("Comprar"+2)
+      var objetos = JSON.parse(variable);
+      
+      //1º opcion
+      objetos.forEach(function(objeto) {
+        var id = objeto.id;
+        var casa = objeto.casa;
+        var precio = objeto.precio;
+        var cantidad = objeto.cantidad;
+        var totalCompra = objeto.totalCompra;
+        console.log(id);
+      });
+      //2º opcion
+      console.log(objetos[0].id);*/
     
-      localStorage.setItem("Compra"+numeroNombre,valueJson); // Los meto al local storage con un id de la persona
-      valueJson =""; //Reiniciamos los datos para que no haya duplicados
-}
+    }
 
 
 
