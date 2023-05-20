@@ -65,6 +65,7 @@ body{/*El body normal*/
     height: 15px;
     width: 200px;
     font-size: xx-large;
+    text-align:initial;
     
 }
 .boton{ /*Boton de acceder*/

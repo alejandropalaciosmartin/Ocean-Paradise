@@ -55,16 +55,12 @@ fetch('https://getpantry.cloud/apiv1/pantry/464bfeaa-daae-4ecd-81c0-3a675193d25e
     if (datosGuardados) {
       const datos = JSON.parse(datosGuardados);
       cantidad = datos[2];
-      document.getElementById("cantidad").innerHTML = cantidad;
+      document.getElementById("cantidad").innerHTML = 1;
     } else {
       document.getElementById("cantidad").innerHTML = cantidad;
     }
 
-    // Guardar los valores en sessionStorage si no existen
-  //   if (!datosGuardados) {
-  //     const datos = [nombreCasa, precioCasa, 0];
-  //     sessionStorage.setItem(id, JSON.stringify(datos));
-  //   }
+    
    });
 
 function cambiofotos(event) {
@@ -128,6 +124,8 @@ function añadirCarrito() {
     actualizarNumeroCarrito(sumaTotal);
   }
 }
+//---------------------------------------------------------------------------------------------------------------------//
+
 
   //Flecha ir arriba----------------------------------------------------
   window.onscroll = function() {
@@ -163,8 +161,8 @@ function añadirCarrito() {
 
 
 
-/*Este el codigo bueno 18:06
-const enlace = window.location.search;
+
+/*const enlace = window.location.search;
 const urlparametros = new URLSearchParams(enlace);
 const id = urlparametros.get("id");
 
@@ -305,8 +303,8 @@ window.onscroll = function() {
 
 function topFunction() {
   document.documentElement.scrollTop = 0;
-}
+}*/
 
 
 
-*/
+

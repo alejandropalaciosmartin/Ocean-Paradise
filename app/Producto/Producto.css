@@ -143,6 +143,7 @@ header div{
     box-shadow: 0 4px 8px 0 #01587a, 0 6px 20px 0 #01587a;
     transition: transform 0.2s ease-in-out;
     border: 0;
+  
 }
 
 .botonImagen:hover{/*Boton de cuando pasas por encima en una imagen pequeñita*/
