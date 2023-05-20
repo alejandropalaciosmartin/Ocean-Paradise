@@ -65,6 +65,27 @@ div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS 
     text-align: center;
 }
 
+/* -----------Botón volver arriba----------- */
+#botonFlecha{
+  display: none; 
+  position: fixed; 
+  bottom: 50px; 
+  right: 9px; 
+  z-index: 99; 
+  border: none;
+  background-color: transparent;
+}
+
+#botonFlecha:hover{
+  cursor: pointer;
+  box-shadow: 0 0 20px rgb(171, 185, 96);
+  /* transition: box-shadow 0.3s ease-in-out; */
+  border-radius: 50%;
+}
+
+#flechita{
+  width: 10vh;
+}
 /*----------------------------------------------main-----------------------------------------*/
 /*CSS CARRITO*/
 .carrito {

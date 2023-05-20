@@ -1,3 +1,28 @@
+//Flecha ir arriba----------------------------------------------------
+window.onscroll = function() {
+  const myBtn = document.getElementById("botonFlecha");
+  myBtn.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
+};
+
+function topFunction() {
+  scrollToTop(document.documentElement, 0, 500); // Desplaza hasta arriba en 500ms (medio segundo)
+}
+
+function scrollToTop(element, to, duration) {
+  if (duration > 0) {
+    const difference = to - element.scrollTop;
+    const perTick = difference / duration * 10;
+
+    requestAnimationFrame(function() {
+      element.scrollTop = element.scrollTop + perTick;
+
+      if (element.scrollTop !== to) {
+        scrollToTop(element, to, duration - 10);
+      }
+    });
+  }
+}
+
 //constante de la url de la api
 const urlCasa = "https://getpantry.cloud/apiv1/pantry/464bfeaa-daae-4ecd-81c0-3a675193d25e/basket/Casas";
 CogerDatos();
