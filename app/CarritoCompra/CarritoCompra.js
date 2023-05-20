@@ -238,7 +238,7 @@ function realizarCompra(){
 
   //--------------------------------------------------------------------------------------------------------------------
   let compra = " ";
-  let numeroNombre = 1;
+  let numeroNombre = 0;
   let valueJson = " ";
   let compraTotal = " ";
 
@@ -248,7 +248,9 @@ function enviarDatos(nombreL){ //nombre del popup
       value = JSON.parse(sessionStorage.getItem(key)); // Obtener el valor correspondiente a la clave
         // console.log(key);
         // console.log(value);
-        compra = { // Creo un objeto para meter todos los datos 
+
+        //OPCIÓN OBJETO
+        /*compra = { // Creo un objeto para meter todos los datos 
           id : key,
           nombre : nombreL, //Cogemos el nombre del popup
           idNombre: numeroNombre,
@@ -256,7 +258,11 @@ function enviarDatos(nombreL){ //nombre del popup
           precio : value[1],
           cantidad: value[2],
           //totalCompra: precioTotal, //suma total -> lo cogemos de la funcion cogerDatos() que lo metemos en la variable
-        };
+        };*/
+
+        //OPCIÓN ARRAY
+        compra = [key, nombreL, numeroNombre, value[0], value[1], value[2], precioTotal];
+        
         valueJson += JSON.stringify(compra); //Los convierto en un archivo Json
       }
         compraTotal = { //Hacemos otro json para no repetir en cada artículo y hacerlo como artículo diferente con ese dato
