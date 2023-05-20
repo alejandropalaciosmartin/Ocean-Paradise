@@ -176,6 +176,7 @@ button#enviar[type="submit"]:hover {
 }
 .phone{
 	width: 30px;
+	margin-left: -5px;
 }
 @media (max-width:1490px) {
 	.telefono{
@@ -214,7 +215,7 @@ button#enviar[type="submit"]:hover {
 }
 .direction{
 	width: 23px;
-	margin-left: 5px
+	margin-left: 11px
 }
 @media (max-width:1490px) {
 	.direccion{
