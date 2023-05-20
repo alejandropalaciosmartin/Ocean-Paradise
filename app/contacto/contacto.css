@@ -328,8 +328,8 @@ footer a:hover{ /*subraya cuando te pones encima*/
 	}
 }
 
- /* -----------Botón volver arriba----------- */
- #botonFlecha{
+   /* -----------Botón volver arriba----------- */
+#botonFlecha{
     display: none; 
     position: fixed; 
     bottom: 50px; 
