@@ -184,7 +184,10 @@ tr{ /*ESTO es el css de cada tr*/
     display: none;
   }
 
-  .imagenBasurita{
+.imagenBasurita{
     width: 30px;
     margin-top:20px;
   }
+.imagenBasurita:hover{
+    src: "../Recursos/imagen/basuraAbiertaNegra";
+}

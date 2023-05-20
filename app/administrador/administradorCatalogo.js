@@ -49,7 +49,7 @@ function aparecemensaje(){
                                            <td class="correo">${datosDeMensajesEnObjeto.email}</td>
                                            <td>${datosDeMensajesEnObjeto.asunto}</td>
                                            <td class="contenidoMensaje">${datosDeMensajesEnObjeto.contenidoMensaje}</td>
-                                           <td><button onclick="" ><img class="imagenBasurita" src="../../Recursos/Imagen/basuraNegra.png" /><button></td>`; //metemos sus propiedades dentro de cada tr creado en el html
+                                           <td><button onmouseout="cambioBasura2(${i})" onmouseover="cambioBasura(${i})" onclick="" ><img id="basura${i}"class="imagenBasurita" src="../../Recursos/Imagen/basuraNegra.png" /><button></td>`; //metemos sus propiedades dentro de cada tr creado en el html
 
             //console.log(datosDeMensajesEnObjeto.id);
             meterDatosHtml.appendChild(nuevaFilaParaDatos); //agregamos los datos a la tabla del html
@@ -59,4 +59,16 @@ function aparecemensaje(){
 
 
 cogerMensajesUsuarios();
+
+
+function cambioBasura(i){
+    let basura = document.getElementById(`basura${i}`);
+    
+    basura.src = "../../Recursos/Imagen/basuraAbiertaNegra.png";
+}
+function cambioBasura2(i){
+    let basura = document.getElementById(`basura${i}`);
+    
+    basura.src = "../../Recursos/Imagen/basuraNegra.png";
+}
 
