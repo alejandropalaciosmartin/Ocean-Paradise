@@ -181,6 +181,7 @@ footer a{ /*estilo de los enlaces*/
 }  
 #copy{ /*texto copyright*/
 	margin-right: 20px;
+    color: white;
 }
 
 footer a:hover{ /*subraya cuando te pones encima*/
