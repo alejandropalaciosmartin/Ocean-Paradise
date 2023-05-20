@@ -41,6 +41,24 @@ fetch('https://getpantry.cloud/apiv1/pantry/464bfeaa-daae-4ecd-81c0-3a675193d25e
     // Actualizar los elementos HTML con los valores obtenidos
     document.getElementById("nombre").innerHTML = nombreCasa;
     document.getElementById("precio").innerHTML = precioCasa;
+
+    // Verificar si hay un valor almacenado en el sessionStorage
+    const datosGuardados = sessionStorage.getItem(id);
+    let cantidad = 1; // Establecer la cantidad inicial en 1 por defecto
+
+    if (datosGuardados) {
+      const datos = JSON.parse(datosGuardados);
+      cantidad = datos[2];
+      document.getElementById("cantidad").innerHTML = cantidad;
+    } else {
+      document.getElementById("cantidad").innerHTML = cantidad;
+    }
+
+    // Guardar los valores en sessionStorage si no existen
+    if (!datosGuardados) {
+      const datos = [nombreCasa, precioCasa, 0];
+      sessionStorage.setItem(id, JSON.stringify(datos));
+    }
   });
 
 function cambiofotos(event) {
@@ -48,44 +66,24 @@ function cambiofotos(event) {
   document.getElementById("foto").src = imagenSeleccionada;
 }
 
-// Asignar la función cambiofotos() a los botones de imagen
+
 document.getElementById("botonImagen1").addEventListener("click", cambiofotos);
 document.getElementById("botonImagen2").addEventListener("click", cambiofotos);
 document.getElementById("botonImagen3").addEventListener("click", cambiofotos);
 document.getElementById("botonImagen4").addEventListener("click", cambiofotos);
 document.getElementById("botonImagen5").addEventListener("click", cambiofotos);
 
-const elementoNombre = document.getElementById("nombre");
-const contenidoNombre = elementoNombre.innerHTML;
-
-const elementoPrecio = document.getElementById("precio");
-const contenidoPrecio = elementoPrecio.innerHTML;
-
-const elementoCantidad = document.getElementById("cantidad");
-let cantidad = 1;
-
-// Verificar si hay un valor almacenado en el sessionStorage
-const datosGuardados = sessionStorage.getItem(id);
-if (datosGuardados) {
-  const datos = JSON.parse(datosGuardados);
-  cantidad = datos[2];
-  elementoCantidad.innerHTML = cantidad;
-}
-
-// Restablecer la cantidad a 1 al volver a la página
-document.addEventListener("DOMContentLoaded", function() {
-  elementoCantidad.innerHTML = 1;
-});
-
 function botonmas() {
+  let cantidad = parseInt(document.getElementById("cantidad").innerHTML);
   cantidad++;
-  elementoCantidad.innerHTML = cantidad;
+  document.getElementById("cantidad").innerHTML = cantidad;
 }
 
 function botonmenos() {
+  let cantidad = parseInt(document.getElementById("cantidad").innerHTML);
   if (cantidad > 1) {
     cantidad--;
-    elementoCantidad.innerHTML = cantidad;
+    document.getElementById("cantidad").innerHTML = cantidad;
   }
 }
 
@@ -94,7 +92,9 @@ function realizarcompra() {
 }
 
 function añadirCarrito() {
-  const contenidoCantidad = parseInt(elementoCantidad.innerText);
+  const contenidoNombre = document.getElementById("nombre").innerHTML;
+  const contenidoPrecio = document.getElementById("precio").innerHTML;
+  const contenidoCantidad = parseInt(document.getElementById("cantidad").innerHTML);
 
   if (sessionStorage.getItem(id) == null) {
     const datos = [contenidoNombre, contenidoPrecio, contenidoCantidad];
@@ -126,10 +126,6 @@ window.onscroll = function() {
 function topFunction() {
   document.documentElement.scrollTop = 0;
 }
-
-
-
-
 
 
 
