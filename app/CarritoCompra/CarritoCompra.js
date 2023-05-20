@@ -288,7 +288,7 @@ function enviarDatos(nombreL){ //nombre del popup
     
       numeroNombre++; //Sumamos la id para separar las personas
     
-      localStorage.setItem(numeroNombre,valueJson); // Los meto al local storage con un id de la persona
+      localStorage.setItem("Compra"+numeroNombre,valueJson); // Los meto al local storage con un id de la persona
       valueJson =""; //Reiniciamos los datos para que no haya duplicados
 }
 
