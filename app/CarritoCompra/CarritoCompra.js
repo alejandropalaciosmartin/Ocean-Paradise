@@ -238,7 +238,7 @@ function realizarCompra(){
 
   //--------------------------------------------------------------------------------------------------------------------
   let compra = " ";
-  let numeroNombre = 0;
+  let numeroNombre = 1;
   let valueJson = " ";
   let compraTotal = " ";
 
@@ -261,7 +261,7 @@ function enviarDatos(nombreL){ //nombre del popup
         };*/
 
         //OPCIÓN ARRAY
-        compra = [key, nombreL, numeroNombre, value[0], value[1], value[2], precioTotal];
+        compra = ["idCompra"+key, nombreL, "idNombre"+numeroNombre, value[0], value[1], value[2], precioTotal];
         
         valueJson += JSON.stringify(compra); //Los convierto en un archivo Json
       }
