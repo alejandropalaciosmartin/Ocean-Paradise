@@ -61,11 +61,11 @@ fetch('https://getpantry.cloud/apiv1/pantry/464bfeaa-daae-4ecd-81c0-3a675193d25e
     }
 
     // Guardar los valores en sessionStorage si no existen
-    if (!datosGuardados) {
-      const datos = [nombreCasa, precioCasa, 0];
-      sessionStorage.setItem(id, JSON.stringify(datos));
-    }
-  });
+  //   if (!datosGuardados) {
+  //     const datos = [nombreCasa, precioCasa, 0];
+  //     sessionStorage.setItem(id, JSON.stringify(datos));
+  //   }
+   });
 
 function cambiofotos(event) {
   const imagenSeleccionada = event.target.src;
