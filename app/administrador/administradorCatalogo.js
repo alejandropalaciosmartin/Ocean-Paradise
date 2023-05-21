@@ -49,7 +49,7 @@ function aparecemensaje(){
                                            <td class="correo">${datosDeMensajesEnObjeto.email}</td>
                                            <td>${datosDeMensajesEnObjeto.asunto}</td>
                                            <td class="contenidoMensaje">${datosDeMensajesEnObjeto.contenidoMensaje}</td>
-                                           <td><button onmouseout="cambioBasura2(${i})" onmouseover="cambioBasura(${i})" onclick="" ><img id="basura${i}"class="imagenBasurita" src="../../Recursos/Imagen/basuraNegra.png" /><button></td>`; //metemos sus propiedades dentro de cada tr creado en el html
+                                           <td><button onmouseout="cambioBasura2(${i})" onmouseover="cambioBasura(${i})" onclick="borrarMensaje(${i})" ><img id="basura${i}"class="imagenBasurita" src="../../Recursos/Imagen/basuraNegra.png" /><button></td>`; //metemos sus propiedades dentro de cada tr creado en el html
 
             //console.log(datosDeMensajesEnObjeto.id);
             meterDatosHtml.appendChild(nuevaFilaParaDatos); //agregamos los datos a la tabla del html
@@ -61,14 +61,37 @@ function aparecemensaje(){
 cogerMensajesUsuarios();
 
 
-function cambioBasura(i){
+function cambioBasura(i){//para poner la img de la basura abierta
     let basura = document.getElementById(`basura${i}`);
     
     basura.src = "../../Recursos/Imagen/basuraAbiertaNegra.png";
 }
-function cambioBasura2(i){
+function cambioBasura2(i){//para volver a la img de basura normal
     let basura = document.getElementById(`basura${i}`);
     
     basura.src = "../../Recursos/Imagen/basuraNegra.png";
 }
 
+
+function borrarMensaje(i){
+//METER LIBRERIA ADRI, MENSAJE DE SEGURO QUE QUIERES BORRAR??
+    if(true){//BOOLEANO QUE ME DE LA RESPUESTA ANTERIOR
+        let numMensajes = localStorage.getItem("idNum");//cojo el item idNum para restarle una a la cantidad y lo vuelvo a poner
+        numMensajes--;
+        localStorage.setItem("idNum", numMensajes);
+        localStorage.removeItem(i);//borro el item
+        siguiente(i);//esta funcion cambia las ids de las keys para que siempre esten en orden y no haya saltos ni fallos
+    }
+
+    location.reload();//recarga la pagina para actualizar los datos
+    //CORREGIR poner algo para que se vea la tabla en la que estaba
+}
+
+function siguiente(i){//funcion recursiva para que lo haga hasta que el siguiente sea nulo
+var siguienteValor = localStorage.getItem(i+1);
+if(siguienteValor != null){
+    localStorage.removeItem(i+1);
+    localStorage.setItem(i, siguienteValor);
+    siguiente(i+1);
+}
+}
