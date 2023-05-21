@@ -23,3 +23,17 @@ function entrarAdmin() {
 function hideAlert() {/*Para ocultar la alerta*/
     customAlert.style.display = 'none';
   }
+
+function togglePasswordVisibility() {
+    let input = document.getElementById('contrasena');
+    let botonOjo = document.getElementById("ojo");
+  
+    if (input.type === 'password') {
+      input.type = 'text';
+      botonOjo.src = "../../Recursos/Imagen/visible.png";
+    } else {
+      input.type = 'password';
+      botonOjo.src = "../../Recursos/Imagen/visibilidad.png";
+    }
+  }
+  

@@ -52,6 +52,21 @@ body{/*El body normal*/
     margin: 0 auto 0 auto;
     
 }
+.botonOjo{
+    position: absolute;
+    z-index: 99;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-top: 18px;
+    margin-left: 160px;
+}
+#ojo{
+    
+    width: 23px;
+    height: 23px;
+}
+
 @font-face{/*Tipografía*/
     font-family: OCEAN;
     src: url("../../recursos/Fuentes/Frosh.ttf");
