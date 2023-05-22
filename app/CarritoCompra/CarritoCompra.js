@@ -190,7 +190,7 @@ function botonmenos(key){
     elementoNumero.style.display = "none";
   }
   actualizarTotal();
-  location.reload();
+  location.reload(); //Actualizar la página al darle al botón
 }
 
 function actualizarTotal() { //Esta función lo que hace es actualizar el precio total para cada vez que le doy al boton mas o menos
