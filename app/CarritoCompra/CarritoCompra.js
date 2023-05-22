@@ -190,6 +190,7 @@ function botonmenos(key){
     elementoNumero.style.display = "none";
   }
   actualizarTotal();
+  location.reload();
 }
 
 function actualizarTotal() { //Esta función lo que hace es actualizar el precio total para cada vez que le doy al boton mas o menos
@@ -211,6 +212,8 @@ function actualizarTotal() { //Esta función lo que hace es actualizar el precio
 /*Realizar compra - POPUP */
 let nombreGuardado;
 function realizarCompra(){
+  if(sumaTotal > 0)
+  {
   Swal
   .fire({
       text: "¿Desea realizar la compra?",
@@ -271,6 +274,16 @@ function realizarCompra(){
       }
   });
 }
+else{
+  Swal
+      .fire({
+          title: "¡No has introducido ninguna compra!",
+          text: "Si necesita asesoramiento, nuestros experto estarán encantados en ayudarle",
+          icon: 'error',
+          confirmButtonText: "Entendido",
+      })
+}
+}
 
   //--------------------------------------------------------------------------------------------------------------------
   let compra = " ";
@@ -285,8 +298,6 @@ function enviarDatos(nombreL){ //nombre del popup
       value = JSON.parse(sessionStorage.getItem(key)); // Obtener el valor correspondiente a la clave
         // console.log(key);
         // console.log(value);
-
-        //OPCIÓN OBJETO
         compra = { // Creo un objeto para meter todos los datos 
           id : key,
           casa : value[0], //Cogemos cada parte del archivo que nos da el sessionStorage
