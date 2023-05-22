@@ -329,7 +329,7 @@ footer a:hover{ /*subraya cuando te pones encima*/
 	}
 }
 
-   /* -----------Botón volver arriba----------- */
+/* -----------Botón volver arriba----------- */
 #botonFlecha{
     display: none; 
     position: fixed; 
@@ -338,17 +338,22 @@ footer a:hover{ /*subraya cuando te pones encima*/
     z-index: 99; 
     border: none;
     background-color: transparent;
-  }
+    width: 8vh;
+    height: 8vh;
+}
 
-  #botonFlecha:hover{
+#botonFlecha:hover{
     cursor: pointer;
-    box-shadow: 0 0 5px rgb(171, 185, 96);
-    /* transition: box-shadow 0.3s ease-in-out; */
     border-radius: 50%;
-  }
+}
 
 #flechita{
-    width: 10vh;
+    width: 8vh;
+    border-radius: 100%;
+}
+
+#flechita:hover{
+    box-shadow: 0 0 13px rgb(171, 185, 96);
 }
 
 #sumaTotalCarrito {
