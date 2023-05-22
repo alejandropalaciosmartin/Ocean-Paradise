@@ -65,28 +65,22 @@ header div{
     text-align: center;
 }
 .barraizquierda1{
-    position:absolute;
-    width: 15%;
-    height: 765px;
-    background-image: linear-gradient(#e1e8ec,#0079a9,#015b7f,#003d55 );
-    margin-right: 0;
-    
+    position: sticky;
+    z-index: 5;
+    margin-left: 40%;
+    margin-top: -10vh;
 }
 .usuarios:hover{
     box-shadow: 5px 5px 5px 5px black;
 }
 .usuarios{
     height: 20%;
-    width: 50%;
-    margin-top: 80%;
-    margin-left: 20%;
+    width: 25%;
     border-radius: 7%;
 }
 .mensajes{
-    height: 20%;
-    width: 50%;
-    margin-top: 80%;
-    margin-left: 20%;
+    height: 13%;
+    width: 18%;
     border-radius: 7%;
 }
 .mensajes:hover{
@@ -134,7 +128,7 @@ border-bottom: 1px solid black;
 /*--------------------------------------------------------------------------------------*/
 
 .tablaDeInformacion{ /*ESTO es el css de la tabla en si */
-   margin-left: 20%;
+   margin-left: 12%;
    margin-top: 5%;
    width: 75%;
    border-collapse: collapse;
