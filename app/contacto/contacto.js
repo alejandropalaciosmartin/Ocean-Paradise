@@ -55,8 +55,16 @@ function enviarDatos(){
     
     const mensaje = cogerDatos(); // Llamo el metodo donde hago lo de agrupar los datos.
     const mensajeJson = JSON.stringify(mensaje); //Los convierto en un archivo Json
-    localStorage.setItem(mensaje.id,mensajeJson); // Los meto al local storage con un id
-    
+
+    if(mensaje.email != "" && mensaje.contenidoMensaje != ""){
+      localStorage.setItem(mensaje.id,mensajeJson); // Los meto al local storage con un id
+    }
+    else{
+      let num = localStorage.getItem("idNum");
+      --idNum;
+      localStorage.setItem("idNum",idNum);
+    }
+      
 }
 
 //Flecha ir arriba----------------------------------------------------
