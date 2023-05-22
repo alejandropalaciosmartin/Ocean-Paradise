@@ -211,28 +211,8 @@ tr{ /*ESTO es el css de cada tr*/
 
 @media screen and (max-width:694px) {
     .tablaDeInformacion{
-        width: 100px;
         font-size: medium;
         transition: 0.8s;
-    }
-
-    td{
-        width: 100px;
-    }
-    
-    .correo{  /*ESTO es el css de la columna del correo (email)*/
-        width: 100px;
-           
-    }
-    
-    .contenidoMensaje{ /*ESTO es el css de la columna del contenido del mensaje*/
-        width: 100px;
-       
-    }
-    
-    .idMensaje{ /*ESTO es el css de la columna del id del mensaje*/
-        width: 2%;
-       
     }
 
 }
