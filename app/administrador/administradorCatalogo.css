@@ -70,6 +70,7 @@ header div{
     height: 765px;
     background-image: linear-gradient(#e1e8ec,#0079a9,#015b7f,#003d55 );
     margin-right: 0;
+    
 }
 .usuarios:hover{
     box-shadow: 5px 5px 5px 5px black;
