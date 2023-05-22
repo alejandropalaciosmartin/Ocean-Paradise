@@ -252,7 +252,7 @@ function realizarCompra(){
               else{
                 Swal
                 .fire({
-                    title: "¡¡Oh se le olvidó introducir un nombre!!",
+                    title: "<p style='color: red;'>¡¡Oh se le olvidó introducir un nombre!!</p>", //Aplicando estilo dentro sweepalert2
                     text: "Sino se introduce nombre no podremos realizar la compra",
                     icon: 'error',
                     confirmButtonText: "Entendido",
