@@ -97,6 +97,7 @@ div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS 
     margin-bottom: 10px;
     text-shadow: 0 0 20px rgb(196, 196, 196);
 }
+
 .visionGeneral{/*la frase breve debajo de sobreNostros*/
     font-weight: bold;
     font-size: xx-large;
@@ -105,11 +106,13 @@ div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS 
     text-align: left;
     text-shadow: 0 0 20px rgb(196, 196, 196);/*HAY QUE MIRAR QUE COLORES PONER EN EL GRADIENTE*/
 }
+
 .contenedorGrid{/*el contenedor de todas personas*/
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     margin-top: 120px;
 }
+
 .cadaPersona{/*div contenedor de cada persona*/
     margin:auto;
     width: 75%;
@@ -119,27 +122,32 @@ div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS 
     border-radius: 30px;
     box-shadow: 0 4px 8px 0 #99d8dd, 0 6px 20px 0 #99d8dd;
 }
+
 .cadaPersona > p{/*son todos los parrafos de cada persona, es decir nombre, puesto...*/
     width: 80%;
     margin: auto;
     margin-bottom: 10px;
 }
+
 .fotoPersona{/*la foto de la persona*/
     width:70%;
     margin:30px auto 20px auto;
 }
+
 .infoEmpresa{/*contenedor de los textos de mision vision y valores*/
     margin-bottom: 60px;
 }
+
 .infoEmpresa p{/*cada parrafo del contenedor de info empresa*/
     width: 70%;
     margin: auto;
     padding: 30px 0 30px 0;
     font-size: 20px;
 }
+
 /*--------------------------------- footer ---------------------------------*/
   
-  footer {/*estilo barra inferior*/
+footer {/*estilo barra inferior*/
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -173,6 +181,7 @@ footer a{/*estilo de los enlaces*/
 footer a:hover{/*subraya cuando te pones encima*/
 	text-decoration: underline;
 }
+
 @media (max-width:615px) {/*PARA ARREGLAR EL RESPONSIVO DEL FOOTER*/
     footer a img {
         height: 15px;
@@ -182,20 +191,21 @@ footer a:hover{/*subraya cuando te pones encima*/
         font-size: 15px;
     }  
 }
+
 /*--------------------barra lateral------------------*/
 ::-webkit-scrollbar {/*define tamaño de la barra para subir y bajar*/
     width: 10px;
     height: 5px;
-  }
+}
   
-  ::-webkit-scrollbar-thumb {/*estilo de lo que mueves de la barra*/
+::-webkit-scrollbar-thumb {/*estilo de lo que mueves de la barra*/
     background-color:#f3ba00;
     border-radius: 5px;
-  }
+}
   
-  ::-webkit-scrollbar-track {/*estilo del fondo de la barra*/
+::-webkit-scrollbar-track {/*estilo del fondo de la barra*/
     background-image: linear-gradient(to bottom, #003d55, #015b7f, #0079a9, #e1e8ec);
-  }
+}
 
 .menuEnlace{
     all:unset;
@@ -211,15 +221,16 @@ footer a:hover{/*subraya cuando te pones encima*/
     z-index: 99; 
     border: none;
     background-color: transparent;
-  }
-  #myBtn:hover{
+}
+
+#myBtn:hover{
     cursor: pointer;
     box-shadow: 0 0 20px rgb(255, 0, 0);
     transition: box-shadow 0.3s ease-in-out;
     border-radius: 50%;
-  }
+}
 
-   /* -----------Botón volver arriba----------- */
+/* -----------Botón volver arriba----------- */
 #botonFlecha{
     display: none; 
     position: fixed; 
@@ -228,17 +239,22 @@ footer a:hover{/*subraya cuando te pones encima*/
     z-index: 99; 
     border: none;
     background-color: transparent;
-  }
+    width: 8vh;
+    height: 8vh;
+}
 
-  #botonFlecha:hover{
+#botonFlecha:hover{
     cursor: pointer;
-    box-shadow: 0 0 20px rgb(171, 185, 96);
-    /* transition: box-shadow 0.3s ease-in-out; */
     border-radius: 50%;
-  }
+}
 
 #flechita{
-    width: 10vh;
+    width: 8vh;
+    border-radius: 100%;
+}
+
+#flechita:hover{
+    box-shadow: 0 0 13px rgb(171, 185, 96);
 }
 
 #sumaTotalCarrito {
@@ -255,4 +271,4 @@ footer a:hover{/*subraya cuando te pones encima*/
     color: white;
     font-size: 16px;
     font-weight: bold;
-  }
+}

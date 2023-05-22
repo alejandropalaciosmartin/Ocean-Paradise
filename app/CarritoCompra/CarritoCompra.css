@@ -74,18 +74,24 @@ div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS 
   z-index: 99; 
   border: none;
   background-color: transparent;
+  width: 8vh;
+  height: 8vh;
 }
 
 #botonFlecha:hover{
   cursor: pointer;
-  box-shadow: 0 0 20px rgb(171, 185, 96);
-  /* transition: box-shadow 0.3s ease-in-out; */
   border-radius: 50%;
 }
 
 #flechita{
-  width: 10vh;
+  width: 8vh;
+  border-radius: 100%;
 }
+
+#flechita:hover{
+  box-shadow: 0 0 13px rgb(171, 185, 96);
+}
+
 /*----------------------------------------------main-----------------------------------------*/
 /*CSS CARRITO*/
 .carrito {
