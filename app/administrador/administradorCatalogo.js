@@ -75,16 +75,27 @@ function cambioBasura2(i){//para volver a la img de basura normal
 
 function borrarMensaje(i){
 //METER LIBRERIA ADRI, MENSAJE DE SEGURO QUE QUIERES BORRAR??
-    if(true){//BOOLEANO QUE ME DE LA RESPUESTA ANTERIOR
+Swal
+  .fire({
+      text: "¿Estás seguro de que deseas borrar el mensaje?",
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: "Sí",
+      cancelButtonText: "No",
+  })
+  .then(resultado => {
+    //Botón "Sí, comprar"
+      if (resultado.value){
         let numMensajes = localStorage.getItem("idNum");//cojo el item idNum para restarle una a la cantidad y lo vuelvo a poner
         numMensajes--;
         localStorage.setItem("idNum", numMensajes);
         localStorage.removeItem(i);//borro el item
         siguiente(i);//esta funcion cambia las ids de las keys para que siempre esten en orden y no haya saltos ni fallos
-    }
 
-    location.reload();//recarga la pagina para actualizar los datos
-    //CORREGIR poner algo para que se vea la tabla en la que estaba
+
+        location.reload();//recarga la pagina para actualizar los datos
+        //CORREGIR poner algo para que se vea la tabla en la que estaba
+      }})
 }
 
 function siguiente(i){//funcion recursiva para que lo haga hasta que el siguiente sea nulo
