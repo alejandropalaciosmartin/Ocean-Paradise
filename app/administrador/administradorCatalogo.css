@@ -67,8 +67,14 @@ header div{
 .barraizquierda1{
     position: sticky;
     z-index: 5;
-    margin-left: 40%;
-    margin-top: -10vh;
+    margin-left: 45%;
+    margin-top: -8vh;
+}
+.barraderecha1{
+    position: sticky;
+    z-index: 5;
+    margin-left: 55%;
+    margin-top: -8vh;
 }
 .usuarios:hover{
     box-shadow: 5px 5px 5px 5px black;
@@ -76,11 +82,14 @@ header div{
 .usuarios{
     height: 20%;
     width: 25%;
+    margin-top: -2vh;
+
     border-radius: 7%;
 }
 .mensajes{
-    height: 13%;
-    width: 18%;
+    height: 20%;
+    width: 19%;
+    margin-top: -1.5vh;
     border-radius: 7%;
 }
 .mensajes:hover{
@@ -185,4 +194,21 @@ tr{ /*ESTO es el css de cada tr*/
   }
 .imagenBasurita:hover{
     src: "../Recursos/imagen/basuraAbiertaNegra";
+}
+
+@media (max-width:615px) { 
+    .barraizquierda1{
+        margin-top: -10vh;
+    }
+    .usuarios{
+        height: 12%;
+        width: 22%;
+        margin-top: 1vh;
+    }
+    .mensajes{
+        height: 12%;
+        width: 21%;
+        margin-top: 2.8vh;
+        margin-left: 10vh;
+    }
 }
