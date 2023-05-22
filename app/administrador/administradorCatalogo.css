@@ -153,7 +153,7 @@ border-bottom: 1px solid black;
 /*------------------------------------------CSS DE LA TABLA--------------------------------------------*/
 
 .tablaDeInformacion{ /*ESTO es el css de la tabla en si */
-   margin:10% auto 15% auto;
+   margin:80px auto 0 auto;
    width: 75%;
    border-collapse: collapse;
    padding: 5vh;
@@ -199,11 +199,6 @@ tr{ /*ESTO es el css de cada tr*/
     white-space: nowrap;
 }
 
-
-.idMensaje{ /*ESTO es el css de la columna del id del mensaje*/
-    width: 5%;
-    margin: 5%;
-}
 
 .desaparecio{
     display: none;

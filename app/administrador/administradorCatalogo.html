@@ -22,33 +22,24 @@
       </div>
     </div>
     </header>
-    <div id="botonusuario" class="boton1"> 
-        <div class="informacion">
-            <p id="parrafo">Usuario:</p> <p id="parrafo"> ID O NOMBRE DEL USUARIO</p>
-        </div>
-        <table style="width:100%">
-            <tr>
-              <th>Producto</th>
-              <th>Descripción</th>
-              <th>Precio</th>
-              <th>Cantidad</th>
-            </tr>
-            <tr>
-              <td>
-                <div class="imagenproducto">
-                    <img src="../../Recursos/Imagen/usuarios.jpg" height="100%" width="100%" >
-              </div>
-            </td>
-              <td>Descripción del producto</td>
-              <td>Precio del producto</td>
-              <td>Cantidad</td>
-            </tr>
-          </table>
-    </div>
+      <table class="tablaDeInformacion desaparecio" id="botonusuario">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Detalles Pedido</th>
+            <th>Precio Total</th>
+            <th>Borrar</th>
+          </tr>
+        </thead>
+        <tbody id="tablaParaMeterPedidos">
+        </tbody>
+      </table>
+
     <table class="tablaDeInformacion desaparecio" id="botonmensaje">
       <thead>
         <tr>
-          <th class="idMensaje">Id</th>
+          <th>Id</th>
           <th >Email</th>
           <th>Asunto</th>
           <th >Contenido Mensaje</th>
