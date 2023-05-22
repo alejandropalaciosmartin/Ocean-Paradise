@@ -50,7 +50,7 @@ body{/*El body normal*/
     width: 96%;
     height: 45%;
     margin: 0 auto 0 auto;
-    
+    text-align: center;
 }
 .botonOjo{
     position: absolute;
