@@ -290,10 +290,10 @@ else{
   let numeroNombre = 1;
   let valueJson = "";
   let compraTotal = "";
-  
+  let array = [];
 
 function enviarDatos(nombreL){ //nombre del popup
-  let array = [];
+  
     for (let i = 0; i < sessionStorage.length; i++) { // Recorrer todas las claves en el Session Storage
       key = sessionStorage.key(i); // Obtener la clave actual
       value = JSON.parse(sessionStorage.getItem(key)); // Obtener el valor correspondiente a la clave
@@ -318,7 +318,7 @@ function enviarDatos(nombreL){ //nombre del popup
       array="["+valueJson+"]"; //Para convertir en array todo el conjunto
       localStorage.setItem("Comprar"+numeroNombre,array); // Los meto al local storage con un id de la persona
       numeroNombre++; //Sumamos la id para separar las personas
-      
+      array ="";
     
     }
 
