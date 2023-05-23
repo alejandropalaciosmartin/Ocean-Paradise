@@ -69,17 +69,13 @@ cogerCasas();
          if(casaNombre[i].includes(letrasIntroducidas)){ //este if mira si el array de nombres hecho arriba incluye o contiene las letras que voy metiendo
                 item[i-1].classList.remove("loBuscado"); /*lo del menos 1 es por que las casas su id empieza desde 1 no desde cero, entonces el bucle
                                                          empieza en 1 pues para acceder al primero es 1-1 =0 POR QUE ITEM ES UN ARRAY!! y el remove elimine 
-                                                         lo de que se esconda*/
-                
+                                                         lo de que se esconda*/  
          }
          else{
             item[i-1].classList.add("loBuscado");/*lo del menos 1 es por que las casas su id empieza desde 1 no desde cero, entonces el bucle
             empieza en 1 pues para acceder al primero es 1-1 =0 POR QUE ITEM ES UN ARRAY!! y aqui el add hace que se agregue el esconder de la clase "loBuscado"*/
          }
-       
     }
-    
-    
 }
 
 //Flecha ir arriba----------------------------------------------------

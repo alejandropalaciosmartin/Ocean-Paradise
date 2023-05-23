@@ -107,6 +107,14 @@ function añadirCarrito() {
     if(elementoNumero.style.display == "none"){
       elementoNumero.style.display = "flex";
     }
+    // Seepalert2
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Compra realizada',
+      showConfirmButton: false,
+      timer: 1500
+    })
     actualizarNumeroCarrito(sumaTotal);
   } else {
     const datosGuardados = sessionStorage.getItem(id);
@@ -121,14 +129,6 @@ function añadirCarrito() {
     if(elementoNumero.style.display == "none"){
       elementoNumero.style.display = "flex";
     }
-    // Seepalert2
-    Swal.fire({
-      position: 'center',
-      icon: 'success',
-      title: 'Compra realizada',
-      showConfirmButton: false,
-      timer: 1500
-    })
     actualizarNumeroCarrito(sumaTotal);
   }
 }

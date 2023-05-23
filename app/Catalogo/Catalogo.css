@@ -254,3 +254,9 @@ footer a:hover{ /*subraya cuando te pones encima*/
     font-size: 16px;
     font-weight: bold;
   }
+
+  /*Estilos texto y título*/
+  .name{
+    font-size: 5vh;
+    font-family: "Comic Sans", Impact;
+  }
