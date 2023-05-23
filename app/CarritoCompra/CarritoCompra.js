@@ -248,6 +248,7 @@ function realizarCompra(){
                       //Recargamos para borrar de la cesta
                       confirmButtonText: '<a onclick="location.reload()">Entendido</a>',
                     })
+                    window.reload();
                   }
                   //Sino se introduce valor/nombre
                   else{
