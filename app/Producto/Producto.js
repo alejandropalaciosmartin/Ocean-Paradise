@@ -140,7 +140,7 @@ function añadirCarrito() {
     // Seepalert2
     const Toast = Swal.mixin({
       toast: true,
-      position: 'top-end',
+      position: 'top-start',
       showConfirmButton: false,
       timer: 9000,
       timerProgressBar: true,
