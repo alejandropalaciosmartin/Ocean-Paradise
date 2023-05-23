@@ -261,7 +261,12 @@ tr{ /*ESTO es el css de cada tr*/
     box-sizing: border-box;
 }
 
-/*--------------------BARRA DE CARGA------------------*/
+/*BARRA DE CARGA*/
+
+*,*:after, *:before{
+    margin: 0;
+    padding: 0;
+}
 
 #contenedorCirculoCarga{
     background-color: rgba(250,240,245,0.9);
