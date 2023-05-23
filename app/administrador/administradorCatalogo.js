@@ -38,7 +38,7 @@ function aparecemensaje(){
                                            <td class="correo">${datosDeMensajesEnObjeto.email}</td>
                                            <td>${datosDeMensajesEnObjeto.asunto}</td>
                                            <td class="contenidoMensaje">${datosDeMensajesEnObjeto.contenidoMensaje}</td>
-                                           <td><button onmouseout="cambioBasura2(${i})" onmouseover="cambioBasura(${i})" onclick="borrarMensaje(${i},${datosDeMensajesEnObjeto.id})" ><img id="basura${i}"class="imagenBasurita" src="../../Recursos/Imagen/basuraNegra.png" /><button></td>`; //metemos sus propiedades dentro de cada tr creado en el html
+                                           <td><button onmouseout="cambioBasura2Mensaje(${i})" onmouseover="cambioBasuraMensaje(${i})" onclick="borrarMensaje(${i},${datosDeMensajesEnObjeto.id})" ><img id="basuraMensaje${i}"class="imagenBasurita" src="../../Recursos/Imagen/basuraNegra.png" /><button></td>`; //metemos sus propiedades dentro de cada tr creado en el html
 
             //console.log(datosDeMensajesEnObjeto.id);
             meterDatosHtml.appendChild(nuevaFilaParaDatos); //agregamos los datos a la tabla del html
@@ -50,13 +50,24 @@ function aparecemensaje(){
 cogerMensajesUsuarios();
 
 
-function cambioBasura(i){//para poner la img de la basura abierta
-    let basura = document.getElementById(`basura${i}`);
+function cambioBasuraMensaje(i){//para poner la img de la basura abierta
+    let basura = document.getElementById(`basuraMensaje${i}`);
     
     basura.src = "../../Recursos/Imagen/basuraAbiertaNegra.png";
 }
-function cambioBasura2(i){//para volver a la img de basura normal
-    let basura = document.getElementById(`basura${i}`);
+function cambioBasura2Mensaje(i){//para volver a la img de basura normal
+    let basura = document.getElementById(`basuraMensaje${i}`);
+    
+    basura.src = "../../Recursos/Imagen/basuraNegra.png";
+}
+
+function cambioBasuraPedido(i){//para poner la img de la basura abierta
+    let basura = document.getElementById(`basuraPedido${i}`);
+    
+    basura.src = "../../Recursos/Imagen/basuraAbiertaNegra.png";
+}
+function cambioBasura2Pedido(i){//para volver a la img de basura normal
+    let basura = document.getElementById(`basuraPedido${i}`);
     
     basura.src = "../../Recursos/Imagen/basuraNegra.png";
 }
@@ -102,7 +113,7 @@ function cogerPedidosUsuarios(){
                                            <td>${datosDePedidoEnObjeto[ultimoValor].nombre}</td>
                                            <td class="detallePedido"><ul class="detallePedidoUl">${crearLista(datosDePedidoEnObjeto)}</ul></td>
                                            <td>${datosDePedidoEnObjeto[ultimoValor].totalCompra}</td>
-                                           <td class="cuadroBasura"><button onmouseout="cambioBasura2(${i})" onmouseover="cambioBasura(${i})" onclick="borrarPedido(${i}, ${datosDePedidoEnObjeto[ultimoValor].idNombre})" ><img id="basura${i}"class="imagenBasurita" src="../../Recursos/Imagen/basuraNegra.png" /><button></td>`; //metemos sus propiedades dentro de cada tr creado en el html
+                                           <td class="cuadroBasura"><button onmouseout="cambioBasura2Pedido(${i})" onmouseover="cambioBasuraPedido(${i})" onclick="borrarPedido(${i}, ${datosDePedidoEnObjeto[ultimoValor].idNombre})" ><img id="basuraPedido${i}"class="imagenBasurita" src="../../Recursos/Imagen/basuraNegra.png" /><button></td>`; //metemos sus propiedades dentro de cada tr creado en el html
 
             //console.log(datosDeMensajesEnObjeto.id);
             meterDatosHtml.appendChild(nuevaFilaPedidos); //agregamos los datos a la tabla del html
