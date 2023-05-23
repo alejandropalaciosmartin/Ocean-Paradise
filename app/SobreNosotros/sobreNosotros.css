@@ -150,6 +150,7 @@ footer {/*estilo barra inferior*/
 	bottom: 0; 
 	text-align: center;
 	height: 85px;
+    border-top: solid 1px rgb(31, 171, 171);
 }
 
 footer a img {/*tamaño de las imagenes en los enlaces*/
