@@ -297,6 +297,7 @@ function enviarDatos(nombreL){ //nombre del popup
     for (let i = 0; i < sessionStorage.length; i++) { // Recorrer todas las claves en el Session Storage
       key = sessionStorage.key(i); // Obtener la clave actual
       value = JSON.parse(sessionStorage.getItem(key)); // Obtener el valor correspondiente a la clave
+      
         // console.log(key);
         // console.log(value);
         compra = { // Creo un objeto para meter todos los datos 
@@ -306,6 +307,11 @@ function enviarDatos(nombreL){ //nombre del popup
           cantidad: value[2],
         };
         valueJson += JSON.stringify(compra)+ ","; //Los convierto en un archivo Json, SE AÑADE , AL FINAL PARA QUE LOS JSON SE SEPARE CORRECTAMENTE MENOS EL ÚLTIMO QUE AÑADIMOS
+
+        // //Eliminar session
+        // if (sessionStorage.length > 0) {
+        //   sessionStorage.removeItem(key,value);
+        // }
       }
       compraTotal = { //Hacemos otro json para no repetir en cada artículo y hacerlo como artículo diferente con ese dato
         nombre : nombreL, //Cogemos el nombre del popup
@@ -318,8 +324,9 @@ function enviarDatos(nombreL){ //nombre del popup
       array="["+valueJson+"]"; //Para convertir en array todo el conjunto
       localStorage.setItem("Comprar"+numeroNombre,array); // Los meto al local storage con un id de la persona
       numeroNombre++; //Sumamos la id para separar las personas
-      array ="";
-    
+      //valueJson ="";
+
+      sessionStorage.clear();
     }
 
 
