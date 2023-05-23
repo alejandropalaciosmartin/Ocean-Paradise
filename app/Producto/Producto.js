@@ -112,7 +112,7 @@ function añadirCarrito() {
       toast: true,
       position: 'top-start',
       showConfirmButton: false,
-      timer: 9000,
+      timer: 2000,
       timerProgressBar: true,
       didOpen: (toast) => {
         toast.addEventListener('mouseenter', Swal.stopTimer)
@@ -142,7 +142,7 @@ function añadirCarrito() {
       toast: true,
       position: 'top-start',
       showConfirmButton: false,
-      timer: 9000,
+      timer: 2000,
       timerProgressBar: true,
       didOpen: (toast) => {
         toast.addEventListener('mouseenter', Swal.stopTimer)
