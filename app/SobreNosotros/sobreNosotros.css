@@ -116,6 +116,7 @@ div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS 
 .cadaPersona{/*div contenedor de cada persona*/
     margin:auto;
     width: 75%;
+    height: 580px;
     border:0;
     padding-bottom: 20px;
     margin-bottom:80px;
@@ -130,8 +131,9 @@ div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS 
 }
 
 .fotoPersona{/*la foto de la persona*/
-    width:70%;
+    width:250px;
     margin:30px auto 20px auto;
+    border-radius: 25px;
 }
 
 .infoEmpresa{/*contenedor de los textos de mision vision y valores*/
