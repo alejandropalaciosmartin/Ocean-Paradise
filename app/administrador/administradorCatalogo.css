@@ -203,6 +203,19 @@ tr{ /*ESTO es el css de cada tr*/
     white-space: nowrap;
 }
 
+.detallePedidoUl{
+    max-height: 130px;
+    overflow-y: auto;
+    margin:0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 0;
+}
+.detallePedido{
+    padding: 0;
+    margin: 0;
+}
+
 
 .desaparecio{
     display: none;
@@ -224,3 +237,17 @@ tr{ /*ESTO es el css de cada tr*/
     src: "../Recursos/imagen/basuraAbiertaNegra";
 }
 
+/*--------------------barra lateral------------------*/
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color:#f3ba00;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-image: linear-gradient(to bottom, #003d55, #015b7f, #0079a9, #e1e8ec);
+  }

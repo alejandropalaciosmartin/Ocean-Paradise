@@ -93,14 +93,14 @@ function cogerPedidosUsuarios(){
     for(let i =1;i<=idNumValue;i++){   //Esto lee el local store y coge su tamaño para recorrerlo y coger los datos
       
         const datosDePedidoEnObjeto = JSON.parse(localStorage.getItem(`Compra${i}`));//mete en la variable datosDeMensajes pasando a json pa que siga siendo un objeto y podamos entrar en las propiedades.
-        let ultimoValor = datosDePedidoEnObjeto.length-1;
-
-        if(datosDePedidoEnObjeto != null){    //hay que ver que no sea null el objeto en si       
+        
+        if(datosDePedidoEnObjeto != null){    //hay que ver que no sea null el objeto en si  
+            let ultimoValor = datosDePedidoEnObjeto.length-1;     
             const nuevaFilaPedidos = document.createElement("tr");      //creamos un tr para cada dato
             nuevaFilaPedidos.setAttribute("id",`${datosDePedidoEnObjeto[ultimoValor].idNombre}`);
             nuevaFilaPedidos.innerHTML=`<td class="idMensaje">${datosDePedidoEnObjeto[ultimoValor].idNombre}</td> 
                                            <td>${datosDePedidoEnObjeto[ultimoValor].nombre}</td>
-                                           <td><ul>${crearLista(datosDePedidoEnObjeto)}</ul></td>
+                                           <td class="detallePedido"><ul class="detallePedidoUl">${crearLista(datosDePedidoEnObjeto)}</ul></td>
                                            <td>${datosDePedidoEnObjeto[ultimoValor].totalCompra}</td>
                                            <td class="cuadroBasura"><button onmouseout="cambioBasura2(${i})" onmouseover="cambioBasura(${i})" onclick="borrarPedido(${i}, ${datosDePedidoEnObjeto[ultimoValor].idNombre})" ><img id="basura${i}"class="imagenBasurita" src="../../Recursos/Imagen/basuraNegra.png" /><button></td>`; //metemos sus propiedades dentro de cada tr creado en el html
 
