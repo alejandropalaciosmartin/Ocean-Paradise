@@ -59,7 +59,8 @@ function enviarDatos(){
 
     if(mensaje.email != "" && mensaje.contenidoMensaje != "" && regex.test(mensaje.email)){
       localStorage.setItem(mensaje.id,mensajeJson); // Los meto al local storage con un id
-        const Toast = Swal.mixin({
+      
+      const Toast = Swal.mixin({
         toast: true,
         position: 'top-end',
         showConfirmButton: false,
@@ -72,7 +73,7 @@ function enviarDatos(){
       })
       Toast.fire({
         icon: 'success',
-        title: 'Mensaje enviado'
+        title: 'Mensaje enviado',
       })
     }
     else{
