@@ -36,7 +36,7 @@ function aparecemensaje(){
             nuevaFilaParaDatos.setAttribute("id",`${datosDeMensajesEnObjeto.id}`);
             nuevaFilaParaDatos.innerHTML=`<td class="idMensaje">${datosDeMensajesEnObjeto.id}</td> 
                                            <td class="correo">${datosDeMensajesEnObjeto.email}</td>
-                                           <td>${datosDeMensajesEnObjeto.asunto}</td>
+                                           <td class="asunto">${datosDeMensajesEnObjeto.asunto}</td>
                                            <td class="contenidoMensaje">${datosDeMensajesEnObjeto.contenidoMensaje}</td>
                                            <td><button onmouseout="cambioBasura2Mensaje(${i})" onmouseover="cambioBasuraMensaje(${i})" onclick="borrarMensaje(${i},${datosDeMensajesEnObjeto.id})" ><img id="basuraMensaje${i}"class="imagenBasurita" src="../../Recursos/Imagen/basuraNegra.png" /><button></td>`; //metemos sus propiedades dentro de cada tr creado en el html
 

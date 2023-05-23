@@ -164,6 +164,13 @@ border-bottom: 1px solid black;
     width: 6%;
 }
 
+.asunto{
+    width: 50%;
+    margin: 5%;
+    max-width: 200px; /* Tamaño máximo del texto en píxeles */
+    overflow-x: auto; /* Oculta cualquier contenido que exceda el tamaño máximo */
+    white-space: nowrap;
+}
 
 td{ /*ESTO es el css de cada td*/
     margin-left: 30%;
