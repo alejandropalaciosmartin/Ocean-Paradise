@@ -207,6 +207,7 @@ tr{ /*ESTO es el css de cada tr*/
     max-height: 130px;
     overflow-y: auto;
     margin:0;
+    padding-left: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 0;
