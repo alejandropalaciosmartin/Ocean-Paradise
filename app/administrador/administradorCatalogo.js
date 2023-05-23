@@ -85,5 +85,56 @@ Swal
 
 
 
-
+cogerPedidosUsuarios();
 //---------------------------Pedidos--------------------------
+function cogerPedidosUsuarios(){
+    const meterDatosHtml = document.getElementById("tablaParaMeterPedidos");
+    const idNumValue = localStorage.getItem("idCompras");
+    for(let i =1;i<=idNumValue;i++){   //Esto lee el local store y coge su tamaño para recorrerlo y coger los datos
+      
+        const datosDePedidoEnObjeto = JSON.parse(localStorage.getItem(`Compra${i}`));//mete en la variable datosDeMensajes pasando a json pa que siga siendo un objeto y podamos entrar en las propiedades.
+        let ultimoValor = datosDePedidoEnObjeto.length-1;
+
+        if(datosDePedidoEnObjeto != null){    //hay que ver que no sea null el objeto en si       
+            const nuevaFilaPedidos = document.createElement("tr");      //creamos un tr para cada dato
+            nuevaFilaPedidos.setAttribute("id",`${datosDePedidoEnObjeto[ultimoValor].idNombre}`);
+            nuevaFilaPedidos.innerHTML=`<td class="idMensaje">${datosDePedidoEnObjeto[ultimoValor].idNombre}</td> 
+                                           <td>${datosDePedidoEnObjeto[ultimoValor].nombre}</td>
+                                           <td><ul>${crearLista(datosDePedidoEnObjeto)}</ul></td>
+                                           <td>${datosDePedidoEnObjeto[ultimoValor].totalCompra}</td>
+                                           <td class="cuadroBasura"><button onmouseout="cambioBasura2(${i})" onmouseover="cambioBasura(${i})" onclick="borrarPedido(${i}, ${datosDePedidoEnObjeto[ultimoValor].idNombre})" ><img id="basura${i}"class="imagenBasurita" src="../../Recursos/Imagen/basuraNegra.png" /><button></td>`; //metemos sus propiedades dentro de cada tr creado en el html
+
+            //console.log(datosDeMensajesEnObjeto.id);
+            meterDatosHtml.appendChild(nuevaFilaPedidos); //agregamos los datos a la tabla del html
+        }      
+    }
+}
+
+function crearLista(datosDePedidoEnObjeto){
+    let casas = "";
+    datosDePedidoEnObjeto.forEach(element => {
+        if(element.casa != null){
+            casas += `<li>${element.casa}</li>`
+       }});
+       return casas;
+}
+
+function borrarPedido(i, idPedido){
+    //METER LIBRERIA ADRI, MENSAJE DE SEGURO QUE QUIERES BORRAR??
+    Swal
+      .fire({
+          text: "¿Estás seguro de que deseas borrar el mensaje?",
+          icon: 'question',
+          showCancelButton: true,
+          confirmButtonText: "Sí",
+          cancelButtonText: "No",
+      })
+      .then(resultado => {
+          if (resultado.value){//si confirma que quiere borrar
+    
+            const tr = document.getElementById(`${idPedido}`);
+            tr.remove();//borro el tr
+    
+            localStorage.removeItem(`Compra${i}`);//borro el item
+          }})
+    }
