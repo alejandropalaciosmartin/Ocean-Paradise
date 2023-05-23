@@ -43,7 +43,8 @@ fetch('https://getpantry.cloud/apiv1/pantry/464bfeaa-daae-4ecd-81c0-3a675193d25e
       
       const img = document.createElement('img');
       img.classList.add('fotoPersona');
-       img.src = "..\\..\\Recursos\\Imagen\\imagenPlaceHolder.jpg";//equipo[persona].imagen;
+      //  img.src = "..\\..\\Recursos\\Imagen\\imagenPlaceHolder.jpg";//equipo[persona].imagen;
+       img.src = equipo[persona].imagen;//equipo[persona].imagen;
       
       const nombre = document.createElement('p');
       nombre.id = 'nombre';

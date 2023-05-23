@@ -291,13 +291,13 @@ let valueJson = "";
 let compraTotal = "";
 let array = [];
 
-let idNum = parseInt(localStorage.getItem("idNum")) || 0; // Tenemos que poner esto por que necesitamos guardar el numero por el que iba la id en
+let idCompras = parseInt(localStorage.getItem("idCompras")) || 0; // Tenemos que poner esto por que necesitamos guardar el Comprasero por el que iba la id en
 // nuestro localStorage y si no hay ninguno coge el 0 pa que no de fallo.
 
 function crearID(){//Esto me crea el id de la propiedad id de mensaje ABAJO!!!
-    idNum++;
-    localStorage.setItem("idNum",idNum); //Me sube el incremento de id
-    return idNum;
+    idCompras++;
+    localStorage.setItem("idCompras",idCompras); //Me sube el incremento de id
+    return idCompras;
 }
 
 
