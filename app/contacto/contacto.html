@@ -5,6 +5,8 @@
     <link rel="stylesheet" type="text/css" href="contacto.css"> <!--LINK CSS-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgbr52ky3bu44_fvT5nT0MBaAK7ENte94"></script> <!--ESTO ES PARA LO DE GOOGLE MAPS-->
     <link rel="icon" type="image/x-icon" href="../../recursos/imagen/logo.png"> <!--FAVICON DE LA VENTANA-->
+    <!-- Añadimos sweepalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script> /*ESTE SCRIPT ES PARA PONER EL MAPA (LA FUNCIÓN ESTÁ EN EL BODY)*/
       function initMap() {
@@ -59,7 +61,7 @@
       <div id="map"> <!--UBICACIÓN-->
     </div>
           
-    <form id="formulario" > <!--FORMULARIO-->
+    <form id="formulario"> <!--FORMULARIO-->
       <label for="email">EMAIL</label>
         <input type="email" id="email" name="email" required>
       <label for="asunto">ASUNTO</label>

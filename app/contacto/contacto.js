@@ -57,16 +57,24 @@ function enviarDatos(){
     const mensajeJson = JSON.stringify(mensaje); //Los convierto en un archivo Json
     var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-
     if(mensaje.email != "" && mensaje.contenidoMensaje != "" && regex.test(mensaje.email)){
       localStorage.setItem(mensaje.id,mensajeJson); // Los meto al local storage con un id
+
+      Swal
+      .fire({
+        title: "Compra realizada <br> Gracias por confiar en nosotros",
+        text: "Pronto uno de nuestros vendedores se pondrá en contacto con usted",
+        icon: 'success',
+        //Recargamos para borrar de la cesta
+        confirmButtonText: '<a onclick="location.reload()">Entendido</a>',
+        timer: 5000
+      })
     }
     else{
-      let num = localStorage.getItem("idNum");
+      localStorage.getItem("idNum");
       --idNum;
       localStorage.setItem("idNum",idNum);
     }
-      
 }
 
 //Flecha ir arriba----------------------------------------------------
