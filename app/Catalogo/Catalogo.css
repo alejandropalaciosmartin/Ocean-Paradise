@@ -195,14 +195,20 @@ footer a:hover{ /*subraya cuando te pones encima*/
         margin-right: 18px;
         font-size: 15px;
     }  
+}
+
+@media (max-width:850px) { 
   /*Estilos texto y título*/
   .name, .precio{
-    font-size: 4vh;
+    font-size: 2vh;
   }
 
   .texto{
-    margin-top: 4vh;
-
+    margin-top: 2vh;
+}
+.precio{
+    
+    margin-top: -1vh;
   }
 }
 
@@ -266,17 +272,25 @@ footer a:hover{ /*subraya cuando te pones encima*/
 
   /*Estilos texto y título*/
   .texto{
-    text-align: center;
+    
     font-family: "Comic Sans", Impact;
-    margin-top: 4vh;
+    /* margin-top: 1vh; */
+
   }
 
   .name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #003d55;
-    font-size: 4vh;
+    font-size: 4.7vh;
+    margin-top: -2vh;
 }
 
 .precio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #015b7f;
-    font-size: 4vh;
+    font-size: 5vh;
   }
