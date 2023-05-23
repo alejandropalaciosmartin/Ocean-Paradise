@@ -108,12 +108,20 @@ function añadirCarrito() {
       elementoNumero.style.display = "flex";
     }
     // Seepalert2
-    Swal.fire({
-      position: 'center',
-      icon: 'success',
-      title: 'Se ha añadido al carrito con éxito',
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
       showConfirmButton: false,
-      timer: 1500
+      timer: 9000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    })
+    Toast.fire({
+      icon: 'success',
+      title: 'Se ha añadido la compra con éxito'
     })
     actualizarNumeroCarrito(sumaTotal);
   } else {
@@ -130,12 +138,20 @@ function añadirCarrito() {
       elementoNumero.style.display = "flex";
     }
     // Seepalert2
-    Swal.fire({
-      position: 'center',
-      icon: 'success',
-      title: 'Se ha añadido al carrito con éxito',
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
       showConfirmButton: false,
-      timer: 1500
+      timer: 9000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    })
+    Toast.fire({
+      icon: 'success',
+      title: 'Se ha añadido la compra con éxito'
     })
     actualizarNumeroCarrito(sumaTotal);
   }
