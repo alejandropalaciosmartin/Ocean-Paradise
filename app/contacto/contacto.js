@@ -59,22 +59,28 @@ function enviarDatos(){
 
     if(mensaje.email != "" && mensaje.contenidoMensaje != "" && regex.test(mensaje.email)){
       localStorage.setItem(mensaje.id,mensajeJson); // Los meto al local storage con un id
-
-      Swal
-      .fire({
-        title: "Compra realizada <br> Gracias por confiar en nosotros",
-        text: "Pronto uno de nuestros vendedores se pondrá en contacto con usted",
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 9000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
+      Toast.fire({
         icon: 'success',
-        //Recargamos para borrar de la cesta
-        confirmButtonText: '<a onclick="location.reload()">Entendido</a>',
-        timer: 5000
+        title: 'Mensaje enviado'
       })
     }
     else{
-      localStorage.getItem("idNum");
+      let num = localStorage.getItem("idNum");
       --idNum;
       localStorage.setItem("idNum",idNum);
     }
+      
 }
 
 //Flecha ir arriba----------------------------------------------------
