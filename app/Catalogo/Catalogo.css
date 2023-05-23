@@ -195,6 +195,20 @@ footer a:hover{ /*subraya cuando te pones encima*/
         margin-right: 18px;
         font-size: 15px;
     }  
+  /*Estilos texto y título*/
+  .name{
+    font-size: 5vh;
+    font-family: "Comic Sans", Impact;
+  }
+
+  .precio{
+    font-size: 3vh;
+    font-family: "Comic Sans", Impact;
+  }
+
+  .texto{
+    margin-top: 4vh;
+  }
 }
 
 /*--------------------barra lateral------------------*/
@@ -256,16 +270,16 @@ footer a:hover{ /*subraya cuando te pones encima*/
   }
 
   /*Estilos texto y título*/
-  .name{
-    font-size: 5vh;
+  .texto{
+    text-align: center;
     font-family: "Comic Sans", Impact;
+    font-size: 6vh;
+  }
+
+  .name{
+    color: #003d55;
   }
 
   .precio{
-    font-size: 3vh;
-    font-family: "Comic Sans", Impact;
-  }
-
-  .texto{
-    margin-top: -1vh;
+    color: #015b7f;
   }

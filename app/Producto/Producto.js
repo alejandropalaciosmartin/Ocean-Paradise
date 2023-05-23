@@ -111,7 +111,7 @@ function añadirCarrito() {
     Swal.fire({
       position: 'center',
       icon: 'success',
-      title: 'Compra realizada',
+      title: 'Se ha añadido al carrito con éxito',
       showConfirmButton: false,
       timer: 1500
     })
@@ -133,7 +133,7 @@ function añadirCarrito() {
     Swal.fire({
       position: 'center',
       icon: 'success',
-      title: 'Compra realizada',
+      title: 'Se ha añadido al carrito con éxito',
       showConfirmButton: false,
       timer: 1500
     })
