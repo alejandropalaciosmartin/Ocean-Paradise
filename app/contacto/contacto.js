@@ -123,3 +123,13 @@ function scrollToTop(element, to, duration) {
     });
   }
 }
+
+//BARRA DE CARGA
+
+window.onload = function(){
+  var contenedor = document.getElementById(`contenedorCirculoCarga`);// coge el contedendor del circulo
+  contenedor.style.visibility ='hidden'; // oculta todo el contenedor
+  contenedor.style.opacity= '0'; // lo opaca
+  initMap();
+}
+

@@ -138,3 +138,12 @@ function borrarPedido(i, idPedido){
             localStorage.removeItem(`Compra${i}`);//borro el item
           }})
     }
+
+    //BARRA DE CARGA
+
+    window.onload = function(){
+         var contenedor = document.getElementById(`contenedorCirculoCarga`);
+         contenedor.style.visibility ='hidden';
+        contenedor.style.opacity= '0';
+    
+    }
