@@ -160,12 +160,16 @@ border-bottom: 1px solid black;
    font-size: x-large;
    transition: 0.8S;
 }
+.idMensaje, .cuadroBasura{
+    width: 6%;
+}
+
 
 td{ /*ESTO es el css de cada td*/
     margin-left: 30%;
     margin-top: 5%;
     border: 2px solid #015b7f;
-    padding: 2% 15% 2% 2%;
+    padding: 2% 2% 2% 2%;
     width: 20%;  
  } 
  
