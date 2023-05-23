@@ -108,7 +108,7 @@ function cogerPedidosUsuarios(){
         if(datosDePedidoEnObjeto != null){    //hay que ver que no sea null el objeto en si  
             let ultimoValor = datosDePedidoEnObjeto.length-1;     
             const nuevaFilaPedidos = document.createElement("tr");      //creamos un tr para cada dato
-            nuevaFilaPedidos.setAttribute("id",`${datosDePedidoEnObjeto[ultimoValor].idNombre}`);
+            nuevaFilaPedidos.setAttribute("id",`Compra${datosDePedidoEnObjeto[ultimoValor].idNombre}`);
             nuevaFilaPedidos.innerHTML=`<td class="idMensaje">${datosDePedidoEnObjeto[ultimoValor].idNombre}</td> 
                                            <td>${datosDePedidoEnObjeto[ultimoValor].nombre}</td>
                                            <td class="detallePedido"><ul class="detallePedidoUl">${crearLista(datosDePedidoEnObjeto)}</ul></td>
@@ -143,7 +143,7 @@ function borrarPedido(i, idPedido){
       .then(resultado => {
           if (resultado.value){//si confirma que quiere borrar
     
-            const tr = document.getElementById(`${idPedido}`);
+            const tr = document.getElementById(`Compra${idPedido}`);
             tr.remove();//borro el tr
     
             localStorage.removeItem(`Compra${i}`);//borro el item
