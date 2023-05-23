@@ -64,8 +64,8 @@ div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS 
 .imagenPrincipal{/*el div que contiene el primer texto y pone la foto de fondo*/
     background-image: URL("..\\..\\Recursos\\Imagen\\Casas\\CasaNormal1\\1.jpg") ;
     background-repeat: no-repeat;
-    background-position-y: -190px;
-    background-size: 100%;
+    /*background-position-y: -190px;*/
+    background-size: 100% 100%;
     color: white;
     z-index: 1;
 }
@@ -74,18 +74,9 @@ div{/*AL HACER COPIA PEGA PONER header div{} PARA QUE NO OS MUEVA NADA EN OTROS 
     padding: 110px 0 29% 0;
 }
 
-@media (max-width: 1225px) {/*el responsivo de la imagen de fondo*/
-    .imagenPrincipal {
-        background-position-y: -190px;
-        background-size: 1355px;
-        background-position-x: -140px;
-    }
-}
-@media (max-width: 790px) {/*el responsivo de la imagen de fondo*/
-    .imagenPrincipal {
-        background-position-y: -50px;
-        background-size: 1000px;
-        background-position-x: -200px;
+@media (max-width: 850px) {/*el responsivo de la imagen de fondo*/
+    .imagenPrincipal div{
+        padding: 70px 0 29% 0;
     }
 }
 
