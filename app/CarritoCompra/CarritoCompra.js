@@ -211,7 +211,7 @@ function actualizarTotal() { //Esta función lo que hace es actualizar el precio
 
 /*Realizar compra - POPUP */
 let nombreGuardado;
-function realizarCompra(){
+async function realizarCompra(){
   if(sumaTotal > 0)
   {
   Swal
@@ -236,61 +236,70 @@ function realizarCompra(){
           })
           //Cogemos el resultado de guardar nombre 
           .then(resultado => {
-              //Si se introduce valor/nombre
-              if (resultado.value) {
-                    nombreGuardado = resultado.value; //guardamos el nombre
+            //Si se introduce valor/nombre
+            if (resultado.value) {
+              nombreGuardado = resultado.value; //guardamos el nombre
                     enviarDatos(nombreGuardado);
-                    /*localStorage.setItem("value", valueLocal);
-                    localStorage.setItem("cantidad", sumaTotal);
-                    localStorage.setItem("nombre", resultado.value); //Guardamos en el localStorage el valor introducido con la clave name*/
-                  Swal
-                  .fire({
+                    Swal
+                    .fire({
                       title: "Compra realizada <br> Gracias por confiar en nosotros",
                       text: "Pronto uno de nuestros vendedores se pondrá en contacto con usted",
                       icon: 'success',
+                      //Recargamos para borrar de la cesta
+                      confirmButtonText: '<a onclick="location.reload()">Entendido</a>',
+                    })
+                  }
+                  //Sino se introduce valor/nombre
+                  else{
+                    Swal
+                    .fire({
+                      title: "<p style='color: red;'>¡¡Oh se le olvidó introducir un nombre!!</p>", //Aplicando estilo dentro sweepalert2
+                      text: "Sino se introduce nombre no podremos realizar la compra",
+                      icon: 'error',
                       confirmButtonText: "Entendido",
-                  })
-              }
-              //Sino se introduce valor/nombre
-              else{
-                Swal
-                .fire({
-                    title: "<p style='color: red;'>¡¡Oh se le olvidó introducir un nombre!!</p>", //Aplicando estilo dentro sweepalert2
-                    text: "Sino se introduce nombre no podremos realizar la compra",
-                    icon: 'error',
-                    confirmButtonText: "Entendido",
-                })
-              }
-          });
-      //Botón "Cancelar"
-      } else {  
+                    })
+                  }
+                });
+                //Botón "Cancelar"
+              } else {  
         Swal
         .fire({
-            title: "¡¡Oh lástima!! <br> Esperamos verle pronto",
-            text: "Si necesita asesoramiento, nuestros experto estarán encantados en ayudarle",
-            icon: 'info',
-            confirmButtonText: "Entendido",
+          title: "¡¡Oh lástima!! <br> Esperamos verle pronto",
+          text: "Si necesita asesoramiento, nuestros experto estarán encantados en ayudarle",
+          icon: 'info',
+          confirmButtonText: "Entendido",
         })
       }
   });
 }
 else{
   Swal
-      .fire({
-          title: "¡No has introducido ninguna compra!",
-          text: "Si necesita asesoramiento, nuestros experto estarán encantados en ayudarle",
-          icon: 'error',
-          confirmButtonText: "Entendido",
-      })
-}
+  .fire({
+    title: "¡No has introducido ninguna compra!",
+    text: "Si necesita asesoramiento, nuestros experto estarán encantados en ayudarle",
+    icon: 'error',
+    confirmButtonText: "Entendido",
+  })
 }
 
-  //--------------------------------------------------------------------------------------------------------------------
-  let compra = "";
-  let numeroNombre = 1;
-  let valueJson = "";
-  let compraTotal = "";
-  let array = [];
+}
+
+//--------------------------------------------------------------------------------------------------------------------
+let compra = "";
+let idNombre = 0;
+let valueJson = "";
+let compraTotal = "";
+let array = [];
+
+let idNum = parseInt(localStorage.getItem("idNum")) || 0; // Tenemos que poner esto por que necesitamos guardar el numero por el que iba la id en
+// nuestro localStorage y si no hay ninguno coge el 0 pa que no de fallo.
+
+function crearID(){//Esto me crea el id de la propiedad id de mensaje ABAJO!!!
+    idNum++;
+    localStorage.setItem("idNum",idNum); //Me sube el incremento de id
+    return idNum;
+}
+
 
 function enviarDatos(nombreL){ //nombre del popup
   
@@ -307,26 +316,23 @@ function enviarDatos(nombreL){ //nombre del popup
           cantidad: value[2],
         };
         valueJson += JSON.stringify(compra)+ ","; //Los convierto en un archivo Json, SE AÑADE , AL FINAL PARA QUE LOS JSON SE SEPARE CORRECTAMENTE MENOS EL ÚLTIMO QUE AÑADIMOS
-
-        // //Eliminar session
-        // if (sessionStorage.length > 0) {
-        //   sessionStorage.removeItem(key,value);
-        // }
       }
       compraTotal = { //Hacemos otro json para no repetir en cada artículo y hacerlo como artículo diferente con ese dato
         nombre : nombreL, //Cogemos el nombre del popup
-        idNombre: numeroNombre,
+        idNombre: crearID(),
         totalCompra: precioTotal, //suma total -> lo cogemos de la funcion cogerDatos() que lo metemos en la variable
       };
       valueJson += JSON.stringify(compraTotal); 
 
       
       array="["+valueJson+"]"; //Para convertir en array todo el conjunto
-      localStorage.setItem("Comprar"+numeroNombre,array); // Los meto al local storage con un id de la persona
-      numeroNombre++; //Sumamos la id para separar las personas
+      idNombre++; //Sumamos la id para separar las personas
+      localStorage.setItem("Compra"+compraTotal.idNombre,array); // Los meto al local storage con un id de la persona
       //valueJson ="";
-
+      
+      //Borramos del session después de meterlo en el local
       sessionStorage.clear();
+
     }
 
 
