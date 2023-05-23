@@ -197,18 +197,10 @@ footer a:hover{ /*subraya cuando te pones encima*/
     }  
 }
 
-@media (max-width:850px) { 
+@media (max-width:1080px) { 
   /*Estilos texto y título*/
   .name, .precio{
-    font-size: 2vh;
-  }
-
-  .texto{
-    margin-top: 2vh;
-}
-.precio{
-    
-    margin-top: -1vh;
+    font-size: 3vh !important; 
   }
 }
 
