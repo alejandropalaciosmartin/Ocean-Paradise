@@ -46,7 +46,7 @@ async function cogerCasas(){
                 <img src="${casa.imagenes[0]}" alt="fotoCasa" class="estiloFotos">
                 <div class="texto">
                     <span class="name">${casa.nombre}</span>
-                    <p>${casa.precio}</p>
+                    <p class="precio">${casa.precio}</p>
                 </div>
             </div>`;
         // Manda id a la otra web

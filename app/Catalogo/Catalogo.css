@@ -260,3 +260,12 @@ footer a:hover{ /*subraya cuando te pones encima*/
     font-size: 5vh;
     font-family: "Comic Sans", Impact;
   }
+
+  .precio{
+    font-size: 3vh;
+    font-family: "Comic Sans", Impact;
+  }
+
+  .texto{
+    margin-top: -1vh;
+  }
