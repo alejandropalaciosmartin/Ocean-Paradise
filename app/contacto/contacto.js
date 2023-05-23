@@ -79,6 +79,21 @@ function enviarDatos(){
       let num = localStorage.getItem("idNum");
       --idNum;
       localStorage.setItem("idNum",idNum);
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 9000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
+      Toast.fire({
+        icon: 'error',
+        title: '<p style="color: red">Error</p><p>Formato erróneo y no se pudo enviar</p>'
+      })
     }
       
 }
