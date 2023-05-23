@@ -92,7 +92,7 @@ function enviarDatos(){
       })
       Toast.fire({
         icon: 'error',
-        title: 'Error de formato y no se pudo enviar'
+        title: 'Error de formato/campos no rellenos y no se pudo enviar'
       })
     }
       
