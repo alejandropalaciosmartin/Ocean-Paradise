@@ -188,9 +188,9 @@ function botonmenos(key){
   }
   else{
     elementoNumero.style.display = "none";
+    location.reload(); //Actualizar la página al darle al botón - Reiniciamos solo cuando no vaya haber más unidades y de ese modo se vea que no hay más y salga mensaje e impida seguir
   }
   actualizarTotal();
-  location.reload(); //Actualizar la página al darle al botón
 }
 
 function actualizarTotal() { //Esta función lo que hace es actualizar el precio total para cada vez que le doy al boton mas o menos
