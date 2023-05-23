@@ -211,7 +211,7 @@ function actualizarTotal() { //Esta función lo que hace es actualizar el precio
 
 /*Realizar compra - POPUP */
 let nombreGuardado;
-async function realizarCompra(){
+function realizarCompra(){
   if(sumaTotal > 0)
   {
   Swal
