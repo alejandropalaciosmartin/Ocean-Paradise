@@ -15,46 +15,34 @@
 
             <a id="botonCasita" href="../../index.html"><img id="casita" src="../../Recursos/Imagen/CasaBlanca.png"></a>
         </div>
-    </header>
-    <div class="barrasuperior">
-        <div class="barraizquierda1">
-          <button type="button" onclick="apareceusuario()"><img class="usuarios" src="../../Recursos/Imagen/usuarios2.png"></button>
+        <div class="barrasuperior">
+          <button class="usuarios" type="button" onclick="apareceusuario()"><img class="imagenUsuarios" src="../../Recursos/Imagen/usuarios2.png"></button>
         </div>
-      <div class="barraderecha1">
-        <button type="button" onclick="aparecemensaje()"><img class="mensajes" src="../../Recursos/Imagen/mensajes2.png"></button>
+        <button class="mensajes" type="button" onclick="aparecemensaje()"><img class="imagenMensajes" src="../../Recursos/Imagen/mensajes2.png"></button>
       </div>
     </div>
+    </header>
+      <table class="tablaDeInformacion desaparecio" id="botonusuario">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Detalles Pedido</th>
+            <th>Precio Total</th>
+            <th>Borrar</th>
+          </tr>
+        </thead>
+        <tbody id="tablaParaMeterPedidos">
+        </tbody>
+      </table>
 
-    <div id="botonusuario" class="boton1"> 
-        <div class="informacion">
-            <p id="parrafo">Usuario:</p> <p id="parrafo"> ID O NOMBRE DEL USUARIO</p>
-        </div>
-        <table style="width:100%">
-            <tr>
-              <th>Producto</th>
-              <th>Descripción</th>
-              <th>Precio</th>
-              <th>Cantidad</th>
-            </tr>
-            <tr>
-              <td>
-                <div class="imagenproducto">
-                    <img src="../../Recursos/Imagen/usuarios.jpg" height="100%" width="100%" >
-              </div>
-            </td>
-              <td>Descripción del producto</td>
-              <td>Precio del producto</td>
-              <td>Cantidad</td>
-            </tr>
-          </table>
-    </div>
     <table class="tablaDeInformacion desaparecio" id="botonmensaje">
       <thead>
         <tr>
-          <th class="idMensaje">Id</th>
-          <th class="correo">Email</th>
+          <th>Id</th>
+          <th >Email</th>
           <th>Asunto</th>
-          <th class="contenidoMensaje">Contenido Mensaje</th>
+          <th >Contenido Mensaje</th>
           <th>Borrar</th>
         </tr>
       </thead>

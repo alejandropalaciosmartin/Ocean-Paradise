@@ -286,13 +286,14 @@ else{
 }
 
   //--------------------------------------------------------------------------------------------------------------------
-  let compra = " ";
+  let compra = "";
   let numeroNombre = 1;
-  let valueJson = " ";
-  let compraTotal = " ";
+  let valueJson = "";
+  let compraTotal = "";
   let array = [];
 
 function enviarDatos(nombreL){ //nombre del popup
+  
     for (let i = 0; i < sessionStorage.length; i++) { // Recorrer todas las claves en el Session Storage
       key = sessionStorage.key(i); // Obtener la clave actual
       value = JSON.parse(sessionStorage.getItem(key)); // Obtener el valor correspondiente a la clave
@@ -313,27 +314,11 @@ function enviarDatos(nombreL){ //nombre del popup
       };
       valueJson += JSON.stringify(compraTotal); 
 
-      numeroNombre++; //Sumamos la id para separar las personas
+      
       array="["+valueJson+"]"; //Para convertir en array todo el conjunto
       localStorage.setItem("Comprar"+numeroNombre,array); // Los meto al local storage con un id de la persona
-      array =""; //Reiniciamos los datos para que no haya duplicados
-      
-
-      //ADMINISTRADOR - COGER DATOS - OLIVER
-     /* var variable = localStorage.getItem("Comprar"+2)
-      var objetos = JSON.parse(variable);
-      
-      //1º opcion
-      objetos.forEach(function(objeto) {
-        var id = objeto.id;
-        var casa = objeto.casa;
-        var precio = objeto.precio;
-        var cantidad = objeto.cantidad;
-        var totalCompra = objeto.totalCompra;
-        console.log(id);
-      });
-      //2º opcion
-      console.log(objetos[0].id);*/
+      numeroNombre++; //Sumamos la id para separar las personas
+      array ="";
     
     }
 
