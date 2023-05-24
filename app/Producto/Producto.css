@@ -158,7 +158,7 @@ header div{
     width: 80%;
 }
 .texto{ /*Cambios responsivos del texto para que cambie de tamaño al hacerlo pequeño*/
-    width: auto;
+    width: 80%;
     margin: 10% auto 0 10px;
     margin-bottom: 50px;
 }
@@ -314,7 +314,7 @@ footer a:hover{
     }
     .contenedorImagenes{
         grid-template-columns: repeat(3,0.27fr);
-        grid-gap: 1vh;
+        grid-gap: 2vh;
     }
     #botonFlecha{
         right: 10px;
