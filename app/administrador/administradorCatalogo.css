@@ -236,6 +236,37 @@ tr{ /*ESTO es el css de cada tr*/
     }
 
 }
+@media screen and (max-width:400px) {
+    .tablaDeInformacion{
+        font-size: small;
+        transition: 0.8s;
+    }
+
+    .imagenUsuarios{
+        width: 40px;
+        height: 40px; 
+    }
+    .usuarios{ 
+        margin-top: 5px;
+        left: 145px;
+    }
+
+    .mensajes{
+        margin-top: 5px;
+        left: 200px;
+    }
+
+    .imagenMensajes{
+        width: 30px;
+        height: 40px; 
+    }
+     
+    #logo{
+       left: 20px;
+    }
+
+
+}
 
 .imagenBasurita{
     width: 30px;
@@ -260,14 +291,6 @@ tr{ /*ESTO es el css de cada tr*/
     background-image: linear-gradient(to bottom, #003d55, #015b7f, #0079a9, #e1e8ec);
   }
 
-
-  *,*:after, *:before{
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
 
 /*BARRA DE CARGA*/
 
