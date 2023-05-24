@@ -279,9 +279,9 @@ footer a:hover{
       margin-right: 18px;
       font-size: 15px;
   }  
-  footer{
-    flex-wrap: wrap
-}
+      footer{
+        flex-wrap: wrap
+    }
 }
 /*--------------------barra lateral------------------*/
 ::-webkit-scrollbar {
