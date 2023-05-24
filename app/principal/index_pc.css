@@ -20,6 +20,7 @@ header{
 }
 
 #logo{
+    width: 20vh;
     display: flex;
     justify-content: start;
     align-items: center;

@@ -197,7 +197,7 @@ imagen no quede espacio vacío*/
 }
 
 #logo{
-    width: 20vh;
+    width: 10vh;
     display: flex;
     justify-content: start;
     align-items: center;
