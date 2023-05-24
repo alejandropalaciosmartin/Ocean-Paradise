@@ -129,7 +129,7 @@ header div{
 
 .contenedorImagenes{ /*contenedor de imagenes pequeñitas*/
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(2,0.3fr);
     max-width: 100%;
 }
 
