@@ -129,7 +129,7 @@ header div{
 
 .contenedorImagenes{ /*contenedor de imagenes pequeñitas*/
     display: grid;
-    grid-template-columns: repeat(2,0.3fr);
+    grid-template-columns: repeat(5,1fr);
     max-width: 100%;
 }
 
@@ -155,7 +155,7 @@ header div{
 
 @media (max-width :1025px) { /*Cambios responsivos de la imagen para que cambie de tamaño al hacerlo pequeño*/
     .imagen{
-    width: 100%;
+    width: 70%;
 }
 .texto{ /*Cambios responsivos del texto para que cambie de tamaño al hacerlo pequeño*/
     width: auto;
@@ -309,6 +309,9 @@ footer a:hover{
         align-items: center;
         font-size: 15px;
     }  
+    .contenedorImagenes{
+        grid-template-columns: repeat(2,0.3fr);
+    }
 }
 
 /*--------------------barra lateral------------------*/
