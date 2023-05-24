@@ -316,6 +316,10 @@ footer a:hover{/*subraya cuando te pones encima*/
     footer{
         flex-wrap: wrap
     }
+    #botonFlecha{
+        right: 10px;
+        bottom: 70px;
+    }
 }
 /*--------------------barra lateral------------------*/
 ::-webkit-scrollbar {/*define tamaño de la barra para subir y bajar*/

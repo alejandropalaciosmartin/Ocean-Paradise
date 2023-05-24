@@ -143,7 +143,7 @@ header div{
     box-shadow: 0 4px 8px 0 #01587a, 0 6px 20px 0 #01587a;
     transition: transform 0.2s ease-in-out;
     border: 0;
-  padding: 0;
+    padding: 0;
 }
 
 .botonImagen:hover{/*Boton de cuando pasas por encima en una imagen pequeñita*/
@@ -155,7 +155,7 @@ header div{
 
 @media (max-width :1025px) { /*Cambios responsivos de la imagen para que cambie de tamaño al hacerlo pequeño*/
     .imagen{
-    width: 70%;
+    width: 80%;
 }
 .texto{ /*Cambios responsivos del texto para que cambie de tamaño al hacerlo pequeño*/
     width: auto;
@@ -309,8 +309,18 @@ footer a:hover{
         align-items: center;
         font-size: 15px;
     }  
+    footer{
+        flex-wrap: wrap
+    }
     .contenedorImagenes{
-        grid-template-columns: repeat(2,0.3fr);
+        grid-template-columns: repeat(3,0.27fr);
+    }
+    #botonFlecha{
+        right: 10px;
+        bottom: 70px;
+    }
+    .imagenYTextoYContenedor{
+        justify-content: center
     }
 }
 
