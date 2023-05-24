@@ -246,13 +246,15 @@ imagen no quede espacio vacío*/
 #titulito2{
     font-size: 2.5vh;
     margin-top: -20vh;
+    
 }
 
 .textito2{
     font-size: 3vh;
     margin-top: 3vh;
-    margin-left: 20vh;
+    margin-left: 17vh;
     color: var(--letras);
+    width: 60%;
 }
 
 #monos{
@@ -311,6 +313,9 @@ footer a:hover{/*subraya cuando te pones encima*/
         margin-right: 18px;
         font-size: 15px;
     }  
+    footer{
+        flex-wrap: wrap
+    }
 }
 /*--------------------barra lateral------------------*/
 ::-webkit-scrollbar {/*define tamaño de la barra para subir y bajar*/
@@ -332,7 +337,7 @@ footer a:hover{/*subraya cuando te pones encima*/
     display: none; 
     position: fixed; 
     bottom: 50px; 
-    right: 9px; 
+    right: 70px; 
     z-index: 99; 
     border: none;
     background-color: transparent;
