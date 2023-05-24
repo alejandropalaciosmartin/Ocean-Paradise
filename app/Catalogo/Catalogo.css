@@ -196,6 +196,9 @@ footer a:hover{ /*subraya cuando te pones encima*/
         margin-right: 18px;
         font-size: 15px;
     }  
+    footer{
+        flex-wrap: wrap
+    }
 }
 
 @media (max-width:1080px) { 

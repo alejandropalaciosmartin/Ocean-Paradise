@@ -183,7 +183,10 @@ footer a:hover{/*subraya cuando te pones encima*/
     footer a{
         margin-right: 18px;
         font-size: 15px;
-    }  
+    } 
+    footer{
+        flex-wrap: wrap
+    } 
 }
 
 /*--------------------barra lateral------------------*/

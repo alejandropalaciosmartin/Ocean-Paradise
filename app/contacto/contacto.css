@@ -277,6 +277,9 @@ footer a:hover{ /*subraya cuando te pones encima*/
         margin-right: 18px;
         font-size: 15px;
     }  
+	footer{
+        flex-wrap: wrap
+    }
 }
 /* ---------------------------------------------- SCROLL BAR ---------------------------------------------- */
 ::-webkit-scrollbar { /*define tamaño de la barra para subir y bajar*/
