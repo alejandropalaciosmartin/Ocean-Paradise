@@ -199,6 +199,12 @@ footer a:hover{ /*subraya cuando te pones encima*/
     footer{
         flex-wrap: wrap
     }
+    #botonFlecha{
+        right: -10px !important;
+    }
+    #flechita{
+        width: 6vh !important;
+    }
 }
 
 @media (max-width:1080px) { 

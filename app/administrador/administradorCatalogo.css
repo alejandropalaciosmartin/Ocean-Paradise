@@ -236,7 +236,7 @@ tr{ /*ESTO es el css de cada tr*/
     }
 
 }
-@media screen and (max-width:400px) {
+@media screen and (max-width:600px) {
     .tablaDeInformacion{
         font-size: small;
         transition: 0.8s;
@@ -266,6 +266,14 @@ tr{ /*ESTO es el css de cada tr*/
     }
 
 
+}
+@media (max-width:615px) {
+    #botonFlecha{
+        right: 0px !important;
+    }
+    #flechita{
+        width: 6.5vh !important;
+    }
 }
 
 .imagenBasurita{

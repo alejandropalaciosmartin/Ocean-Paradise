@@ -86,7 +86,7 @@ div{
 /* ---------------------------------------------- MAIN ----------------------------------------------*/
 main {
     flex: 1;
-    padding: 20px;
+    padding: 40px;
 }
 form {
 	max-width: 600px;
@@ -193,7 +193,7 @@ button#enviar[type="submit"]:hover {
 }
 @media (max-width:720px) {
 	.telefono{
-		top:448px;
+		top:458px;
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
@@ -232,7 +232,7 @@ button#enviar[type="submit"]:hover {
 }
 @media (max-width:720px) {
 	.direccion{
-		top:500px;
+		top:520px;
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
@@ -281,6 +281,14 @@ footer a:hover{ /*subraya cuando te pones encima*/
         flex-wrap: wrap
     }
 }
+@media (max-width:615px) {
+    #botonFlecha{
+        right: 0px !important;
+    }
+    #flechita{
+        width: 6.5vh !important;
+    }
+}
 /* ---------------------------------------------- SCROLL BAR ---------------------------------------------- */
 ::-webkit-scrollbar { /*define tamaño de la barra para subir y bajar*/
     width: 10px;
@@ -325,8 +333,8 @@ footer a:hover{ /*subraya cuando te pones encima*/
 }
 @media (max-width:720px) {
 	#map{
-		top:685px;
-		width: 400px;
+		top:695px;
+		width: 95%;
 		height: 261px;
 		left: 50%;
 		transform: translate(-50%, -50%);

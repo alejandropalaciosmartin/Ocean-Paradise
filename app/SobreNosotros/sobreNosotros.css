@@ -188,6 +188,17 @@ footer a:hover{/*subraya cuando te pones encima*/
         flex-wrap: wrap
     } 
 }
+@media (max-width:615px) {
+    #botonFlecha{
+        right: -10px !important;
+    }
+    #flechita{
+        width: 6vh !important;
+    }
+    .visionGeneral{
+        font-size: x-large !important;
+    }
+}
 
 /*--------------------barra lateral------------------*/
 ::-webkit-scrollbar {/*define tamaño de la barra para subir y bajar*/
