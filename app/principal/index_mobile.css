@@ -197,15 +197,17 @@ imagen no quede espacio vacío*/
 }
 
 #logo{
-    width: 10vh;
+    width: 16vh;
     display: flex;
     justify-content: start;
     align-items: center;
 }
 
 #titulito{
+    width: 70%;
+    margin-left: 11vh;
     font-size: 2.5vh;
-    margin-top: -26vh;
+    margin-top: -20vh;
 }
 
 .textito{
