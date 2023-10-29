@@ -1,7 +1,0 @@
-Primera regla: comentar todo lo que pueda crear una mínima duda.
-
-Segunda regla: nombre de variables o clases, empiezan por minúscula y segunda palabra empieza por mayúscula, por ejemplo "descripcionCasa".
-
-Tercera regla: nombres de métodos en JavaScript empiezan por mayúscula y segunda palabra iguañ, por ejemplo "ComprarCasa".
-
-Cuarta Regla: nombre de las subcarpetas de app con el mismo formato que los métodos.
